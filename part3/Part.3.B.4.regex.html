@@ -1,0 +1,1949 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Part.3.B.4.regex（正则表达式） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Part.3.B.5.bnf-ebnf-pebnf.html" />
+    
+    
+    <link rel="prev" href="Part.3.B.3.decorator-iterator-generator.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    自学是门艺术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../00.cover.html">
+            
+                <a href="../00.cover.html">
+            
+                    
+                    00.cover(封面)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01.preface.html">
+            
+                <a href="../01.preface.html">
+            
+                    
+                    01.preface（前言）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../02.proof-of-work.html">
+            
+                <a href="../02.proof-of-work.html">
+            
+                    
+                    02.proof-of-work（如何证明你真的读过这本书？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Part 1
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../part1/Part.1.A.better.teachyourself.html">
+            
+                <a href="../part1/Part.1.A.better.teachyourself.html">
+            
+                    
+                    Part.1.A.better.teachyourself（为什么一定要掌握自学能力？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../part1/Part.1.B.why.start.from.learning.coding.html">
+            
+                <a href="../part1/Part.1.B.why.start.from.learning.coding.html">
+            
+                    
+                    Part.1.B.why.start.from.learning.coding（为什么把编程当作自学的入口？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../part1/Part.1.C.must.learn.sth.only.by.reading.html">
+            
+                <a href="../part1/Part.1.C.must.learn.sth.only.by.reading.html">
+            
+                    
+                    Part.1.C.must.learn.sth.only.by.reading（只靠阅读习得新技能）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../part1/Part.1.D.preparation.for.reading.html">
+            
+                <a href="../part1/Part.1.D.preparation.for.reading.html">
+            
+                    
+                    Part.1.D.preparation.for.reading（开始阅读前的一些准备）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../part1/Part.1.E.1.entrance.html">
+            
+                <a href="../part1/Part.1.E.1.entrance.html">
+            
+                    
+                    Part.1.E.1.entrance（入口）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../part1/Part.1.E.2.values-and-their-operators.html">
+            
+                <a href="../part1/Part.1.E.2.values-and-their-operators.html">
+            
+                    
+                    Part.1.E.2.values-and-their-operators（值及其相应的运算）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../part1/Part.1.E.3.controlflow.html">
+            
+                <a href="../part1/Part.1.E.3.controlflow.html">
+            
+                    
+                    Part.1.E.3.controlflow（流程控制）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../part1/Part.1.E.4.functions.html">
+            
+                <a href="../part1/Part.1.E.4.functions.html">
+            
+                    
+                    Part.1.E.4.functions（函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../part1/Part.1.E.5.strings.html">
+            
+                <a href="../part1/Part.1.E.5.strings.html">
+            
+                    
+                    Part.1.E.5.strings（字符串）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../part1/Part.1.E.6.containers.html">
+            
+                <a href="../part1/Part.1.E.6.containers.html">
+            
+                    
+                    Part.1.E.6.containers（数据容器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../part1/Part.1.E.7.files.html">
+            
+                <a href="../part1/Part.1.E.7.files.html">
+            
+                    
+                    Part.1.E.7.files（文件）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../part1/Part.1.F.deal-with-forward-references.html">
+            
+                <a href="../part1/Part.1.F.deal-with-forward-references.html">
+            
+                    
+                    Part.1.F.deal-with-forward-references（如何从容应对含有过多 “过早引用” 的知识？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../part1/Part.1.G.The-Python-Tutorial-local.html">
+            
+                <a href="../part1/Part.1.G.The-Python-Tutorial-local.html">
+            
+                    
+                    Part.1.G.The-Python-Tutorial-local（官方教程：The Python Tutorial）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Part 2
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../part2/Part.2.A.clumsy-and-patience.html">
+            
+                <a href="../part2/Part.2.A.clumsy-and-patience.html">
+            
+                    
+                    Part.2.A.clumsy-and-patience（笨拙与耐心）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../part2/Part.2.B.deliberate-practicing.html">
+            
+                <a href="../part2/Part.2.B.deliberate-practicing.html">
+            
+                    
+                    Part.2.B.deliberate-practicing（刻意练习）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../part2/Part.2.C.why-start-from-writing-functions.html">
+            
+                <a href="../part2/Part.2.C.why-start-from-writing-functions.html">
+            
+                    
+                    Part.2.C.why-start-from-writing-functions（为什么从函数开始？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../part2/Part.2.D.1-args.html">
+            
+                <a href="../part2/Part.2.D.1-args.html">
+            
+                    
+                    Part.2.D.1-args（关于参数（上））
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../part2/Part.2.D.2-aargs.html">
+            
+                <a href="../part2/Part.2.D.2-aargs.html">
+            
+                    
+                    Part.2.D.2-aargs（关于参数（下））
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../part2/Part.2.D.3-lambda.html">
+            
+                <a href="../part2/Part.2.D.3-lambda.html">
+            
+                    
+                    Part.2.D.3-lambda（化名与匿名）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../part2/Part.2.D.4-recursion.html">
+            
+                <a href="../part2/Part.2.D.4-recursion.html">
+            
+                    
+                    Part.2.D.4-recursion（递归函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../part2/Part.2.D.5-docstrings.html">
+            
+                <a href="../part2/Part.2.D.5-docstrings.html">
+            
+                    
+                    Part.2.D.5-docstrings（函数的文档）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../part2/Part.2.D.6-modules.html">
+            
+                <a href="../part2/Part.2.D.6-modules.html">
+            
+                    
+                    Part.2.D.6-modules（保存到文件的函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../part2/Part.2.D.7-tdd.html">
+            
+                <a href="../part2/Part.2.D.7-tdd.html">
+            
+                    
+                    Part.2.D.7-tdd（测试驱动的开发）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../part2/Part.2.D.8-main.html">
+            
+                <a href="../part2/Part.2.D.8-main.html">
+            
+                    
+                    Part.2.D.8-main（可执行的 Python 文件）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../part2/Part.2.E.deliberate-thinking.html">
+            
+                <a href="../part2/Part.2.E.deliberate-thinking.html">
+            
+                    
+                    Part.2.E.deliberate-thinking（刻意思考）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Part 3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="Part.3.A.conquering-difficulties.html">
+            
+                <a href="Part.3.A.conquering-difficulties.html">
+            
+                    
+                    Part.3.A.conquering-difficulties（战胜难点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="Part.3.B.1.classes-1.html">
+            
+                <a href="Part.3.B.1.classes-1.html">
+            
+                    
+                    Part.3.B.1.classes-1（类 —— 面向对象编程）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="Part.3.B.2.classes-2.html">
+            
+                <a href="Part.3.B.2.classes-2.html">
+            
+                    
+                    Part.3.B.2.classes-2（类 —— Python 的实现）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="Part.3.B.3.decorator-iterator-generator.html">
+            
+                <a href="Part.3.B.3.decorator-iterator-generator.html">
+            
+                    
+                    Part.3.B.3.decorator-iterator-generator（函数工具）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="Part.3.B.4.regex.html">
+            
+                <a href="Part.3.B.4.regex.html">
+            
+                    
+                    Part.3.B.4.regex（正则表达式）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="Part.3.B.5.bnf-ebnf-pebnf.html">
+            
+                <a href="Part.3.B.5.bnf-ebnf-pebnf.html">
+            
+                    
+                    Part.3.B.5.bnf-ebnf-pebnf（BNF 以及 EBNF）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="Part.3.C.breaking-good-and-bad.html">
+            
+                <a href="Part.3.C.breaking-good-and-bad.html">
+            
+                    
+                    Part.3.C.breaking-good-and-bad（拆解）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="Part.3.D.indispensable-illusion.html">
+            
+                <a href="Part.3.D.indispensable-illusion.html">
+            
+                    
+                    Part.3.D.indispensable-illusion（刚需幻觉）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="Part.3.E.to-be-thorough.html">
+            
+                <a href="Part.3.E.to-be-thorough.html">
+            
+                    
+                    Part.3.E.to-be-thorough（全面 —— 自学的境界）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="Part.3.F.social-selfteaching.html">
+            
+                <a href="Part.3.F.social-selfteaching.html">
+            
+                    
+                    Part.3.F.social-selfteaching（自学者的社交）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="Part.3.G.the-golden-age-and-google.html">
+            
+                <a href="Part.3.G.the-golden-age-and-google.html">
+            
+                    
+                    Part.3.G.the-golden-age-and-google（这是自学者的黄金时代）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="Part.3.H.prevent-focus-drifting.html">
+            
+                <a href="Part.3.H.prevent-focus-drifting.html">
+            
+                    
+                    Part.3.H.prevent-focus-drifting（避免注意力漂移）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    附章
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Q.good-communiation.html">
+            
+                <a href="../Q.good-communiation.html">
+            
+                    
+                    Q.good-communiation（如何成为优秀沟通者）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../R.finale.html">
+            
+                <a href="../R.finale.html">
+            
+                    
+                    R.finale（自学者的终点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../S.whats-next.html">
+            
+                <a href="../S.whats-next.html">
+            
+                    
+                    S.whats-next（下一步干什么？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    附录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../T-appendix.editor.vscode.html">
+            
+                <a href="../T-appendix.editor.vscode.html">
+            
+                    
+                    T-appendix.editor.vscode（Visual Studio Code 的安装与配置）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../T-appendix.git-introduction.html">
+            
+                <a href="../T-appendix.git-introduction.html">
+            
+                    
+                    T-appendix.git-introduction（Git 简介）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../T-appendix.jupyter-installation-and-setup.html">
+            
+                <a href="../T-appendix.jupyter-installation-and-setup.html">
+            
+                    
+                    T-appendix.jupyter-installation-and-setup（Jupyterlab 的安装与配置）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../T-appendix.symbols.html">
+            
+                <a href="../T-appendix.symbols.html">
+            
+                    
+                    T-appendix.symbols（这些符号都代表什么？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Part.3.B.4.regex（正则表达式）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h1>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x77ED;&#x5C0F;&#x5374;&#x683C;&#x5916;&#x5F3A;&#x608D; &#x2014;&#x2014; &#x4E43;&#x81F3;&#x4E8E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7ADF;&#x7136;&#x6CA1;&#x5B66;&#x4F1A;&#x5B83;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x7684;&#x4E4B;&#x524D;&#x5B66;&#x7684;&#x7F16;&#x7A0B;&#x6280;&#x80FD;&#x5E72;&#x8106;&#x4E0E;&#x6B8B;&#x75BE;&#x65E0;&#x5F02;&#x3002;</p>
+<p>Wikipedia &#x4E0A;&#x5BF9;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<blockquote>
+<p><strong>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</strong>&#xFF08;&#x82F1;&#x8BED;&#xFF1A;Regular Expression&#xFF0C;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x5E38;&#x7B80;&#x5199;&#x4E3A; regex&#x3001;regexp &#x6216; RE&#xFF09;&#xFF0C;&#x53C8;&#x79F0;<em>&#x6B63;&#x89C4;&#x8868;&#x793A;&#x5F0F;</em>&#x3001;<em>&#x6B63;&#x89C4;&#x8868;&#x793A;&#x6CD5;</em>&#x3001;<em>&#x6B63;&#x89C4;&#x8FD0;&#x7B97;&#x5F0F;</em>&#x3001;<em>&#x89C4;&#x5219;&#x8FD0;&#x7B97;&#x5F0F;</em>&#x3001;<em>&#x5E38;&#x89C4;&#x8868;&#x793A;&#x6CD5;</em>&#xFF0C;&#x662F;&#x8BA1;&#x7B97;&#x673A;&#x79D1;&#x5B66;&#x7684;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#x3002;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F7F;&#x7528;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6765;&#x63CF;&#x8FF0;&#x3001;&#x5339;&#x914D;&#x4E00;&#x7CFB;&#x5217;&#x7B26;&#x5408;&#x67D0;&#x4E2A;&#x53E5;&#x6CD5;&#x89C4;&#x5219;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5728;&#x5F88;&#x591A;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x91CC;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x901A;&#x5E38;&#x88AB;&#x7528;&#x6765;&#x68C0;&#x7D22;&#x3001;&#x66FF;&#x6362;&#x90A3;&#x4E9B;&#x7B26;&#x5408;&#x67D0;&#x4E2A;&#x6A21;&#x5F0F;&#x7684;&#x6587;&#x672C;&#x3002;&#x8BB8;&#x591A;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8BED;&#x8A00;&#x90FD;&#x652F;&#x6301;&#x5229;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728; Perl &#x4E2D;&#x5C31;&#x5185;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5F15;&#x64CE;&#x3002;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x6700;&#x521D;&#x662F;&#x7531; Unix &#x4E2D;&#x7684;&#x5DE5;&#x5177;&#x8F6F;&#x4EF6;&#xFF08;&#x4F8B;&#x5982; sed &#x548C; grep&#xFF09;&#x666E;&#x53CA;&#x5F00;&#x7684;&#x3002;</p>
+</blockquote>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7FFB;&#x8BD1;&#x6210;&#x4E2D;&#x6587;&#x7684;&#x6559;&#x7A0B;&#x4E2D;&#x5BF9;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x8BB2;&#x89E3;&#x65F6;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x63CF;&#x8FF0;&#xFF1A;</p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;Regular Expression&#xFF09;&#x901A;&#x5E38;&#x88AB;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x6A21;&#x5F0F;&#xFF08;Pattern&#xFF09;&#x3002;</p>
+</blockquote>
+<p>&#x6211;&#x5E38;&#x5E38;&#x89C9;&#x5F97;&#x5F53;&#x521D;&#x8981;&#x662F;&#x5B83;&#x88AB;&#x7FFB;&#x8BD1;&#x6210; &#x201C;&#x89C4;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x201D;&#xFF0C;&#x90A3;&#x4E48;&#x5F88;&#x53EF;&#x80FD;&#x521D;&#x5B66;&#x8005;&#x4E0D;&#x4F1A;&#x611F;&#x5230;&#x90A3;&#x4E48;&#x5927;&#x7684;&#x538B;&#x529B; &#x2014;&#x2014; &#x8C01;&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x770B;&#x7740;&#x7531; &#x201C;&#x6BCF;&#x4E2A;&#x90FD;&#x8BA4;&#x8BC6;&#x7684;&#x5B57;&#x6784;&#x6210;&#x7684;&#x8BCD;&#x7EC4;&#x201D; &#x5374;&#x4E0D;&#x80FD;&#x76F4;&#x89C2;&#x5730;&#x60F3;&#x5230;&#x5B83;&#x7A76;&#x7ADF;&#x662F;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;&#xFF0C;&#x90FD;&#x4F1A;&#x611F;&#x5230;&#x83AB;&#x540D;&#x7684;&#x538B;&#x529B;&#x3002;</p>
+<p><strong>Regular</strong>&#xFF0C;&#x5176;&#x5B9E;&#x5728;&#x5B83;&#x7684;&#x4F17;&#x591A;&#x8BED;&#x4E49;&#x4E2D;&#xFF0C;&#x53D6;&#x4EE5;&#x4E0B;&#x91CA;&#x4E49;&#x6700;&#x7B26;&#x5408; Regular Expression &#x7684;&#x539F;&#x610F;<a href="#fn1" name="fn1b"><sup>[1]</sup></a>&#xFF1A;</p>
+<blockquote>
+<p>&#x246D; Linguistics &#x89C4;&#x5219;&#x7684; &#x25B8; regular verbs &#x89C4;&#x5219;&#x52A8;&#x8BCD;</p>
+</blockquote>
+<p>&#x800C; <strong>Pattern</strong> &#x8FD9;&#x4E2A;&#x8BCD;&#xFF0C;&#x5728;&#x8BCD;&#x5178;&#x91CC;&#x6709;&#x597D;&#x51E0;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x4E2D;&#x6587;&#x8BCD;&#x6C47;&#xFF1A;</p>
+<blockquote>
+<p>&#x2460; &#x56FE;&#x6848;&#xFF1B;&#x2461; &#x5F0F;&#x6837;&#xFF1B;&#x2462; &#x56FE;&#x6837;&#xFF1B;&#x2463; &#x699C;&#x6837;&#xFF1B;&#x2464; &#x6A21;&#x5F0F;&#xFF1B;&#x2465; &#x6837;&#x54C1;&#xFF1B;&#x2466; &#x6A21;&#x5B50;</p>
+</blockquote>
+<p>&#x5728;&#x5F53;&#x524D;&#x8BED;&#x5883;&#x4E4B;&#x4E0B;&#xFF0C;&#x628A; Pattern &#x7FFB;&#x8BD1;&#x6210; &#x201C;&#x6A21;&#x5F0F;&#x201D;&#xFF0C;&#x663E;&#x7136;&#x4E0D;&#x5982; &#x201C;&#x6A21;&#x5B50;&#x201D; &#x66F4;&#x597D;&#xFF08;&#x751A;&#x81F3;&#x8FDE; &#x201C;&#x6837;&#x54C1;&#x201D; &#x611F;&#x89C9;&#x90FD;&#x6BD4; &#x201C;&#x6A21;&#x5F0F;&#x201D; &#x66F4;&#x6070;&#x5F53;&#xFF09;&#x2014;&#x2014; &#x201C;&#x6A21;&#x5B50;&#x201D; &#x8FD9;&#x4E2A;&#x8BCD;&#x5F88;&#x76F4;&#x89C2;&#x554A;&#xFF0C;&#x62FF;&#x7740;&#x4E00;&#x4E2A;&#x6A21;&#x5B50;&#x53BB;&#x627E;&#x4E0E;&#x5B83;&#x4E00;&#x81F4;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x2026;&#x2026; &#x201C;&#x4E0E;&#x89C4;&#x5219;&#x4E00;&#x81F4;&#x201D;&#xFF0C;&#x82F1;&#x6587;&#x7528;&#x7684;&#x662F; <strong>Match</strong>&#xFF0C;&#x4E00;&#x822C;&#x88AB;&#x7FFB;&#x8BD1;&#x4F5C; &#x201C;&#x5339;&#x914D;&#x201D;&#x3002;</p>
+<p>&#x5728;&#x81EA;&#x5B66;&#x7F16;&#x7A0B;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5904;&#x5904;&#x90FD;&#x662F;&#x8FD9;&#x79CD;&#x8BED;&#x8A00;&#x7FFB;&#x8BD1;&#x5E26;&#x6765;&#x7684;&#x8FF7;&#x60D1;&#x3001;&#x969C;&#x788D;&#xFF0C;&#x6216;&#x8005;&#x803D;&#x8BEF;&#x3002;&#x65E2;&#x7136;&#x5E94;&#x8BE5;&#x628A; Regular Expression &#x7406;&#x89E3;&#x4E3A; &#x201C;&#x89C4;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x201D; &#x66F4;&#x597D;&#xFF0C;&#x90A3;&#x5176;&#x5B9E;&#x5427;&#xFF0C;&#x628A; Pattern &#x76F4;&#x63A5;&#x7406;&#x89E3;&#x4E3A;&#x4E2D;&#x6587;&#x7684; &#x201C;<em>&#x89C4;&#x5219;</em>&#x201D;&#xFF0C;&#x53EF;&#x80FD;&#x66F4;&#x76F4;&#x89C2;&#x66F4;&#x51C6;&#x786E;&#xFF0C;&#x7406;&#x89E3;&#x4E0A;&#x66F4;&#x662F;&#x6BEB;&#x65E0;&#x969C;&#x788D;&#xFF1A;</p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;Regular Expression&#xFF09;&#x901A;&#x5E38;&#x88AB;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#xFF08;Pattern&#xFF09;&#x3002;</p>
+</blockquote>
+<p>&#x90A3;&#x4E48;&#xFF0C;<strong>&#x89C4;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</strong>&#x91CC;&#x5199;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x53EA;&#x80FD;&#x662F;<strong>&#x89C4;&#x5219;</strong>&#x4E86;&#x2026;&#x2026; &#x5230;&#x6700;&#x540E;&#x597D;&#x50CF;&#x4E5F;&#x5C31; &#x201C;&#x6355;&#x83B7;&#x201D;&#xFF08;Capture&#xFF09;&#x8FD9;&#x4E2A;&#x8BCD;&#x6CA1;&#x4EC0;&#x4E48;&#x6B67;&#x4E49;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x628A;&#x672F;&#x8BED;&#x5168;&#x90E8; &#x201C;&#x89E3;&#x5BC6;&#x201D; &#x4E86;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x8868;&#x8FF0;&#xFF1A;</p>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x4E66;&#x5199;&#x7279;&#x5B9A;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x7528;&#x6765;&#x5728;&#x6587;&#x672C;&#x4E2D;&#x6355;&#x83B7;&#x4E0E;&#x89C4;&#x5219;&#x4E00;&#x81F4;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C;&#x540E;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x2026;&#x2026;</p>
+</blockquote>
+<p>&#x7406;&#x89E3;&#x8D77;&#x6765;&#x76F8;&#x5F53;&#x987A;&#x7545;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x7684; Python &#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<a href="https://regexper.com#%5Cwo%5Cw" target="_blank"><code>\wo\w</code></a> &#x5C31;&#x662F;&#x4E00;&#x4E2A;<em>&#x89C4;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</em>&#xFF08;&#x6216;&#x79F0;&#x4E3A;<em>&#x89C4;&#x5219;</em>&#xFF09;&#xFF1B;</p>
+<p>&#x800C; <code>re.findall(pttn, str)</code> &#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#xFF0C;&#x5728; <code>str</code> &#x91CC;&#x627E;&#x5230;&#x6240;&#x6709;&#x4E0E;&#x8FD9;&#x4E2A;<strong>&#x89C4;&#x5219;</strong>&#xFF08;Pattern&#xFF0C;&#x6A21;&#x5F0F;&#xFF09;<strong>&#x4E00;&#x81F4;</strong>&#xFF08;Match&#xFF0C;&#x5339;&#x914D;&#xFF09;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+str = <span class="hljs-string">&apos;The quick brown fox jumps over the lazy dog&apos;</span>
+pttn = re.compile(<span class="hljs-string">r&apos;\wo\w&apos;</span>)
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;row&apos;, &apos;fox&apos;, &apos;dog&apos;]
+</code></pre><p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<blockquote>
+<p><strong>&#x89C4;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</strong>&#xFF08;Regular Expressions&#xFF0C;&#x901A;&#x5E38;&#x7F29;&#x5199;&#x4E3A; Regex&#xFF09;&#x662F;&#x6700;&#x5F3A;&#x5927;&#x4E14;&#x4E0D;&#x53EF;&#x6216;&#x7F3A;&#x7684;&#x6587;&#x672C;&#x5904;&#x7406;&#x5DE5;&#x5177; &#x2014;&#x2014; &#x5B83;&#x7684;&#x7528;&#x5904;&#x5C31;&#x662F;&#x5728;&#x6587;&#x672C;&#x4E2D;<strong>&#x626B;&#x63CF;/&#x641C;&#x7D22;</strong>&#xFF08;Scan/Search&#xFF09;&#x4E0E;&#x67D0;&#x4E00;<strong>&#x89C4;&#x5219;</strong>&#xFF08;Pattern&#xFF09;<strong>&#x5339;&#x914D;</strong>&#xFF08;Match&#xFF0C;&#x5373;&#xFF0C;&#x4E0E;&#x89C4;&#x5219;&#x4E00;&#x81F4;&#xFF09;&#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x4E14;&#x8FD8;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x89C4;&#x5219;<strong>&#x6355;&#x83B7;</strong>&#xFF08;Capture&#xFF09;&#x5176;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x6216;&#x8005;&#x5168;&#x90E8;&#xFF0C;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;<strong>&#x66FF;&#x6362;</strong>&#xFF08;Replace&#xFF09;&#x3002;</p>
+</blockquote>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6B67;&#x4E49;&#xFF0C;&#x6211;&#x4EEC;&#x5E72;&#x8106;&#x7528; Regex &#x8FD9;&#x4E2A;&#x7F29;&#x5199;&#xFF0C;&#x4EE5;&#x53CA;&#x4E0E;&#x5B83;&#x76F8;&#x5173;&#x7684;&#x82F1;&#x6587;&#x5355;&#x8BCD;&#xFF1A;pattern, match, capture, replace(ment)&#x2026;&#x2026;</p>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F7F;&#x7528; Regex &#x5E76;&#x4E0D;&#x662F;&#x4E3A;&#x4E86; Replace&#xFF0C;&#x800C;&#x662F;&#x4E3A;&#x4E86;&#x68C0;&#x67E5;&#x683C;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; Regex &#x68C0;&#x67E5;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x8FC7;&#x4E8E;&#x7B80;&#x5355;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x5168;&#x90E8;&#x90FD;&#x7531;&#x6570;&#x5B57;&#x6784;&#x6210;&#xFF09;&#xFF0C;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x3001;&#x8BC1;&#x4EF6;&#x53F7;&#x7801;&#x662F;&#x5426;&#x7B26;&#x5408;&#x7279;&#x5B9A;&#x683C;&#x5F0F;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5728;&#x81EA;&#x5B66;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x60F3;&#x5C3D;&#x4E00;&#x5207;&#x529E;&#x6CD5;&#x628A;&#x4E00;&#x5207;&#x672F;&#x8BED;&#x7528;&#x7B80;&#x5355;&#x76F4;&#x767D;&#x7684; &#x201C;&#x4EBA;&#x8BDD;&#x201D; &#x91CD;&#x65B0;&#x8868;&#x8FF0;&#xFF0C;&#x662F;&#x7279;&#x522B;&#x6709;&#x6548;&#x7684;&#x4FC3;&#x8FDB;&#x8FDB;&#x6B65;&#x7684;&#x884C;&#x4E3A;&#x6A21;&#x5F0F;&#x3002;</p>
+<h2 id="&#x89C6;&#x89C9;&#x4F53;&#x9A8C;">&#x89C6;&#x89C9;&#x4F53;&#x9A8C;</h2>
+<p>&#x6240;&#x8C13;&#x767E;&#x95FB;&#x4E0D;&#x5982;&#x4E00;&#x89C1;&#x3002;</p>
+<p>&#x773C;&#x89C1;&#x4E3A;&#x5B9E; &#x2014;&#x2014; &#x60F3;&#x529E;&#x6CD5;&#x8BA9;&#x4E00;&#x4E2A;&#x964C;&#x751F;&#x7684;&#x6982;&#x5FF5;&#x89C6;&#x89C9;&#x4E0A;&#x76F4;&#x89C2;&#xFF0C;&#x662F;&#x7A81;&#x7834;&#x5927;&#x591A;&#x5B66;&#x4E60;&#x969C;&#x788D;&#x7684;&#x6700;&#x7B80;&#x5355;&#x7C97;&#x66B4;&#x76F4;&#x63A5;&#x6709;&#x6548;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x6700;&#x597D;&#x5148;&#x76F4;&#x63A5;&#x770B;&#x770B; Regex &#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;&#x3002;&#x4EE5;&#x4E0B;&#xFF0C;&#x662F;&#x7528;&#x5FAE;&#x8F6F;&#x53D1;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x7F16;&#x8F91;&#x5DE5;&#x5177; Visual Studio Code &#x9488;&#x5BF9;&#x4E00;&#x5C0F;&#x6BB5;&#x6587;&#x672C;&#x4F7F;&#x7528;&#x82E5;&#x5E72;&#x6761; Regex &#x8FDB;&#x884C;&#x5339;&#x914D;&#x7684;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/regex-test.gif?raw=true" alt=""></p>
+<p>Python &#x7684;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x7B80;&#x77ED;&#x7684; Demo &#x7A0B;&#x5E8F;&#xFF0C;&#x53EB; <a href="https://github.com/python/cpython/blob/master/Tools/demo/redemo.py" target="_blank"><code>redemo.py</code></a>&#xFF0C;&#x5B83;&#x4F7F;&#x7528; <a href="https://docs.python.org/3/library/tkinter.html" target="_blank">Tcl/Tk</a> &#x4F5C;&#x4E3A;&#x56FE;&#x5F62;&#x754C;&#x9762;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6D4B;&#x8BD5;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<p>&#x5B83;&#x7684;&#x4EE3;&#x7801;&#x5730;&#x5740;&#x662F;&#xFF1A;</p>
+<blockquote>
+<p><a href="https://raw.githubusercontent.com/python/cpython/master/Tools/demo/redemo.py" target="_blank">https://raw.githubusercontent.com/python/cpython/master/Tools/demo/redemo.py</a></p>
+</blockquote>
+<p>&#x5B83;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x957F;&#x6210;&#x8FD9;&#x6837;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/redemo.png?raw=true" alt=""></p>
+<p>&#x76EE;&#x524D;&#xFF08;2019&#xFF09;&#x7F51;&#x4E0A;&#x6700;&#x65B9;&#x4FBF;&#x7684; Regex &#x6D4B;&#x8BD5;&#x5668;&#xFF0C;&#x662F; <a href="https://regex101.com" target="_blank">regex101.com</a>&#xFF1A;</p>
+<p>&#x4EE5;&#x4E0B;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x4E00;&#x6BB5;&#x6587;&#x672C;&#x4E2D;&#xFF0C;&#x627E;&#x51FA;&#x6240;&#x6709;&#x9996;&#x5199;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x7684;&#x8BCD;&#x6C47;&#x7684;<em>&#x8FC7;&#x7A0B;</em>&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x5148;&#x5168;&#x90E8;&#x66FF;&#x6362;&#x6210;&#x5C0F;&#x5199;&#xFF0C;&#x518D;&#x5C06;&#x5176;&#x5168;&#x90E8;&#x66FF;&#x6362;&#x4E3A;&#x5927;&#x5199;&#x7684;&#x8FC7;&#x7A0B;&#xFF1B;&#x4F7F;&#x7528;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x662F; <code>([A-Z]\w+)</code>&#xFF0C;&#x66FF;&#x6362;&#x8868;&#x8FBE;&#x5F0F;&#x5206;&#x522B;&#x662F; <code>\L$1</code> &#x548C; <code>\U$1</code>&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/regex101.gif?raw=true" alt=""></p>
+<p>&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x592A;&#x597D;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5E73;&#x65E5;&#x91CC;&#x6211;&#x662F;&#x7528; <a href="https://github.com/jiahaog/nativefier" target="_blank">Nativefier</a> &#x5DE5;&#x5177;&#x5C06;&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x6253;&#x5305;&#x4E3A;&#x4E00;&#x4E2A; Mac Desktop App &#x4F7F;&#x7528;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x5B83;&#x4E5F;&#x6709;&#x5C40;&#x9650;&#xFF0C;&#x5C31;&#x662F;&#x88AB;&#x641C;&#x7D22;&#x6587;&#x4EF6;&#x7565;&#x5FAE;&#x5927;&#x70B9;&#x5C31;&#x62A5;&#x9519;&#xFF0C;&#x8BF4; <code>timeout</code>&#x2026;&#x2026;</p>
+<h2 id="&#x51C6;&#x5907;&#x5DE5;&#x4F5C;">&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h2>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x7528;&#x6765;&#x5F53;&#x4F5C;&#x7EC3;&#x4E60;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x53BB;&#x641C;&#x7D22;&#x66FF;&#x6362;&#x7684;&#x76EE;&#x6807;&#x3002;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5728;&#x5F53;&#x524D;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x662F;&#xFF1A;<code>regex-target-text-sample.txt</code>&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>pttn = r&apos;beg[iau]ns?&apos;</code> &#x8FD9;&#x4E00;&#x53E5;&#x4E2D;&#x7684; <a href="https://regexper.com#beg[iau]ns?" target="_blank"><code>beg[iau]ns?</code></a> &#x5C31;&#x662F; Regex &#x7684; Pattern&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5728; Python &#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5199; Pattern &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x8981;&#x5728;&#x5B57;&#x7B26;&#x4E32; <code>&apos;...&apos;</code> &#x4E4B;&#x524D;&#x52A0;&#x4E0A; <code>r</code>&#xFF0C;&#x5199;&#x6210; <code>r&apos;...&apos;</code>&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x4E0D;&#x7528; raw string &#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x6BCF;&#x4E2A;&#x8F6C;&#x4E49;&#x7B26;&#x53F7;&#x90FD;&#x8981;&#x5199;&#x6210; <code>\\</code>&#xFF1B;&#x5982;&#x679C;&#x7528; raw string&#xFF0C;&#x8F6C;&#x4E49;&#x7B26;&#x53F7;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; <code>\</code> &#x672C;&#x8EAB;&#x4E86;&#x2026;&#x2026; &#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x641C;&#x7D22; <code>\</code> &#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x672C;&#x8EAB;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x8FD8;&#x662F;&#x5F97;&#x5199; <code>\\</code>&#x3002;</p>
+<p>&#x800C; <code>re.findall(pttn, str)</code> &#x7684;&#x610F;&#x601D;&#x662F;&#x8BF4;&#xFF0C;&#x628A; <code>str</code> &#x4E2D;&#x6240;&#x6709;&#x4E0E; <code>pttn</code> &#x8FD9;&#x4E2A;&#x89C4;&#x5219;&#x4E00;&#x81F4;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x627E;&#x51FA;&#x6765;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;regex-target-text-sample.txt&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> f:
+    str = f.read()
+pttn = <span class="hljs-string">r&apos;beg[iau]ns?&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;begin&apos;, &apos;began&apos;, &apos;begun&apos;, &apos;begin&apos;]
+</code></pre><p>&#x6587;&#x4EF6; <code>regex-target-text-sample.txt</code> &#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>begin began begun bigins begining<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>google gooogle goooogle goooooogle<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>coloured color coloring  colouring colored<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>never ever verb however everest<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>520 52000 5200000 520000000 520000000000<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>error wonderer achroiocythaemia achroiocythemia<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>The white dog wears a black hat.<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>Handel, H&#xE4;ndel, Haendel<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>(843) 542-4256<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>(431) 270-9664<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>3336741162<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>3454953965<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>peoplesr@live.com<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>jaxweb@hotmail.com<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>dhwon@comcast.net<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>krueger@me.com<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>URLs<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+https://docs.python.org/3/howto/regex.html
+https://docs.python.org/3/library/re.html
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>passwords<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+Pasw0rd~
+i*Eh,GF67E
+a$4Bh9XE&amp;E
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>duplicate words<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>It&apos;s very very big.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Keep it simple, simple, simple!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>&#x5728;&#x4EE5;&#x4E0B;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6709;&#x65F6;&#x76F4;&#x63A5;&#x8BBE;&#x5B9A;&#x4E86; str &#x7684;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x4EE5;&#x4E0A;&#x6574;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6; &#x2014;&#x2014; &#x56E0;&#x4E3A;&#x8BFB;&#x8005;&#x5728;&#x9605;&#x8BFB;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6700;&#x597D;&#x80FD;&#x76F4;&#x63A5;&#x770B;&#x5230;&#x88AB;&#x641C;&#x7D22;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x5F97;&#x5230;&#x7684; Match &#x592A;&#x591A;&#xFF0C;&#x4E5F;&#x786E;&#x5B9E;&#x5F71;&#x54CD;&#x9605;&#x8BFB;&#x3002;</p>
+<h2 id="&#x4F18;&#x5148;&#x7EA7;">&#x4F18;&#x5148;&#x7EA7;</h2>
+<p>&#x6BD5;&#x7ADF;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x4E0D;&#x662F; &#x201C;&#x5565;&#x90FD;&#x4E0D;&#x61C2;&#x201D; &#x7684;&#x4EBA;&#x4E86;&#x3002;&#x4F60;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E00;&#x4E2A;&#x4E8B;&#x5B9E;&#xFF1A;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x65E0;&#x975E;&#x662F;&#x7528;&#x6765;&#x8FD0;&#x7B97;&#x7684;&#x3002;</p>
+<p>&#x6240;&#x8C13;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x5C31;&#x6709;&#x64CD;&#x4F5C;&#x7B26;&#xFF08;Operators&#xFF09;&#x548C;&#x64CD;&#x4F5C;&#x5143;&#xFF08;Operands&#xFF09;&#x2014;&#x2014; &#x800C;&#x64CD;&#x4F5C;&#x7B26;&#x80AF;&#x5B9A;&#x662F;&#x6709;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#xFF0C;&#x4E0D;&#x7136;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x591A;&#x64CD;&#x4F5C;&#x5143;&#x548C;&#x64CD;&#x4F5C;&#x7B26;&#x653E;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x7A76;&#x7ADF;&#x5148;&#x64CD;&#x4F5C;&#x54EA;&#x4E2A;&#x5462;&#xFF1F;</p>
+<p>Regex &#x4E5F;&#x4E00;&#x6837;&#xFF0C;&#x5B83;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E2A;&#x8FF7;&#x4F60;&#x8BED;&#x8A00;&#xFF08;Mini Language&#xFF09;&#x3002;&#x5728; Regex &#x4E2D;&#xFF0C;&#x64CD;&#x4F5C;&#x7B26;&#x80AF;&#x5B9A;&#x4E5F;&#x6709;&#x4F18;&#x5148;&#x7EA7;&#x3002;&#x5B83;&#x7684;&#x64CD;&#x4F5C;&#x5143;&#x6709;&#x4E2A;&#x4E13;&#x95E8;&#x7684;&#x540D;&#x79F0;&#xFF0C;<strong>&#x539F;&#x5B50;</strong>&#xFF08;Atom&#xFF09;&#x3002;</p>
+<p>&#x5148;&#x5927;&#x81F4;&#x770B;&#x770B;&#x5B83;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x4F60;&#x5C31;&#x4F1A;&#x5BF9;&#x5B83;&#x6709;&#x76F8;&#x5F53;&#x4E0D;&#x9519;&#x7684;&#x4E86;&#x89E3;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6392;&#x5217;</th>
+<th>&#x539F;&#x5B50;&#x4E0E;&#x64CD;&#x4F5C;&#x7B26;&#x4F18;&#x5148;&#x7EA7;</th>
+<th>&#xFF08;&#x4ECE;&#x9AD8;&#x5230;&#x4F4E;&#xFF09;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>&#x8F6C;&#x4E49;&#x7B26;&#x53F7; (Escaping Symbol)</td>
+<td><code>\</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>&#x5206;&#x7EC4;&#x3001;&#x6355;&#x83B7; (Grouping or Capturing)</td>
+<td><code>(...)</code> <code>(?:...)</code> <code>(?=...)</code> <code>(?!...)</code> <code>(?&lt;=...)</code> <code>(?&lt;!...)</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>&#x6570;&#x91CF; (Quantifiers)</td>
+<td><code>a*</code> <code>a+</code> <code>a?</code> <code>a{n, m}</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x5E8F;&#x5217;&#x4E0E;&#x5B9A;&#x4F4D;&#xFF08;Sequence and Anchor&#xFF09;</td>
+<td><code>abc</code> <code>^</code> <code>$</code> <code>\b</code> <code>\B</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>&#x6216;&#xFF08;Alternation&#xFF09;</td>
+<td>`a\</td>
+<td>b\</td>
+<td>c`</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&#x539F;&#x5B50; (Atoms)</td>
+<td><code>a</code> <code>[^abc]</code> <code>\t</code> <code>\r</code> <code>\n</code> <code>\d</code> <code>\D</code> <code>\s</code> <code>\S</code> <code>\w</code> <code>\W</code> <code>.</code></td>
+</tr>
+</tbody>
+</table>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x82E5;&#x662F;&#x5728;&#x4E4B;&#x524D;&#xFF0C;&#x6CA1;&#x6709;&#x81EA;&#x5B66;&#x8FC7;&#x3001;&#x7406;&#x89E3;&#x8FC7; Python&#xFF08;&#x6216;&#x8005;&#x4EFB;&#x4F55;&#x5176;&#x5B83;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF09;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x90A3;&#x4E48;&#x4E00;&#x4E0A;&#x6765;&#x5C31;&#x770B;&#x4E0A;&#x9762;&#x7684;&#x8868;&#x683C;&#x4E0D;&#x4EC5;&#x5BF9;&#x4F60;&#x6CA1;&#x6709;&#x5E2E;&#x52A9;&#xFF0C;&#x53EA;&#x80FD;&#x8BA9;&#x4F60;&#x66F4;&#x8FF7;&#x60D1;&#x3002;</p>
+<p>&#x2014;&#x2014; &#x8FD9;&#x5C31;&#x662F;&#x7406;&#x89E3;&#x80FD;&#x529B;&#x9010;&#x6B65;&#x79EF;&#x7D2F;&#x9010;&#x6B65;&#x52A0;&#x5F3A;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<h2 id="&#x539F;&#x5B50;">&#x539F;&#x5B50;</h2>
+<p>&#x5728; Regex &#x7684; Pattern &#x4E2D;&#xFF0C;&#x64CD;&#x4F5C;&#x5143;&#xFF0C;&#x5373;&#xFF0C;&#x88AB;&#x8FD0;&#x7B97;&#x7684; &#x201C;&#x503C;&#x201D;&#xFF0C;&#x88AB;&#x79F0;&#x4E3A;<strong>&#x539F;&#x5B50;</strong>&#xFF08;Atom&#xFF09;&#x3002;</p>
+<h3 id="&#x672C;&#x4E49;&#x5B57;&#x7B26;">&#x672C;&#x4E49;&#x5B57;&#x7B26;</h3>
+<p>&#x6700;&#x57FA;&#x672C;&#x7684;&#x539F;&#x5B50;&#xFF0C;&#x5C31;&#x662F;&#x672C;&#x4E49;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
+<p>&#x672C;&#x4E49;&#x5B57;&#x7B26;&#x5305;&#x62EC;&#x4ECE; <code>a</code> &#x5230; <code>z</code>&#xFF0C;<code>A</code> &#x5230; <code>Z</code>&#xFF0C;<code>0</code> &#x5230; <code>9</code>&#xFF0C;&#x8FD8;&#x6709; <code>_</code> &#x2014;&#x2014; &#x5B83;&#x4EEC;&#x6240;&#x4EE3;&#x8868;&#x7684;&#x5C31;&#x662F;&#x5B83;&#x4EEC;&#x7684;&#x5B57;&#x9762;&#x503C;&#x3002;</p>
+<p>&#x5373;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#xFF0C;<code>string.ascii_letters</code> &#x548C; <code>string.digits</code> &#x4EE5;&#x53CA; <code>_</code>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+<span class="hljs-keyword">import</span> string
+string.ascii_letters
+string.digits
+</code></pre>
+<pre><code>&apos;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&apos;
+&apos;0123456789&apos;
+</code></pre><p>&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x5728; Regex &#x4E2D;&#x90FD;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#xFF1A;</p>
+<blockquote>
+<p><code>\</code> <code>+</code> <code>*</code> <code>.</code> <code>?</code> <code>-</code> <code>^</code> <code>$</code> <code>|</code> <code>(</code> <code>)</code> <code>[</code> <code>]</code> <code>{</code> <code>}</code> <code>&lt;</code> <code>&gt;</code></p>
+</blockquote>
+<p>&#x5F53;&#x4F60;&#x5728;&#x5199; Regex &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x641C;&#x7D22;&#x7684;&#x5B57;&#x7B26;&#x4E0D;&#x662F;&#x672C;&#x4E49;&#x5B57;&#x7B26;&#xFF0C;&#x800C;&#x662F;&#x4EE5;&#x4E0A;&#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x65F6;&#xFF0C;<em>&#x5EFA;&#x8BAE;</em>&#x90FD;&#x76F4;&#x63A5;&#x52A0;&#x4E0A;&#x8F6C;&#x4E49;&#x7B26;&#x53F7; <code>\</code> &#x6765;&#x8868;&#x793A;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x4F60;&#x60F3;&#x641C;&#x7D22; <code>&apos;</code>&#xFF0C;&#x90A3;&#x4F60;&#x5C31;&#x5199; <code>\&apos;</code>&#xFF0C;&#x6216;&#x8005;&#x4F60;&#x60F3;&#x641C;&#x7D22; <code>#</code> &#x90A3;&#x4F60;&#x5C31;&#x5199; <code>\#</code>&#xFF08;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;<code>#</code> &#x5E76;&#x4E0D;&#x662F; Regex &#x7684;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5B83;&#x4E4B;&#x524D;&#x7684;&#x8F6C;&#x4E49;&#x7B26;&#x53F7;&#x53EF;&#x6709;&#x53EF;&#x65E0;&#xFF09;&#x2014;&#x2014; &#x8FD9;&#x5BF9;&#x521D;&#x5B66;&#x8005;&#x6765;&#x8BF4;&#x53EF;&#x80FD;&#x662F;&#x6700;&#x5B89;&#x5168;&#x7684;&#x7B56;&#x7565;&#x3002;</p>
+<p>&#x8DDF;&#x8FC7;&#x5F80;&#x4E00;&#x6837;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x7EC6;&#x8282;&#x90FD;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x5B83;&#x4EEC;&#x5C31;&#x662F;&#x9700;&#x8981;&#x82B1;&#x65F6;&#x95F4;&#x9010;&#x6B65;&#x719F;&#x6089;&#x5230;&#x7262;&#x8BB0;&#x3002;</p>
+<h3 id="&#x96C6;&#x5408;&#x539F;&#x5B50;">&#x96C6;&#x5408;&#x539F;&#x5B50;</h3>
+<p>&#x96C6;&#x5408;&#x539F;&#x5B50;&#x8FD8;&#x662F;&#x539F;&#x5B50;&#x3002;</p>
+<p>&#x6807;&#x793A;&#x96C6;&#x5408;&#x539F;&#x5B50;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x62EC;&#x53F7; <code>[]</code>&#x3002;<code>[abc]</code> &#x7684;&#x610F;&#x601D;&#x662F;&#x8BF4;&#xFF0C;&#x201C;<code>a</code> or <code>b</code> or <code>c</code>&#x201D;&#xFF0C;&#x5373;&#xFF0C;<code>abc</code> &#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;<a href="https://regexper.com#beg[iau]n" target="_blank"><code>beg[iau]n</code></a> &#x80FD;&#x591F;&#x4EE3;&#x8868; <code>begin</code>&#x3001;<code>began</code>&#xFF0C;&#x4EE5;&#x53CA; <code>begun</code>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+str = <span class="hljs-string">&apos;begin began begun bigins begining&apos;</span>
+pttn = <span class="hljs-string">r&apos;beg[iau]n&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;begin&apos;, &apos;began&apos;, &apos;begun&apos;, &apos;begin&apos;]
+</code></pre><p>&#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;<code>-</code>&#xFF08;&#x533A;&#x95F4;&#xFF09;&#x548C; <code>^</code>&#xFF08;&#x975E;&#xFF09;&#x3002;</p>
+<ul>
+<li><code>[a-z]</code> &#x8868;&#x793A;&#x4ECE;&#x5C0F;&#x5199;&#x5B57;&#x6BCD; <code>a</code> &#x5230;&#x5C0F;&#x5199;&#x5B57;&#x6BCD; <code>z</code> &#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</li>
+<li><code>[^abc]</code> &#x8868;&#x793A; <code>abc</code> &#x4EE5;&#x5916;&#x7684;&#x5176;&#x5B83;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;&#x5373;&#xFF0C;&#x975E; <code>[abc]</code>&#x3002;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x539F;&#x5B50;&#x4E2D;&#xFF0C;<code>^</code> &#x7B26;&#x53F7;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x53EA;&#x80FD;&#x7D27;&#x8DDF;&#x5728; <code>[</code> &#x4E4B;&#x540E;&#x3002;&#x5426;&#x5219;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p>
+<h3 id="&#x7C7B;&#x522B;&#x539F;&#x5B50;">&#x7C7B;&#x522B;&#x539F;&#x5B50;</h3>
+<p>&#x7C7B;&#x522B;&#x539F;&#x5B50;&#xFF0C;&#x662F;&#x6307;&#x90A3;&#x4E9B;&#x80FD;&#x591F;&#x4EE3;&#x8868; &#x201C;&#x4E00;&#x7C7B;&#x5B57;&#x7B26;&#x201D; &#x7684;&#x539F;&#x5B50;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x5F97;&#x4F7F;&#x7528;&#x8F6C;&#x4E49;&#x7B26;&#x53F7;&#x518D;&#x52A0;&#x4E0A;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x8868;&#x8FBE;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;</p>
+<p><code>\d</code> &#x4EFB;&#x610F;&#x6570;&#x5B57;&#xFF1B;&#x7B49;&#x4EF7;&#x4E8E; <code>[0-9]</code></p>
+<p><code>\D</code> &#x4EFB;&#x610F;&#x975E;&#x6570;&#x5B57;&#xFF1B;&#x7B49;&#x4EF7;&#x4E8E; <code>[^0-9]</code></p>
+<p><code>\w</code> &#x4EFB;&#x610F;&#x672C;&#x4E49;&#x5B57;&#x7B26;&#xFF1B;&#x7B49;&#x4EF7;&#x4E8E; <code>[a-zA-Z0-9_]</code></p>
+<p><code>\W</code> &#x4EFB;&#x610F;&#x975E;&#x672C;&#x4E49;&#x5B57;&#x7B26;&#xFF1B;&#x7B49;&#x4EF7;&#x4E8E; <code>[^a-zA-Z0-9_]</code></p>
+<p><code>\s</code> &#x4EFB;&#x610F;&#x7A7A;&#x767D;&#xFF1B;&#x76F8;&#x5F53;&#x4E8E; <code>[ \f\n\r\t\v]</code>&#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x65B9;&#x62EC;&#x53F7;&#x5185;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x662F;&#x7A7A;&#x683C;&#x7B26;&#x53F7;&#xFF09;</p>
+<p><code>\S</code> &#x4EFB;&#x610F;&#x975E;&#x7A7A;&#x767D;&#xFF1B;&#x76F8;&#x5F53;&#x4E8E; <code>[^ \f\n\r\t\v]</code>&#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x7D27;&#x968F; <code>^</code> &#x4E4B;&#x540E;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#x7B26;&#x53F7;&#xFF09;</p>
+<p><code>.</code> &#x9664; <code>\r</code> <code>\n</code> &#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF1B;&#x76F8;&#x5F53;&#x4E8E; <code>[^\r\n]</code></p>
+<p>&#x7C7B;&#x522B;&#x539F;&#x5B50;&#x633A;&#x597D;&#x8BB0;&#x5FC6;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x77E5;&#x9053;&#x5404;&#x4E2A;&#x5B57;&#x6BCD;&#x662F;&#x54EA;&#x4E2A;&#x8BCD;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x7684;&#x8BDD;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li><code>d</code> &#x662F; digits</li>
+<li><code>w</code> &#x662F; word characters</li>
+<li><code>s</code> &#x662F; spaces</li>
+</ul>
+</blockquote>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5728;&#x7A7A;&#x767D;&#x7684;&#x96C6;&#x5408; <code>[ \f\n\r\t\v]</code> &#x4E2D;&#xFF1A;<code>\f</code> &#x662F;&#x5206;&#x9875;&#x7B26;&#xFF1B;<code>\n</code> <code>\r</code> &#x662F;&#x6362;&#x884C;&#x7B26;&#xFF1B;<code>\t</code> &#x662F;&#x5236;&#x8868;&#x7B26;&#xFF1B;<code>\v</code> &#x662F;&#x7EB5;&#x5411;&#x5236;&#x8868;&#x7B26;&#xFF08;&#x5F88;&#x5C11;&#x7528;&#x5230;&#xFF09;&#x3002;&#x5404;&#x79CD;&#x5173;&#x4E8E;&#x7A7A;&#x767D;&#x7684;&#x8F6C;&#x4E49;&#x7B26;&#x4E5F;&#x540C;&#x6837;&#x633A;&#x597D;&#x8BB0;&#x5FC6;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x77E5;&#x9053;&#x5404;&#x4E2A;&#x5B57;&#x6BCD;&#x662F;&#x90A3;&#x4E2A;&#x8BCD;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x7684;&#x8BDD;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li><code>f</code> &#x662F; flip</li>
+<li><code>n</code> &#x662F; new line</li>
+<li><code>r</code> &#x662F; return</li>
+<li><code>t</code> &#x662F; tab</li>
+<li><code>v</code> &#x662F; vertical tab</li>
+</ul>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+str = <span class="hljs-string">&apos;&lt;dl&gt;(843) 542-4256&lt;/dl&gt; &lt;dl&gt;(431) 270-9664&lt;/dl&gt;&apos;</span>
+pttn = <span class="hljs-string">r&apos;\d\d\d\-&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;542-&apos;, &apos;270-&apos;]
+</code></pre><h3 id="&#x8FB9;&#x754C;&#x539F;&#x5B50;">&#x8FB9;&#x754C;&#x539F;&#x5B50;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x8FB9;&#x754C;&#x539F;&#x5B50;&#x6307;&#x5B9A;&#x8FB9;&#x754C;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x79F0;&#x4F5C; &#x201C;&#x5B9A;&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;&#x201D;&#x3002;</p>
+<p><code>^</code> &#x5339;&#x914D;&#x88AB;&#x641C;&#x7D22;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#xFF1B;</p>
+<p><code>$</code> &#x5339;&#x914D;&#x88AB;&#x641C;&#x7D22;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#xFF1B;</p>
+<p><code>\b</code> &#x5339;&#x914D;&#x5355;&#x8BCD;&#x7684;&#x8FB9;&#x754C;&#xFF1B;<a href="https://regexper.com#er%5Cb" target="_blank"><code>er\b</code></a>&#xFF0C;&#x80FD;&#x5339;&#x914D; <code>coder</code> &#x4E2D;&#x7684; <code>er</code>&#xFF0C;&#x5374;&#x4E0D;&#x80FD;&#x5339;&#x914D; <code>error</code> &#x4E2D;&#x7684; <code>er</code>&#xFF1B;</p>
+<p><code>\B</code> &#x5339;&#x914D;&#x975E;&#x5355;&#x8BCD;&#x8FB9;&#x754C;&#xFF1B;<a href="https://regexper.com#er%5CB" target="_blank"><code>er\B</code></a>&#xFF0C;&#x80FD;&#x5339;&#x914D; <code>error</code> &#x4E2D;&#x7684; <code>er</code>&#xFF0C;&#x5374;&#x4E0D;&#x80FD;&#x5339;&#x914D; <code>coder</code> &#x4E2D;&#x7684; <code>er</code>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+str = <span class="hljs-string">&apos;never ever verb however everest&apos;</span>
+pttn = <span class="hljs-string">r&apos;er\b&apos;</span>
+re.findall(pttn, str)
+pttn = <span class="hljs-string">r&apos;er\B&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;er&apos;, &apos;er&apos;, &apos;er&apos;]
+[&apos;er&apos;, &apos;er&apos;]
+</code></pre><p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;<code>^</code> &#x548C; <code>$</code> &#x5728; Python &#x8BED;&#x8A00;&#x4E2D;&#x88AB; <code>\A</code> &#x548C; <code>\Z</code> &#x66FF;&#x4EE3;&#x3002;</p>
+<p>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x6BCF;&#x79CD;&#x8BED;&#x8A00;&#x6216;&#x591A;&#x6216;&#x5C11;&#x90FD;&#x5BF9; Regex &#x6709;&#x81EA;&#x5DF1;&#x7684;&#x5B9A;&#x5236;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x672C;&#x7AE0;&#x8BA8;&#x8BBA;&#x7684;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7EC6;&#x8282;&#xFF0C;&#x90FD;&#x662F;&#x901A;&#x7528;&#x7684;&#x3002;</p>
+<h3 id="&#x7EC4;&#x5408;&#x539F;&#x5B50;">&#x7EC4;&#x5408;&#x539F;&#x5B50;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x5706;&#x62EC;&#x53F7; <code>()</code> &#x5C06;&#x591A;&#x4E2A;&#x5355;&#x5B57;&#x7B26;&#x539F;&#x5B50;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x539F;&#x5B50; &#x2014;&#x2014; &#x8FD9;&#x4E48;&#x505A;&#x7684;&#x7ED3;&#x679C;&#x662F;&#xFF0C;<code>()</code> &#x5185;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5C06;&#x88AB;&#x5F53;&#x4F5C;&#x4E00;&#x6574;&#x4E2A;&#x539F;&#x5B50;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x968F;&#x540E;&#x6211;&#x4EEC;&#x8981;&#x8BB2;&#x89E3;&#x7684;&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;<code>()</code> &#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x4F5C;&#x7528;&#xFF1A;<strong>&#x7EC4;&#x5408;</strong>&#xFF08;Grouping&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x521A;&#x521A;&#x8BB2;&#x5230;&#x7684;&#x4F5C;&#x7528;&#xFF1B;&#x800C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4F5C;&#x7528;&#x662F;<strong>&#x6355;&#x83B7;</strong>&#xFF08;Capturing)&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8BB2;&#x5230;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#x533A;&#x522B;&#xFF0C;<a href="https://regexper.com#er" target="_blank"><code>er</code></a>&#x3001;<a href="https://regexper.com#[er]" target="_blank"><code>[er]</code></a> &#x548C; <a href="https://regexper.com#(er" target="_blank"><code>(er)</code></a> &#x5404;&#x4E0D;&#x76F8;&#x540C;&#x3002;</p>
+<blockquote>
+<ul>
+<li><code>er</code> &#x662F;&#x4E24;&#x4E2A;&#x539F;&#x5B50;&#xFF0C;<code>&apos;e&apos;</code> &#x548C;&#x7D27;&#x968F;&#x5176;&#x540E;&#x7684; <code>&apos;r&apos;</code></li>
+<li><code>[er]</code> &#x662F;&#x4E00;&#x4E2A;&#x539F;&#x5B50;&#xFF0C;&#x6216;&#x8005; <code>&apos;e&apos;</code> &#x6216;&#x8005; <code>&apos;r&apos;</code>&#xFF1B;</li>
+<li><code>(er)</code> &#x662F;&#x4E00;&#x4E2A;&#x539F;&#x5B50;&#xFF0C;<code>&apos;er&apos;</code></li>
+</ul>
+</blockquote>
+<p>&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x8BB2;&#x5230;&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x518D;&#x6B21;&#x5F3A;&#x8C03;&#x8FD9;&#x70B9;&#x3002;</p>
+<h2 id="&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;">&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;</h2>
+<p>&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#x6709;&#xFF1A;<code>+</code> <code>?</code> <code>*</code> <code>{n, m}</code>&#x3002;</p>
+<p>&#x5B83;&#x4EEC;&#x662F;&#x7528;&#x6765;&#x9650;&#x5B9A;&#x4F4D;&#x4E8E;&#x5B83;&#x4EEC;&#x4E4B;&#x524D;&#x7684;&#x539F;&#x5B50;&#x5141;&#x8BB8;&#x51FA;&#x73B0;&#x7684;&#x4E2A;&#x6570;&#xFF1B;&#x4E0D;&#x52A0;&#x6570;&#x91CF;&#x9650;&#x5B9A;&#x5219;&#x4EE3;&#x8868;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#x4E14;&#x4EC5;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#xFF1A;</p>
+<p><code>+</code> &#x4EE3;&#x8868;&#x524D;&#x9762;&#x7684;&#x539F;&#x5B50;&#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#xFF0C;&#x5373;&#xFF1A;<code>&#x51FA;&#x73B0;&#x6B21;&#x6570; &#x2267; 1</code></p>
+<blockquote>
+<p>&#x4F8B;&#x5982;&#xFF0C;<a href="https://regexper.com#go+gle" target="_blank"><code>go+gle</code></a>&#x53EF;&#x4EE5;&#x5339;&#x914D; <code>google</code> <code>gooogle</code> <code>goooogle</code> &#x7B49;&#xFF1B;</p>
+</blockquote>
+<p><code>?</code> &#x4EE3;&#x8868;&#x524D;&#x9762;&#x7684;&#x539F;&#x5B50;&#x6700;&#x591A;&#x53EA;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#xFF0C;&#x5373;&#xFF1A;<code>0 &#x2266; &#x51FA;&#x73B0;&#x6B21;&#x6570; &#x2266; 1</code></p>
+<blockquote>
+<p>&#x4F8B;&#x5982;&#xFF0C;<a href="https://regexper.com#colou?red" target="_blank"><code>colou?red</code></a>&#x53EF;&#x4EE5;&#x5339;&#x914D; <code>colored</code> &#x6216;&#x8005; <code>coloured</code>;</p>
+</blockquote>
+<p><code>*</code> &#x4EE3;&#x8868;&#x524D;&#x9762;&#x7684;&#x539F;&#x5B50;&#x53EF;&#x4EE5;&#x4E0D;&#x51FA;&#x73B0;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#x6216;&#x8005;&#x591A;&#x6B21;&#xFF0C;&#x5373;&#xFF1A;<code>&#x51FA;&#x73B0;&#x6B21;&#x6570; &#x2267; 0</code></p>
+<blockquote>
+<p>&#x4F8B;&#x5982;&#xFF0C;<a href="https://regexper.com#520*" target="_blank"><code>520*</code></a>&#x53EF;&#x4EE5;&#x5339;&#x914D; <code>52</code> <code>520</code> <code>52000</code> <code>5200000</code> <code>520000000000</code> &#x7B49;&#x3002;</p>
+</blockquote>
+<p><code>{n}</code> &#x4E4B;&#x524D;&#x7684;&#x539F;&#x5B50;&#x51FA;&#x73B0;&#x786E;&#x5B9A;&#x7684; <code>n</code> &#x6B21;&#xFF1B;</p>
+<p><code>{n,}</code> &#x4E4B;&#x524D;&#x7684;&#x539F;&#x5B50;&#x51FA;&#x73B0;&#x81F3;&#x5C11; <code>n</code> &#x6B21;&#xFF1B;</p>
+<p><code>{n, m}</code> &#x4E4B;&#x524D;&#x7684;&#x539F;&#x5B50;&#x51FA;&#x73B0;&#x81F3;&#x5C11; <code>n</code> &#x6B21;&#xFF0C;&#x81F3;&#x591A; <code>m</code> &#x6B21;</p>
+<blockquote>
+<p>&#x4F8B;&#x5982;&#xFF0C;<a href="https://regexper.com#go%7B2,5%7Dgle" target="_blank"><code>go{2,5}gle</code></a>&#xFF0C;&#x80FD;&#x5339;&#x914D; <code>google</code> <code>gooogle</code> <code>goooogle</code> &#x6216; <code>gooooogle</code>&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5339;&#x914D; <code>gogle</code> &#x548C; <code>gooooooogle</code></p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+<span class="hljs-keyword">import</span> re
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;regex-target-text-sample.txt&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> f:
+    str = f.read()
+
+pttn = <span class="hljs-string">r&apos;go+gle&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;go{2,5}gle&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;colou?red&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;520*&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;google&apos;, &apos;gooogle&apos;, &apos;goooogle&apos;, &apos;goooooogle&apos;]
+
+[&apos;google&apos;, &apos;gooogle&apos;, &apos;goooogle&apos;]
+
+[&apos;coloured&apos;, &apos;colored&apos;]
+
+[&apos;520&apos;, &apos;52000&apos;, &apos;5200000&apos;, &apos;520000000&apos;, &apos;520000000000&apos;]
+</code></pre><p>&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#x662F;&#x5BF9;&#x5B83;&#x4E4B;&#x524D;&#x7684;&#x539F;&#x5B50;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x6362;&#x8A00;&#x4E4B;&#xFF0C;&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x64CD;&#x4F5C;&#x5143;&#x662F;&#x64CD;&#x4F5C;&#x7B26;&#x4E4B;&#x524D;&#x7684;&#x539F;&#x5B50;&#x3002;</p>
+<p>&#x4E0A;&#x4E00;&#x8282;&#x63D0;&#x5230;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x533A;&#x522B;&#xFF1A;<code>er</code>&#x3001;<code>[er]</code> &#x548C; <code>(er)</code> &#x5404;&#x4E0D;&#x76F8;&#x540C;&#x3002;</p>
+<blockquote>
+<ul>
+<li><code>er</code> &#x662F;&#x4E24;&#x4E2A;&#x539F;&#x5B50;&#xFF0C;<code>&apos;e&apos;</code> &#x4E4B;&#x540E; <code>&apos;r&apos;</code></li>
+<li><code>[er]</code> &#x662F;&#x4E00;&#x4E2A;&#x539F;&#x5B50;&#xFF0C;&#x6216;&#x8005; <code>&apos;e&apos;</code> &#x6216;&#x8005; <code>&apos;r&apos;</code>&#xFF1B;</li>
+<li><code>(er)</code> &#x662F;&#x4E00;&#x4E2A;&#x539F;&#x5B50;&#xFF0C;<code>&apos;er&apos;</code></li>
+</ul>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+<span class="hljs-keyword">import</span> re
+
+str = <span class="hljs-string">&apos;error wonderer severeness&apos;</span>
+
+pttn = <span class="hljs-string">r&apos;er&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;[er]&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;(er)&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;er&apos;, &apos;er&apos;, &apos;er&apos;, &apos;er&apos;]
+[&apos;e&apos;, &apos;r&apos;, &apos;r&apos;, &apos;r&apos;, &apos;e&apos;, &apos;r&apos;, &apos;e&apos;, &apos;r&apos;, &apos;e&apos;, &apos;e&apos;, &apos;r&apos;, &apos;e&apos;, &apos;e&apos;]
+[&apos;er&apos;, &apos;er&apos;, &apos;er&apos;, &apos;er&apos;]
+</code></pre><p>&#x5728;&#x4EE5;&#x4E0A;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x770B;&#x4E0D;&#x51FA; <code>er</code> &#x548C; <code>(er)</code> &#x7684;&#x533A;&#x522B;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x52A0;&#x4E0A;&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#x5C31;&#x4E0D;&#x4E00;&#x6837;&#x4E86; &#x2014;&#x2014; &#x56E0;&#x4E3A;<em>&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#x53EA;&#x5BF9;&#x5B83;&#x4E4B;&#x524D;&#x7684;&#x90A3;&#x4E00;&#x4E2A;&#x539F;&#x5B50;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</em>&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+<span class="hljs-keyword">import</span> re
+
+str = <span class="hljs-string">&apos;error wonderer severeness&apos;</span>
+
+pttn = <span class="hljs-string">r&apos;er+&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;[er]+&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;(er)+&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;err&apos;, &apos;er&apos;, &apos;er&apos;, &apos;er&apos;]
+[&apos;err&apos;, &apos;r&apos;, &apos;erer&apos;, &apos;e&apos;, &apos;ere&apos;, &apos;e&apos;]
+[&apos;er&apos;, &apos;er&apos;, &apos;er&apos;]
+</code></pre><h2 id="&#x6216;&#x64CD;&#x4F5C;&#x7B26;-">&#x6216;&#x64CD;&#x4F5C;&#x7B26; <code>|</code></h2>
+<p>&#x6216;&#x64CD;&#x4F5C;&#x7B26; <code>|</code> &#x662F;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x7B26;&#x4E2D;&#x4F18;&#x5148;&#x7EA7;&#x6700;&#x4F4E;&#x7684;&#xFF0C;&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6BD4;&#x5B83;&#x9AD8;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5728; <code>|</code> &#x524D;&#x540E;&#x7684;&#x539F;&#x5B50;&#x88AB;&#x6570;&#x91CF;&#x64CD;&#x4F5C;&#x7B26;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#x624D;&#x4EA4;&#x7ED9; <code>|</code> &#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x4E8E;&#x662F;&#xFF0C;<a href="https://regexper.com#begin%7Cbegan%7Cbegun" target="_blank"><code>begin|began|begun</code></a> &#x80FD;&#x591F;&#x5339;&#x914D; <code>begin</code> &#x6216; <code>began</code> &#x6216; <code>begun</code>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+str = <span class="hljs-string">&apos;begin began begun begins beginn&apos;</span>
+pttn = <span class="hljs-string">r&apos;begin|began|begun&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;begin&apos;, &apos;began&apos;, &apos;begun&apos;, &apos;begin&apos;, &apos;begin&apos;]
+</code></pre><p>&#x5728;&#x96C6;&#x5408;&#x539F;&#x5B50;&#x4E2D;&#xFF08;&#x5373;&#xFF0C;<code>[]</code> &#x5185;&#x7684;&#x539F;&#x5B50;&#xFF09;&#x5404;&#x4E2A;&#x539F;&#x5B50;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x53EA;&#x6709; &#x201C;&#x6216;&#x201D; &#x2014;&#x2014; &#x76F8;&#x5F53;&#x4E8E;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x4E4B;&#x95F4;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x88AB;&#x7701;&#x7565;&#x7684; <code>|</code>&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x65B9;&#x62EC;&#x53F7;&#x7684; <code>|</code> &#x4E0D;&#x88AB;&#x5F53;&#x4F5C;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#xFF0C;&#x800C;&#x662F;&#x88AB;&#x5F53;&#x4F5C; <code>|</code> &#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x672C;&#x8EAB;&#x3002;&#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5706;&#x62EC;&#x53F7;&#xFF0C;&#x4E5F;&#x88AB;&#x5F53;&#x4F5C;&#x5706;&#x62EC;&#x53F7; <code>()</code> &#x672C;&#x8EAB;&#xFF0C;&#x800C;&#x65E0;&#x5206;&#x7EC4;&#x542B;&#x4E49;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+<span class="hljs-keyword">import</span> re
+
+str = <span class="hljs-string">&apos;achroiocythaemia achroiocythemia a|e&apos;</span>
+pttn = <span class="hljs-string">r&apos;[a|ae]&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;[a|e]&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;[ae]&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;[(ae)]&apos;</span>
+re.findall(pttn, str)
+
+pttn = <span class="hljs-string">r&apos;[a|ae|(ae)]&apos;</span>
+re.findall(pttn, str)
+</code></pre>
+<pre><code>[&apos;a&apos;, &apos;a&apos;, &apos;e&apos;, &apos;a&apos;, &apos;a&apos;, &apos;e&apos;, &apos;a&apos;, &apos;a&apos;, &apos;|&apos;, &apos;e&apos;]
+</code></pre><h2 id="&#x5339;&#x914D;&#x5E76;&#x6355;&#x83B7;">&#x5339;&#x914D;&#x5E76;&#x6355;&#x83B7;</h2>
+<p>&#x6355;&#x83B7;&#xFF08;Capture&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5706;&#x62EC;&#x53F7; <code>()</code>&#x3002;&#x4F7F;&#x7528;&#x5706;&#x62EC;&#x53F7;&#x5F97;&#x5230;&#x7684;&#x5339;&#x914D;&#x7684;&#x503C;&#x88AB;&#x6682;&#x5B58;&#x6210;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x7D22;&#x5F15;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x662F; <code>$1</code>&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F; <code>$2</code>&#x2026;&#x2026; &#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;&#x968F;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x66FF;&#x6362;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528; <code>$1</code> <code>$2</code> &#x4E2D;&#x6240;&#x4FDD;&#x5B58;&#x7684;&#x503C;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5728; Python &#x8BED;&#x8A00;&#x4E2D;&#x8C03;&#x7528; <code>re</code> &#x6A21;&#x5757;&#x4E4B;&#x540E;&#xFF0C;&#x5728; <code>re.sub()</code> &#x4E2D;&#x8C03;&#x7528;&#x88AB;&#x5339;&#x914D;&#x7684;&#x503C;&#xFF0C;&#x7528;&#x7684;&#x7D22;&#x5F15;&#x65B9;&#x6CD5;&#x662F; <code>\1</code>&#x3001;<code>\2</code>&#x2026;&#x2026; &#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+str = <span class="hljs-string">&apos;The white dog wears a black hat.&apos;</span>
+pttn = <span class="hljs-string">r&apos;The (white|black) dog wears a (white|black) hat.&apos;</span>
+re.findall(pttn, str)
+
+repl = <span class="hljs-string">r&apos;The \2 dog wears a \1 hat.&apos;</span>
+re.sub(pttn, repl, str)
+
+repl = <span class="hljs-string">r&apos;The \1 dog wears a \1 hat.&apos;</span>
+re.sub(pttn, repl, str)
+</code></pre>
+<pre><code>[(&apos;white&apos;, &apos;black&apos;)]
+&apos;The black dog wears a white hat.&apos;
+&apos;The white dog wears a white hat.&apos;
+</code></pre><h2 id="&#x975E;&#x6355;&#x83B7;&#x5339;&#x914D;">&#x975E;&#x6355;&#x83B7;&#x5339;&#x914D;</h2>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F60;&#x5E76;&#x4E0D;&#x60F3;&#x6355;&#x83B7;&#x5706;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5728;&#x90A3;&#x4E2A;&#x5730;&#x65B9;&#x4F60;&#x4F7F;&#x7528;&#x62EC;&#x53F7;&#x7684;&#x76EE;&#x7684;&#x53EA;&#x662F;&#x5206;&#x7EC4;&#xFF0C;&#x800C;&#x975E;&#x6355;&#x83B7;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x4F60;&#x5C31;&#x5728;&#x5706;&#x62EC;&#x53F7;&#x5185;&#x6700;&#x5F00;&#x5934;&#x52A0;&#x4E0A; <code>?:</code> &#x2014;&#x2014; <code>(?:...)</code>&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+str = <span class="hljs-string">&apos;The white dog wears a black hat.&apos;</span>
+pttn = <span class="hljs-string">r&apos;The (?:white|black) dog wears a (white|black) hat.&apos;</span>
+re.findall(pttn, str)                   <span class="hljs-comment"># &#x53EA;&#x6355;&#x83B7;&#x4E86;&#x4E00;&#x5904;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x503C;&#x5C06;&#x6765;&#x53EF;&#x4EE5;&#x88AB;&#x5F15;&#x7528;</span>
+
+repl = <span class="hljs-string">r&apos;The \1 dog wears a \1 hat.&apos;</span>    <span class="hljs-comment"># &#x4E4B;&#x524D;&#x7684;&#x4E00;&#x5904;&#x6355;&#x83B7;&#xFF0C;&#x5728;&#x66FF;&#x6362;&#x65F6;&#x53EF;&#x88AB;&#x591A;&#x6B21;&#x5F15;&#x7528;</span>
+&#x66F8;&#x8A55;
+re.sub(pttn, repl, str)
+</code></pre>
+<pre><code>[&apos;black&apos;]
+
+&apos;The black dog wears a black hat.&apos;
+</code></pre><p>&#x5728; Python &#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5339;&#x914D;&#x548C;&#x6355;&#x83B7;&#x4EE5;&#x53CA;&#x968F;&#x540E;&#x7684;&#x66FF;&#x6362;&#xFF0C;&#x6709;&#x66F4;&#x7075;&#x6D3B;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x4EE5;&#x5BF9;&#x90A3;&#x4E9B;&#x503C;&#x76F4;&#x63A5;&#x7F16;&#x7A0B;&#x3002;<code>re.sub()</code> &#x4E2D;&#xFF0C;<code>repl</code> &#x53C2;&#x6570;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570; &#x2014;&#x2014; &#x4EE5;&#x540E;&#x4F60;&#x80AF;&#x5B9A;&#x4F1A;&#x81EA;&#x884C;&#x8BA4;&#x771F;&#x9605;&#x8BFB;&#x4EE5;&#x4E0B;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF1A;</p>
+<blockquote>
+<p><a href="https://docs.python.org/3/library/re.html" target="_blank">https://docs.python.org/3/library/re.html</a></p>
+</blockquote>
+<p>&#x975E;&#x6355;&#x83B7;&#x5339;&#x914D;&#xFF0C;&#x8FD8;&#x6709;&#x82E5;&#x5E72;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;</p>
+<p> <code>(?=pattern)</code></p>
+<blockquote>
+<p>&#x6B63;&#x5411;&#x80AF;&#x5B9A;&#x9884;&#x67E5;&#xFF08;look ahead positive assert&#xFF09;&#xFF0C;&#x5728;&#x4EFB;&#x4F55;&#x5339;&#x914D;&#x89C4;&#x5219;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5F00;&#x59CB;&#x5904;&#x5339;&#x914D;&#x67E5;&#x627E;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x83B7;&#x53D6;&#x5339;&#x914D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x8BE5;&#x5339;&#x914D;&#x4E0D;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x4F9B;&#x4EE5;&#x540E;&#x4F7F;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF0C;<a href="https://regexper.com#%60Windows(?=95%7C98%7CNT%7C2000" target="_blank"><code>Windows(?=95|98|NT|2000)</code></a>%60)
+&#x80FD;&#x5339;&#x914D; <code>Windows2000</code> &#x4E2D;&#x7684; <code>Windows</code>&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5339;&#x914D; <code>Windows3.1</code> &#x4E2D;&#x7684; <code>Windows</code>&#x3002;&#x9884;&#x67E5;&#x4E0D;&#x6D88;&#x8017;&#x5B57;&#x7B26;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x53D1;&#x751F;&#x540E;&#xFF0C;&#x5728;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x4E4B;&#x540E;&#x7ACB;&#x5373;&#x5F00;&#x59CB;&#x4E0B;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x7684;&#x641C;&#x7D22;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4ECE;&#x5305;&#x542B;&#x9884;&#x67E5;&#x7684;&#x5B57;&#x7B26;&#x4E4B;&#x540E;&#x5F00;&#x59CB;&#x3002;</p>
+</blockquote>
+<p><code>(?!pattern)</code></p>
+<blockquote>
+<p>&#x6B63;&#x5411;&#x5426;&#x5B9A;&#x9884;&#x67E5;&#xFF08;negative assert&#xFF09;&#xFF0C;&#x5728;&#x4EFB;&#x4F55;&#x4E0D;&#x5339;&#x914D;&#x89C4;&#x5219;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5F00;&#x59CB;&#x5904;&#x5339;&#x914D;&#x67E5;&#x627E;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x83B7;&#x53D6;&#x5339;&#x914D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x8BE5;&#x5339;&#x914D;&#x4E0D;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x4F9B;&#x4EE5;&#x540E;&#x4F7F;&#x7528;&#x3002;&#x4F8B;&#x5982;<a href="https://regexper.com#Windows(?=95%7C98%7CNT%7C2000" target="_blank"><code>Windows(?!95|98|NT|2000)</code></a>)
+&#x80FD;&#x5339;&#x914D; <code>Windows3.1</code> &#x4E2D;&#x7684; <code>Windows</code>&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5339;&#x914D; <code>Windows2000</code> &#x4E2D;&#x7684; <code>Windows</code>&#x3002;&#x9884;&#x67E5;&#x4E0D;&#x6D88;&#x8017;&#x5B57;&#x7B26;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x53D1;&#x751F;&#x540E;&#xFF0C;&#x5728;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x4E4B;&#x540E;&#x7ACB;&#x5373;&#x5F00;&#x59CB;&#x4E0B;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x7684;&#x641C;&#x7D22;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4ECE;&#x5305;&#x542B;&#x9884;&#x67E5;&#x7684;&#x5B57;&#x7B26;&#x4E4B;&#x540E;&#x5F00;&#x59CB;&#x3002;</p>
+</blockquote>
+<p><code>(?&lt;=pattern)</code></p>
+<blockquote>
+<p>&#x53CD;&#x5411;&#xFF08;look behind&#xFF09;&#x80AF;&#x5B9A;&#x9884;&#x67E5;&#xFF0C;&#x4E0E;&#x6B63;&#x5411;&#x80AF;&#x5B9A;&#x9884;&#x67E5;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EA;&#x662F;&#x65B9;&#x5411;&#x76F8;&#x53CD;&#x3002;&#x4F8B;&#x5982;&#xFF0C;<a href="https://regexper.com#(?%3C=95%7C98%7CNT%7C2000" target="_blank"><code>(?&lt;=95|98|NT|2000)Windows</code></a>Windows)
+&#x80FD;&#x5339;&#x914D; <code>2000Windows</code> &#x4E2D;&#x7684; <code>Windows</code>&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5339;&#x914D; <code>3.1Windows</code> &#x4E2D;&#x7684; <code>Windows</code>&#x3002;</p>
+</blockquote>
+<p> <code>(?&lt;!pattern)</code></p>
+<blockquote>
+<p>&#x53CD;&#x5411;&#x5426;&#x5B9A;&#x9884;&#x67E5;&#xFF0C;&#x4E0E;&#x6B63;&#x5411;&#x5426;&#x5B9A;&#x9884;&#x67E5;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EA;&#x662F;&#x65B9;&#x5411;&#x76F8;&#x53CD;&#x3002;&#x4F8B;&#x5982; <code>(?&lt;!95|98|NT|2000)Windows</code>
+&#x80FD;&#x5339;&#x914D; <code>3.1Windows</code> &#x4E2D;&#x7684; <code>Windows</code>&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5339;&#x914D; <code>2000Windows</code> &#x4E2D;&#x7684; <code>Windows</code>&#x3002;</p>
+</blockquote>
+<h2 id="&#x63A7;&#x5236;&#x6807;&#x8BB0;">&#x63A7;&#x5236;&#x6807;&#x8BB0;</h2>
+<p>&#x6709;&#x51E0;&#x4E2A;&#x5168;&#x5C40;&#x63A7;&#x5236;&#x6807;&#x8BB0;&#xFF08;Flag&#xFF09;&#x9700;&#x8981;&#x4E86;&#x89E3;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x5E38;&#x9ED8;&#x8BA4;&#x6307;&#x5B9A;&#x7684;&#x6709; <code>G</code> &#x548C; <code>M</code>&#xFF1A;</p>
+<p><code>A</code>/<code>ASCII</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>False</code></p>
+<blockquote>
+<ul>
+<li><code>\d</code>, <code>\D</code>, <code>\w</code>, <code>\W</code>, <code>\s</code>, <code>\S</code>, <code>\b</code>, &#x548C; <code>\B</code> &#x7B49;&#x53EA;&#x9650;&#x4E8E; ASCII &#x5B57;&#x7B26;</li>
+<li>&#x884C;&#x5185;&#x5199;&#x6CD5;&#xFF1A;<code>(?a)</code></li>
+<li>Python re &#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#xFF1A;<code>re.A</code> <code>re.ASCII</code></li>
+</ul>
+</blockquote>
+<p><code>I</code>/<code>IGNORECASE</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>False</code></p>
+<blockquote>
+<ul>
+<li>&#x5FFD;&#x7565;&#x5B57;&#x6BCD;&#x5927;&#x5C0F;&#x5199;</li>
+<li>&#x884C;&#x5185;&#x5199;&#x6CD5;&#xFF1A;<code>(?i)</code></li>
+<li>Python re &#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#xFF1A;<code>re.I</code> <code>re.IGNORECASE</code></li>
+</ul>
+</blockquote>
+<p><code>G</code>/<code>GLOBAL</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>True</code></p>
+<blockquote>
+<ul>
+<li>&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A; match &#x4E4B;&#x540E;&#x4E0D;&#x8FD4;&#x56DE;</li>
+<li>&#x884C;&#x5185;&#x5199;&#x6CD5;&#xFF1A;<code>(?g)</code></li>
+<li>Python re &#x6A21;&#x5757;&#x4E2D;&#x8FD9;&#x4E2A;&#x6807;&#x8BB0;&#x4E0D;&#x80FD;&#x66F4;&#x6539;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; TRUE</li>
+</ul>
+</blockquote>
+<p><code>L</code>/<code>LOCALE</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>False</code></p>
+<blockquote>
+<ul>
+<li>&#x7531;&#x672C;&#x5730;&#x8BED;&#x8A00;&#x8BBE;&#x7F6E;&#x51B3;&#x5B9A; <code>\d</code>, <code>\D</code>, <code>\w</code>, <code>\W</code>, <code>\s</code>, <code>\S</code>, <code>\b</code>, &#x548C; <code>\B</code> &#x7B49;&#x7B49;&#x7684;&#x5185;&#x5BB9;</li>
+<li>&#x884C;&#x5185;&#x5199;&#x6CD5;&#xFF1A;<code>(?L)</code></li>
+<li>Python re &#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#xFF1A;<code>re.L</code> <code>re.LOCALE</code></li>
+</ul>
+</blockquote>
+<p><code>M</code>/<code>MULTILINE</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>True</code></p>
+<blockquote>
+<ul>
+<li>&#x4F7F;&#x7528;&#x672C;&#x6807;&#x5FD7;&#x540E;&#xFF0C;<code>^</code> &#x548C; <code>$</code> &#x5339;&#x914D;&#x884C;&#x9996;&#x548C;&#x884C;&#x5C3E;&#x65F6;&#xFF0C;&#x4F1A;&#x589E;&#x52A0;&#x6362;&#x884C;&#x7B26;&#x4E4B;&#x524D;&#x548C;&#x4E4B;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li>&#x884C;&#x5185;&#x5199;&#x6CD5;&#xFF1A;<code>(?m)</code></li>
+<li>Python re &#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#xFF1A;<code>re.M</code> <code>re.MULTILINE</code></li>
+</ul>
+</blockquote>
+<p><code>S</code>/<code>DOTALL</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>False</code></p>
+<blockquote>
+<ul>
+<li>&#x4F7F; <code>.</code> &#x5B8C;&#x5168;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5B57;&#x7B26;&#xFF0C;&#x5305;&#x62EC;&#x6362;&#x884C;&#xFF1B;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6807;&#x5FD7;&#xFF0C;<code>.</code> &#x5339;&#x914D;&#x9664;&#x4E86; <code>n</code> <code>r</code> &#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x5B57;&#x7B26;&#x3002;</li>
+<li>&#x884C;&#x5185;&#x5199;&#x6CD5;&#xFF1A;<code>(?s)</code></li>
+<li>Python re &#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#xFF1A;<code>re.S</code> <code>re.DOTALL</code></li>
+</ul>
+</blockquote>
+<p><code>X</code>/<code>VERBOSE</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>False</code></p>
+<blockquote>
+<ul>
+<li>&#x5F53;&#x8BE5;&#x6807;&#x5FD7;&#x88AB;&#x6307;&#x5B9A;&#x65F6;&#xFF0C;Pattern &#x4E2D;&#x7684;&#x7684;&#x7A7A;&#x767D;&#x7B26;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x9664;&#x975E;&#x8BE5;&#x7A7A;&#x767D;&#x7B26;&#x5728;&#x5706;&#x62EC;&#x53F7;&#x6216;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#xFF0C;&#x6216;&#x5728;&#x53CD;&#x659C;&#x6760; <code>\</code> &#x4E4B;&#x540E;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x5141;&#x8BB8;&#x5C06;&#x6CE8;&#x91CA;&#x5199;&#x5165; Pattern&#xFF0C;&#x8FD9;&#x4E9B;&#x6CE8;&#x91CA;&#x4F1A;&#x88AB; Regex &#x89E3;&#x6790;&#x5F15;&#x64CE;&#x5FFD;&#x7565;&#x3002;&#x6CE8;&#x91CA;&#x7528; <code>#</code> &#x53F7;&#x6765;&#x6807;&#x8BC6;&#xFF0C;&#x4E0D;&#x8FC7;&#x8BE5;&#x7B26;&#x53F7;&#x4E0D;&#x80FD;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x53CD;&#x659C;&#x6760;&#x4E4B;&#x540E;&#x3002;</li>
+<li>&#x884C;&#x5185;&#x5199;&#x6CD5;&#xFF1A;<code>(?x)</code></li>
+<li>Python re &#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#xFF1A;<code>re.X</code> <code>re.VERBOSE</code></li>
+</ul>
+</blockquote>
+<h2 id="&#x51E0;&#x4E2A;&#x6700;&#x5E38;&#x7528;&#x7684;-regex">&#x51E0;&#x4E2A;&#x6700;&#x5E38;&#x7528;&#x7684; Regex</h2>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x51E0;&#x4E2A;&#x5E38;&#x7528;&#x7684; Regex<a href="#fn2" name="fn2b"><sup>[2]</sup></a>&#xFF0C;&#x503C;&#x5F97;&#x4FDD;&#x5B58;&#xFF1A;</p>
+<ul>
+<li><p>matching username</p>
+<blockquote>
+<p><a href="https://regexper.com#/%5E[a-z0-9_-]%7B3,16%7D$/" target="_blank"><code>/^[a-z0-9_-]{3,16}$/</code></a></p>
+</blockquote>
+</li>
+<li><p>matching password<a href="#fn3" name="fn3b"><sup>[3]</sup></a></p>
+<blockquote>
+<p><a href="https://regexper.com#/%5E[a-z0-9_-]%7B6,18%7D$/" target="_blank"><code>/^[a-z0-9_-]{6,18}$/</code></a></p>
+</blockquote>
+</li>
+<li><p>matching a HEX value</p>
+<blockquote>
+<p><a href="https://regexper.com#/%5E#?([a-f0-9]%7B6%7D%7C[a-f0-9]%7B3%7D" target="_blank"><code>/^#?([a-f0-9]{6}|[a-f0-9]{3})$/</code></a>$/)</p>
+</blockquote>
+</li>
+<li><p>matching a slug</p>
+<blockquote>
+<p><a href="https://regexper.com#/%5E[a-z0-9-]+$/" target="_blank"><code>/^[a-z0-9-]+$/</code></a></p>
+</blockquote>
+</li>
+<li><p>matching email address</p>
+<blockquote>
+<p><a href="https://regexper.com#/%5E([a-z0-9_%5C.-]+" target="_blank"><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/</code></a>@([%5Cda-z%5C.-]+)%5C.([a-z%5C.]%7B2,6%7D)$/)</p>
+</blockquote>
+</li>
+<li><p>matching a URL</p>
+<blockquote>
+<p><a href="https://regexper.com#/%5E(https?:%5C/%5C/" target="_blank"><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</code></a>?([%5Cda-z%5C.-]+)%5C.([a-z%5C.]%7B2,6%7D)([%5C/%5Cw%20%5C.-]<em>)</em>%5C/?$/)</p>
+</blockquote>
+</li>
+<li><p>matching an IP address</p>
+<blockquote>
+<p><a href="https://regexper.com/#%2F%5E%28%3F%3A%28%3F%3A25%5B0-5%5D%7C2%5B0-4%5D%5B0-9%5D%7C%5B01%5D%3F%5B0-9%5D%5B0-9%5D%3F%29%5C.%29%7B3%7D%28%3F%3A25%5B0-5%5D%7C2%5B0-4%5D%5B0-9%5D%7C%5B01%5D%3F%5B0-9%5D%5B0-9%5D%3F%29%24%2F" target="_blank"><code>/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/</code></a></p>
+</blockquote>
+</li>
+<li><p>matching a HTML tag</p>
+<blockquote>
+<p><a href="https://regexper.com/#%2F%5E&lt;%28%5Ba-z%5D%2B%29%28%5B%5E&lt;%5D%2B%29*%28%3F%3A&gt;%28.*%29&lt;%5C%2F%5C1&gt;%7C%5Cs%2B%5C%2F&gt;%29%24%2F" target="_blank"><code>/^&lt;([a-z]+)([^&lt;]+)*(?:&gt;(.*)&lt;\/\1&gt;|\s+\/&gt;)$/</code></a></p>
+</blockquote>
+</li>
+</ul>
+<p>&#x5BF9;&#x4E86;&#xFF0C;&#x544A;&#x8BC9;&#x4F60;&#x4E00;&#x4E2A;&#x5C0F;&#x79D8;&#x5BC6;&#xFF1A;</p>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x70B9;&#x51FB;&#x90FD;&#x80FD;&#x8FDE;&#x63A5;&#x5230; <a href="https://regexper.com" target="_blank">regexper.com</a>&#xFF0C;&#x5728;&#x90A3;&#x91CC;&#x4F60;&#x80FD;&#x67E5;&#x770B;&#x8FD9;&#x4E9B;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x56FE;&#x5F62;&#x5316;&#x793A;&#x610F;&#x56FE;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x672C;&#x6587;&#x4E2D;&#xFF0C;&#x5904;&#x4E8E; markdown cell &#x7684;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x90FD;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x8FDE;&#x63A5;&#x2026;&#x2026; &#x4F60;&#x53EF;&#x4EE5;&#x91CD;&#x8BFB;&#x7684;&#x65F6;&#x5019;&#x8BD5;&#x8BD5;&#x3002;</p>
+</blockquote>
+<p>&#x5199; Regex &#x6700;&#x70E7;&#x8111;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E; &#x201C;&#x4F7F;&#x5176;&#x5168;&#x9762;&#x201D; &#x2014;&#x2014; &#x8981;&#x8003;&#x8651;&#x5230;&#x5404;&#x79CD;&#x610F;&#x5916;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x9664;&#x975E;&#x5FC5;&#x8981;&#xFF0C;&#x4E5F;&#x4E0D;&#x8981;&#x5728; &#x201C;&#x5168;&#x9762;&#x201D; &#x8FD9;&#x4E8B;&#x4E0A;&#x9762;&#x82B1;&#x592A;&#x591A;&#x65F6;&#x95F4; &#x2014;&#x2014; &#x7ED9;&#x4F60;&#x770B;&#x4E00;&#x4E2A;&#x636E;&#x8BF4;&#x662F; &#x201C;&#x6700;&#x5927;&#x7A0B;&#x5EA6;&#x4E0A;&#x80FD;&#x591F;&#x5339;&#x914D;&#x6240;&#x6709; email &#x5730;&#x5740;&#x7684; Regex&#x201D; <a href="#fn4" name="fn4b"><sup>[4]</sup></a>&#xFF0C;&#x6211;&#x90FD;&#x61D2;&#x5F97;&#x6D4B;&#x8BD5;&#x7684;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-regex">(?:(?:\r\n)?[ \t])*(?:(?:(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t]
+)+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:
+\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(
+?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[
+\t]))*&quot;(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\0
+31]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\
+](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+
+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:
+(?:\r\n)?[ \t])*))*|(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z
+|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)
+?[ \t])*)*\&lt;(?:(?:\r\n)?[ \t])*(?:@(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\
+r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[
+ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)
+?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t]
+)*))*(?:,@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[
+ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*
+)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t]
+)+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*)
+*:(?:(?:\r\n)?[ \t])*)?(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+
+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r
+\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:
+\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t
+]))*&quot;(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031
+]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](
+?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?
+:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?
+:\r\n)?[ \t])*))*\&gt;(?:(?:\r\n)?[ \t])*)|(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?
+:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?
+[ \t]))*&quot;(?:(?:\r\n)?[ \t])*)*:(?:(?:\r\n)?[ \t])*(?:(?:(?:[^()&lt;&gt;@,;:\\&quot;.\[\]
+\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|
+\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;
+@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;
+(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t]
+)*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\
+&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?
+:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[
+\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*|(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-
+\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(
+?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])*)*\&lt;(?:(?:\r\n)?[ \t])*(?:@(?:[^()&lt;&gt;@,;
+:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([
+^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;
+.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\
+]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*(?:,@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\
+[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\
+r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\]
+\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]
+|\\.)*\](?:(?:\r\n)?[ \t])*))*)*:(?:(?:\r\n)?[ \t])*)?(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \0
+00-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\
+.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,
+;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?
+:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t])*
+(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.
+\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[
+^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]
+]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*\&gt;(?:(?:\r\n)?[ \t])*)(?:,\s*(
+?:(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\
+&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])*)(?:\.(?:(
+?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[
+\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t
+])*))*@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t
+])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?
+:\.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|
+\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*|(?:
+[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\
+]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])*)*\&lt;(?:(?:\r\n)
+?[ \t])*(?:@(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;
+()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)
+?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;
+@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*(?:,@(?:(?:\r\n)?[
+ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,
+;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t]
+)*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\
+&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*)*:(?:(?:\r\n)?[ \t])*)?
+(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.
+\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])*)(?:\.(?:(?:
+\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\[
+&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|&quot;(?:[^\&quot;\r\\]|\\.|(?:(?:\r\n)?[ \t]))*&quot;(?:(?:\r\n)?[ \t])
+*))*@(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])
++|\Z|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\
+.(?:(?:\r\n)?[ \t])*(?:[^()&lt;&gt;@,;:\\&quot;.\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z
+|(?=[\[&quot;()&lt;&gt;@,;:\\&quot;.\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*\&gt;(?:(
+?:\r\n)?[ \t])*))*)?;\s*)
+</code></pre>
+<h2 id="&#x8DA3;&#x4E8B;&#x4E00;&#x5219;">&#x8DA3;&#x4E8B;&#x4E00;&#x5219;</h2>
+<p><a href="https://en.wikipedia.org/wiki/ELIZA" target="_blank">ELIZA</a> &#x662F;&#x4EBA;&#x7C7B;&#x53F2;&#x4E0A;&#x7B2C;&#x4E00;&#x4E2A; &#x201C;&#x804A;&#x5929;&#x673A;&#x5668;&#x4EBA;&#x201D; &#x7A0B;&#x5E8F;&#xFF0C;&#x4E0A;&#x4E2A;&#x4E16;&#x7EAA;&#x516D;&#x5341;&#x5E74;&#x4EE3;&#xFF0C;1966 &#x5E74;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x6838;&#x5FC3;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x5BF9;&#x65B9;&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x6C47;&#xFF0C;&#x518D;&#x7ECF;&#x8FC7;&#x66FF;&#x6362;&#xFF0C;&#x5F62;&#x6210;&#x770B;&#x4F3C;&#x6709;&#x610F;&#x4E49;&#x7684; &#x201C;&#x56DE;&#x5E94;&#x201D; &#x2014;&#x2014; &#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;ELIZA &#x5B8C;&#x5168;&#x4E0D;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x5728;&#x8BF4;&#x4EC0;&#x4E48;&#x2026;&#x2026;</p>
+<p>&#x51E0;&#x5E74;&#x540E;&#xFF0C;&#x5C31;&#x662F;&#x4E03;&#x5341;&#x5E74;&#x4EE3;&#x521D;&#xFF0C;1972 &#x5E74;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x804A;&#x5929;&#x673A;&#x5668;&#x4EBA; <a href="https://en.wikipedia.org/wiki/PARRY" target="_blank">Parry</a> <a href="#fn5" name="fn5b"><sup>[5]</sup></a>&#x88AB;&#x5199;&#x4E86;&#x51FA;&#x6765;&#x2026;&#x2026; &#x968F;&#x540E;&#x7B2C;&#x4E8C;&#x5E74;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x804A;&#x5929;&#x673A;&#x5668;&#x4EBA;&#x5728; ARPANET &#x201C;&#x78B0;&#x9762;&#x201D; &#x597D;&#x597D;&#x5730;&#x804A;&#x4E86;&#x4E00;&#x4E0B;<a href="#fn6" name="fn6b"><sup>[6]</sup></a>&#xFF1A;</p>
+<blockquote>
+<p>ELIZA: Good Evening. Tell me your problems. Please terminate input with a period or a question mark.</p>
+<p>PARRY: People get on my nerves sometimes.</p>
+<p>ELIZA: I am not sure I understand you fully.</p>
+<p>PARRY: You should pay more attention.</p>
+<p>ELIZA: Suppose you should pay more attention.</p>
+<p>PARRY: You&apos;re entitled to your own opinion.</p>
+<p>ELIZA: What makes you think I am entitled to my own opinion?</p>
+<p>PARRY: It bothers me just to be around people in general.</p>
+<p>ELIZA: Please go on.</p>
+<p>PARRY: I went to the track at Bay Meadows a while back.</p>
+<p>ELIZA: What does that suggest to you?</p>
+<p>PARRY: I went to the races.</p>
+<p>......</p>
+</blockquote>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x540E;&#x4EBA;&#x7528; Python &#x91CD;&#x65B0;&#x5B9E;&#x73B0;&#x7684; ELIZA &#x7684;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x5B83;&#xFF0C;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#x4E0E; ELIZA &#x804A;&#x804A;&#x5929;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># %load https://raw.githubusercontent.com/jezhiggins/eliza.py/master/eliza.py</span>
+<span class="hljs-comment">#----------------------------------------------------------------------</span>
+<span class="hljs-comment">#  eliza.py</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#  a cheezy little Eliza knock-off by Joe Strout</span>
+<span class="hljs-comment">#  with some updates by Jeff Epler</span>
+<span class="hljs-comment">#  hacked into a module and updated by Jez Higgins</span>
+<span class="hljs-comment">#----------------------------------------------------------------------</span>
+
+<span class="hljs-keyword">import</span> string
+<span class="hljs-keyword">import</span> re
+<span class="hljs-keyword">import</span> random
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">eliza</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.keys = list(map(<span class="hljs-keyword">lambda</span> x:re.compile(x[<span class="hljs-number">0</span>], re.IGNORECASE),gPats))
+    self.values = list(map(<span class="hljs-keyword">lambda</span> x:x[<span class="hljs-number">1</span>],gPats))
+
+  <span class="hljs-comment">#----------------------------------------------------------------------</span>
+  <span class="hljs-comment"># translate: take a string, replace any words found in dict.keys()</span>
+  <span class="hljs-comment">#  with the corresponding dict.values()</span>
+  <span class="hljs-comment">#----------------------------------------------------------------------</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">translate</span><span class="hljs-params">(self,str,dict)</span>:</span>
+    words = str.lower().split()
+    keys = dict.keys();
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,len(words)):
+      <span class="hljs-keyword">if</span> words[i] <span class="hljs-keyword">in</span> keys:
+        words[i] = dict[words[i]]
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos; &apos;</span>.join(words)
+
+  <span class="hljs-comment">#----------------------------------------------------------------------</span>
+  <span class="hljs-comment">#  respond: take a string, a set of regexps, and a corresponding</span>
+  <span class="hljs-comment">#    set of response lists; find a match, and return a randomly</span>
+  <span class="hljs-comment">#    chosen response from the corresponding list.</span>
+  <span class="hljs-comment">#----------------------------------------------------------------------</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">respond</span><span class="hljs-params">(self,str)</span>:</span>
+    <span class="hljs-comment"># find a match among keys</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, len(self.keys)):
+      match = self.keys[i].match(str)
+      <span class="hljs-keyword">if</span> match:
+        <span class="hljs-comment"># found a match ... stuff with corresponding value</span>
+        <span class="hljs-comment"># chosen randomly from among the available options</span>
+        resp = random.choice(self.values[i])
+        <span class="hljs-comment"># we&apos;ve got a response... stuff in reflected text where indicated</span>
+        pos = resp.find(<span class="hljs-string">&apos;%&apos;</span>)
+        <span class="hljs-keyword">while</span> pos &gt; <span class="hljs-number">-1</span>:
+          num = int(resp[pos+<span class="hljs-number">1</span>:pos+<span class="hljs-number">2</span>])
+          resp = resp[:pos] + \
+            self.translate(match.group(num),gReflections) + \
+            resp[pos+<span class="hljs-number">2</span>:]
+          pos = resp.find(<span class="hljs-string">&apos;%&apos;</span>)
+        <span class="hljs-comment"># fix munged punctuation at the end</span>
+        <span class="hljs-keyword">if</span> resp[<span class="hljs-number">-2</span>:] == <span class="hljs-string">&apos;?.&apos;</span>: resp = resp[:<span class="hljs-number">-2</span>] + <span class="hljs-string">&apos;.&apos;</span>
+        <span class="hljs-keyword">if</span> resp[<span class="hljs-number">-2</span>:] == <span class="hljs-string">&apos;??&apos;</span>: resp = resp[:<span class="hljs-number">-2</span>] + <span class="hljs-string">&apos;?&apos;</span>
+        <span class="hljs-keyword">return</span> resp
+
+<span class="hljs-comment">#----------------------------------------------------------------------</span>
+<span class="hljs-comment"># gReflections, a translation table used to convert things you say</span>
+<span class="hljs-comment">#    into things the computer says back, e.g. &quot;I am&quot; --&gt; &quot;you are&quot;</span>
+<span class="hljs-comment">#----------------------------------------------------------------------</span>
+gReflections = {
+  <span class="hljs-string">&quot;am&quot;</span>   : <span class="hljs-string">&quot;are&quot;</span>,
+  <span class="hljs-string">&quot;was&quot;</span>  : <span class="hljs-string">&quot;were&quot;</span>,
+  <span class="hljs-string">&quot;i&quot;</span>    : <span class="hljs-string">&quot;you&quot;</span>,
+  <span class="hljs-string">&quot;i&apos;d&quot;</span>  : <span class="hljs-string">&quot;you would&quot;</span>,
+  <span class="hljs-string">&quot;i&apos;ve&quot;</span>  : <span class="hljs-string">&quot;you have&quot;</span>,
+  <span class="hljs-string">&quot;i&apos;ll&quot;</span>  : <span class="hljs-string">&quot;you will&quot;</span>,
+  <span class="hljs-string">&quot;my&quot;</span>  : <span class="hljs-string">&quot;your&quot;</span>,
+  <span class="hljs-string">&quot;are&quot;</span>  : <span class="hljs-string">&quot;am&quot;</span>,
+  <span class="hljs-string">&quot;you&apos;ve&quot;</span>: <span class="hljs-string">&quot;I have&quot;</span>,
+  <span class="hljs-string">&quot;you&apos;ll&quot;</span>: <span class="hljs-string">&quot;I will&quot;</span>,
+  <span class="hljs-string">&quot;your&quot;</span>  : <span class="hljs-string">&quot;my&quot;</span>,
+  <span class="hljs-string">&quot;yours&quot;</span>  : <span class="hljs-string">&quot;mine&quot;</span>,
+  <span class="hljs-string">&quot;you&quot;</span>  : <span class="hljs-string">&quot;me&quot;</span>,
+  <span class="hljs-string">&quot;me&quot;</span>  : <span class="hljs-string">&quot;you&quot;</span>
+}
+
+<span class="hljs-comment">#----------------------------------------------------------------------</span>
+<span class="hljs-comment"># gPats, the main response table.  Each element of the list is a</span>
+<span class="hljs-comment">#  two-element list; the first is a regexp, and the second is a</span>
+<span class="hljs-comment">#  list of possible responses, with group-macros labelled as</span>
+<span class="hljs-comment">#  %1, %2, etc.</span>
+<span class="hljs-comment">#----------------------------------------------------------------------</span>
+gPats = [
+  [<span class="hljs-string">r&apos;I need (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Why do you need %1?&quot;</span>,
+    <span class="hljs-string">&quot;Would it really help you to get %1?&quot;</span>,
+    <span class="hljs-string">&quot;Are you sure you need %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Why don\&apos;?t you ([^\?]*)\??&apos;</span>,
+  [  <span class="hljs-string">&quot;Do you really think I don&apos;t %1?&quot;</span>,
+    <span class="hljs-string">&quot;Perhaps eventually I will %1.&quot;</span>,
+    <span class="hljs-string">&quot;Do you really want me to %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Why can\&apos;?t I ([^\?]*)\??&apos;</span>,
+  [  <span class="hljs-string">&quot;Do you think you should be able to %1?&quot;</span>,
+    <span class="hljs-string">&quot;If you could %1, what would you do?&quot;</span>,
+    <span class="hljs-string">&quot;I don&apos;t know -- why can&apos;t you %1?&quot;</span>,
+    <span class="hljs-string">&quot;Have you really tried?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;I can\&apos;?t (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;How do you know you can&apos;t %1?&quot;</span>,
+    <span class="hljs-string">&quot;Perhaps you could %1 if you tried.&quot;</span>,
+    <span class="hljs-string">&quot;What would it take for you to %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;I am (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Did you come to me because you are %1?&quot;</span>,
+    <span class="hljs-string">&quot;How long have you been %1?&quot;</span>,
+    <span class="hljs-string">&quot;How do you feel about being %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;I\&apos;?m (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;How does being %1 make you feel?&quot;</span>,
+    <span class="hljs-string">&quot;Do you enjoy being %1?&quot;</span>,
+    <span class="hljs-string">&quot;Why do you tell me you&apos;re %1?&quot;</span>,
+    <span class="hljs-string">&quot;Why do you think you&apos;re %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Are you ([^\?]*)\??&apos;</span>,
+  [  <span class="hljs-string">&quot;Why does it matter whether I am %1?&quot;</span>,
+    <span class="hljs-string">&quot;Would you prefer it if I were not %1?&quot;</span>,
+    <span class="hljs-string">&quot;Perhaps you believe I am %1.&quot;</span>,
+    <span class="hljs-string">&quot;I may be %1 -- what do you think?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;What (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Why do you ask?&quot;</span>,
+    <span class="hljs-string">&quot;How would an answer to that help you?&quot;</span>,
+    <span class="hljs-string">&quot;What do you think?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;How (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;How do you suppose?&quot;</span>,
+    <span class="hljs-string">&quot;Perhaps you can answer your own question.&quot;</span>,
+    <span class="hljs-string">&quot;What is it you&apos;re really asking?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Because (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Is that the real reason?&quot;</span>,
+    <span class="hljs-string">&quot;What other reasons come to mind?&quot;</span>,
+    <span class="hljs-string">&quot;Does that reason apply to anything else?&quot;</span>,
+    <span class="hljs-string">&quot;If %1, what else must be true?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;(.*) sorry (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;There are many times when no apology is needed.&quot;</span>,
+    <span class="hljs-string">&quot;What feelings do you have when you apologize?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Hello(.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Hello... I&apos;m glad you could drop by today.&quot;</span>,
+    <span class="hljs-string">&quot;Hi there... how are you today?&quot;</span>,
+    <span class="hljs-string">&quot;Hello, how are you feeling today?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;I think (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Do you doubt %1?&quot;</span>,
+    <span class="hljs-string">&quot;Do you really think so?&quot;</span>,
+    <span class="hljs-string">&quot;But you&apos;re not sure %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;(.*) friend (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Tell me more about your friends.&quot;</span>,
+    <span class="hljs-string">&quot;When you think of a friend, what comes to mind?&quot;</span>,
+    <span class="hljs-string">&quot;Why don&apos;t you tell me about a childhood friend?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Yes&apos;</span>,
+  [  <span class="hljs-string">&quot;You seem quite sure.&quot;</span>,
+    <span class="hljs-string">&quot;OK, but can you elaborate a bit?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;(.*) computer(.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Are you really talking about me?&quot;</span>,
+    <span class="hljs-string">&quot;Does it seem strange to talk to a computer?&quot;</span>,
+    <span class="hljs-string">&quot;How do computers make you feel?&quot;</span>,
+    <span class="hljs-string">&quot;Do you feel threatened by computers?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Is it (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Do you think it is %1?&quot;</span>,
+    <span class="hljs-string">&quot;Perhaps it&apos;s %1 -- what do you think?&quot;</span>,
+    <span class="hljs-string">&quot;If it were %1, what would you do?&quot;</span>,
+    <span class="hljs-string">&quot;It could well be that %1.&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;It is (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;You seem very certain.&quot;</span>,
+    <span class="hljs-string">&quot;If I told you that it probably isn&apos;t %1, what would you feel?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Can you ([^\?]*)\??&apos;</span>,
+  [  <span class="hljs-string">&quot;What makes you think I can&apos;t %1?&quot;</span>,
+    <span class="hljs-string">&quot;If I could %1, then what?&quot;</span>,
+    <span class="hljs-string">&quot;Why do you ask if I can %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Can I ([^\?]*)\??&apos;</span>,
+  [  <span class="hljs-string">&quot;Perhaps you don&apos;t want to %1.&quot;</span>,
+    <span class="hljs-string">&quot;Do you want to be able to %1?&quot;</span>,
+    <span class="hljs-string">&quot;If you could %1, would you?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;You are (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Why do you think I am %1?&quot;</span>,
+    <span class="hljs-string">&quot;Does it please you to think that I&apos;m %1?&quot;</span>,
+    <span class="hljs-string">&quot;Perhaps you would like me to be %1.&quot;</span>,
+    <span class="hljs-string">&quot;Perhaps you&apos;re really talking about yourself?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;You\&apos;?re (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Why do you say I am %1?&quot;</span>,
+    <span class="hljs-string">&quot;Why do you think I am %1?&quot;</span>,
+    <span class="hljs-string">&quot;Are we talking about you, or me?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;I don\&apos;?t (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Don&apos;t you really %1?&quot;</span>,
+    <span class="hljs-string">&quot;Why don&apos;t you %1?&quot;</span>,
+    <span class="hljs-string">&quot;Do you want to %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;I feel (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Good, tell me more about these feelings.&quot;</span>,
+    <span class="hljs-string">&quot;Do you often feel %1?&quot;</span>,
+    <span class="hljs-string">&quot;When do you usually feel %1?&quot;</span>,
+    <span class="hljs-string">&quot;When you feel %1, what do you do?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;I have (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Why do you tell me that you&apos;ve %1?&quot;</span>,
+    <span class="hljs-string">&quot;Have you really %1?&quot;</span>,
+    <span class="hljs-string">&quot;Now that you have %1, what will you do next?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;I would (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Could you explain why you would %1?&quot;</span>,
+    <span class="hljs-string">&quot;Why would you %1?&quot;</span>,
+    <span class="hljs-string">&quot;Who else knows that you would %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Is there (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Do you think there is %1?&quot;</span>,
+    <span class="hljs-string">&quot;It&apos;s likely that there is %1.&quot;</span>,
+    <span class="hljs-string">&quot;Would you like there to be %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;My (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;I see, your %1.&quot;</span>,
+    <span class="hljs-string">&quot;Why do you say that your %1?&quot;</span>,
+    <span class="hljs-string">&quot;When your %1, how do you feel?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;You (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;We should be discussing you, not me.&quot;</span>,
+    <span class="hljs-string">&quot;Why do you say that about me?&quot;</span>,
+    <span class="hljs-string">&quot;Why do you care whether I %1?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;Why (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Why don&apos;t you tell me the reason why %1?&quot;</span>,
+    <span class="hljs-string">&quot;Why do you think %1?&quot;</span> ]],
+
+  [<span class="hljs-string">r&apos;I want (.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;What would it mean to you if you got %1?&quot;</span>,
+    <span class="hljs-string">&quot;Why do you want %1?&quot;</span>,
+    <span class="hljs-string">&quot;What would you do if you got %1?&quot;</span>,
+    <span class="hljs-string">&quot;If you got %1, then what would you do?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;(.*) mother(.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Tell me more about your mother.&quot;</span>,
+    <span class="hljs-string">&quot;What was your relationship with your mother like?&quot;</span>,
+    <span class="hljs-string">&quot;How do you feel about your mother?&quot;</span>,
+    <span class="hljs-string">&quot;How does this relate to your feelings today?&quot;</span>,
+    <span class="hljs-string">&quot;Good family relations are important.&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;(.*) father(.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Tell me more about your father.&quot;</span>,
+    <span class="hljs-string">&quot;How did your father make you feel?&quot;</span>,
+    <span class="hljs-string">&quot;How do you feel about your father?&quot;</span>,
+    <span class="hljs-string">&quot;Does your relationship with your father relate to your feelings today?&quot;</span>,
+    <span class="hljs-string">&quot;Do you have trouble showing affection with your family?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;(.*) child(.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Did you have close friends as a child?&quot;</span>,
+    <span class="hljs-string">&quot;What is your favorite childhood memory?&quot;</span>,
+    <span class="hljs-string">&quot;Do you remember any dreams or nightmares from childhood?&quot;</span>,
+    <span class="hljs-string">&quot;Did the other children sometimes tease you?&quot;</span>,
+    <span class="hljs-string">&quot;How do you think your childhood experiences relate to your feelings today?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;(.*)\?&apos;</span>,
+  [  <span class="hljs-string">&quot;Why do you ask that?&quot;</span>,
+    <span class="hljs-string">&quot;Please consider whether you can answer your own question.&quot;</span>,
+    <span class="hljs-string">&quot;Perhaps the answer lies within yourself?&quot;</span>,
+    <span class="hljs-string">&quot;Why don&apos;t you tell me?&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;quit&apos;</span>,
+  [  <span class="hljs-string">&quot;Thank you for talking with me.&quot;</span>,
+    <span class="hljs-string">&quot;Good-bye.&quot;</span>,
+    <span class="hljs-string">&quot;Thank you, that will be $150.  Have a good day!&quot;</span>]],
+
+  [<span class="hljs-string">r&apos;(.*)&apos;</span>,
+  [  <span class="hljs-string">&quot;Please tell me more.&quot;</span>,
+    <span class="hljs-string">&quot;Let&apos;s change focus a bit... Tell me about your family.&quot;</span>,
+    <span class="hljs-string">&quot;Can you elaborate on that?&quot;</span>,
+    <span class="hljs-string">&quot;Why do you say that %1?&quot;</span>,
+    <span class="hljs-string">&quot;I see.&quot;</span>,
+    <span class="hljs-string">&quot;Very interesting.&quot;</span>,
+    <span class="hljs-string">&quot;%1.&quot;</span>,
+    <span class="hljs-string">&quot;I see.  And what does that tell you?&quot;</span>,
+    <span class="hljs-string">&quot;How does that make you feel?&quot;</span>,
+    <span class="hljs-string">&quot;How do you feel when you say that?&quot;</span>]]
+  ]
+
+<span class="hljs-comment">#----------------------------------------------------------------------</span>
+<span class="hljs-comment">#  command_interface</span>
+<span class="hljs-comment">#----------------------------------------------------------------------</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">command_interface</span><span class="hljs-params">()</span>:</span>
+  print(<span class="hljs-string">&apos;Therapist\n---------&apos;</span>)
+  print(<span class="hljs-string">&apos;Talk to the program by typing in plain English, using normal upper-&apos;</span>)
+  print(<span class="hljs-string">&apos;and lower-case letters and punctuation.  Enter &quot;quit&quot; when done.&apos;</span>)
+  print(<span class="hljs-string">&apos;=&apos;</span>*<span class="hljs-number">72</span>)
+  print(<span class="hljs-string">&apos;Hello.  How are you feeling today?&apos;</span>)
+
+  s = <span class="hljs-string">&apos;&apos;</span>
+  therapist = eliza();
+  <span class="hljs-keyword">while</span> s != <span class="hljs-string">&apos;quit&apos;</span>:
+    <span class="hljs-keyword">try</span>:
+      s = input(<span class="hljs-string">&apos;&gt; &apos;</span>)
+    <span class="hljs-keyword">except</span> EOFError:
+      s = <span class="hljs-string">&apos;quit&apos;</span>
+    print(s)
+    <span class="hljs-keyword">while</span> s[<span class="hljs-number">-1</span>] <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;!.&apos;</span>:
+      s = s[:<span class="hljs-number">-1</span>]
+    print(therapist.respond(s))
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+  command_interface()
+</code></pre>
+<pre><code>Therapist
+---------
+Talk to the program by typing in plain English, using normal upper-
+and lower-case letters and punctuation.  Enter &quot;quit&quot; when done.
+========================================================================
+Hello.  How are you feeling today?
+</code></pre><hr>
+<p><strong>&#x811A;&#x6CE8;</strong></p>
+<p><a name="fn1">[1]</a>&#xFF1A;&#x91CA;&#x4E49;&#x6458;&#x81EA;&#x82F9;&#x679C;&#x7535;&#x8111;&#x4E0A;&#x7CFB;&#x7EDF;&#x5185;&#x5EFA;&#x7684;&#x300A;&#x725B;&#x6D25;&#x82F1;&#x6C49;&#x53CC;&#x89E3;&#x8F9E;&#x5178;&#x300B;</p>
+<p><a href="#fn1b"><small>&#x2191;Back to Content&#x2191;</small></a></p>
+<p><a name="fn2">[2]</a>&#xFF1A;<a href="https://bit.ly/2tz8v9n" target="_blank">8 Regular Expressions You Should Know</a> by Vasili</p>
+<p><a href="#fn2b"><small>&#x2191;Back to Content&#x2191;</small></a></p>
+<p><a name="fn3">[3]</a>&#xFF1A;&#x5173;&#x4E8E;&#x6821;&#x9A8C;&#x5BC6;&#x7801;&#x5F3A;&#x5EA6;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x66F4;&#x4E3A;&#x590D;&#x6742;&#x7684;&#x89C4;&#x5219;&#xFF0C;Stackoverflow &#x4E0A;&#x7684;&#x4E00;&#x5219;&#x7B54;&#x590D;&#x4E2D;&#x6709;&#x5F88;&#x597D;&#x7684;&#x793A;&#x4F8B;&#xFF1A;<a href="https://stackoverflow.com/a/21456918" target="_blank">https://stackoverflow.com/a/21456918</a></p>
+<p><a href="#fn3b"><small>&#x2191;Back to Content&#x2191;</small></a></p>
+<p><a name="fn4">[4]</a>&#xFF1A;<a href="http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html" target="_blank">http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html</a></p>
+<p><a href="#fn4b"><small>&#x2191;Back to Content&#x2191;</small></a></p>
+<p><a name="fn5">[5]</a>&#xFF1A;Parry &#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF08;&#x7528; Lisp &#x5199;&#x7684;&#xFF09;&#x5728;&#x8FD9;&#x91CC;&#xFF1A;<a href="http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/" target="_blank">http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>&lt;/a&gt;</p>
+<p><a href="#fn5b"><small>&#x2191;Back to Content&#x2191;</small></a></p>
+<p><a name="fn6">[6]</a>&#xFF1A;ELIZA &#x548C; Parry &#x7684;&#x5B8C;&#x6574;&#x804A;&#x5929;&#x8BB0;&#x5F55;&#x5728;&#x8FD9;&#x91CC;&#xFF1A;<a href="https://tools.ietf.org/html/rfc439" target="_blank">https://tools.ietf.org/html/rfc439</a>&lt;/a&gt;</p>
+<p><a href="#fn6b"><small>&#x2191;Back to Content&#x2191;</small></a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Part.3.B.3.decorator-iterator-generator.html" class="navigation navigation-prev " aria-label="Previous page: Part.3.B.3.decorator-iterator-generator（函数工具）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Part.3.B.5.bnf-ebnf-pebnf.html" class="navigation navigation-next " aria-label="Next page: Part.3.B.5.bnf-ebnf-pebnf（BNF 以及 EBNF）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Part.3.B.4.regex（正则表达式）","level":"1.5.5","depth":2,"next":{"title":"Part.3.B.5.bnf-ebnf-pebnf（BNF 以及 EBNF）","level":"1.5.6","depth":2,"path":"part3/Part.3.B.5.bnf-ebnf-pebnf.md","ref":"part3/Part.3.B.5.bnf-ebnf-pebnf.md","articles":[]},"previous":{"title":"Part.3.B.3.decorator-iterator-generator（函数工具）","level":"1.5.4","depth":2,"path":"part3/Part.3.B.3.decorator-iterator-generator.md","ref":"part3/Part.3.B.3.decorator-iterator-generator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part3/Part.3.B.4.regex.md","mtime":"2020-11-05T09:52:10.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-05T10:41:49.536Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1042 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Part.2.C.why-start-from-writing-functions（为什么从函数开始？） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Part.2.D.1-args.html" />
+    
+    
+    <link rel="prev" href="Part.2.B.deliberate-practicing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    自学是门艺术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../00.cover.html">
+            
+                <a href="../00.cover.html">
+            
+                    
+                    00.cover(封面)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01.preface.html">
+            
+                <a href="../01.preface.html">
+            
+                    
+                    01.preface（前言）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../02.proof-of-work.html">
+            
+                <a href="../02.proof-of-work.html">
+            
+                    
+                    02.proof-of-work（如何证明你真的读过这本书？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Part 1
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../part1/Part.1.A.better.teachyourself.html">
+            
+                <a href="../part1/Part.1.A.better.teachyourself.html">
+            
+                    
+                    Part.1.A.better.teachyourself（为什么一定要掌握自学能力？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../part1/Part.1.B.why.start.from.learning.coding.html">
+            
+                <a href="../part1/Part.1.B.why.start.from.learning.coding.html">
+            
+                    
+                    Part.1.B.why.start.from.learning.coding（为什么把编程当作自学的入口？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../part1/Part.1.C.must.learn.sth.only.by.reading.html">
+            
+                <a href="../part1/Part.1.C.must.learn.sth.only.by.reading.html">
+            
+                    
+                    Part.1.C.must.learn.sth.only.by.reading（只靠阅读习得新技能）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../part1/Part.1.D.preparation.for.reading.html">
+            
+                <a href="../part1/Part.1.D.preparation.for.reading.html">
+            
+                    
+                    Part.1.D.preparation.for.reading（开始阅读前的一些准备）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../part1/Part.1.E.1.entrance.html">
+            
+                <a href="../part1/Part.1.E.1.entrance.html">
+            
+                    
+                    Part.1.E.1.entrance（入口）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../part1/Part.1.E.2.values-and-their-operators.html">
+            
+                <a href="../part1/Part.1.E.2.values-and-their-operators.html">
+            
+                    
+                    Part.1.E.2.values-and-their-operators（值及其相应的运算）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../part1/Part.1.E.3.controlflow.html">
+            
+                <a href="../part1/Part.1.E.3.controlflow.html">
+            
+                    
+                    Part.1.E.3.controlflow（流程控制）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../part1/Part.1.E.4.functions.html">
+            
+                <a href="../part1/Part.1.E.4.functions.html">
+            
+                    
+                    Part.1.E.4.functions（函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../part1/Part.1.E.5.strings.html">
+            
+                <a href="../part1/Part.1.E.5.strings.html">
+            
+                    
+                    Part.1.E.5.strings（字符串）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../part1/Part.1.E.6.containers.html">
+            
+                <a href="../part1/Part.1.E.6.containers.html">
+            
+                    
+                    Part.1.E.6.containers（数据容器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../part1/Part.1.E.7.files.html">
+            
+                <a href="../part1/Part.1.E.7.files.html">
+            
+                    
+                    Part.1.E.7.files（文件）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../part1/Part.1.F.deal-with-forward-references.html">
+            
+                <a href="../part1/Part.1.F.deal-with-forward-references.html">
+            
+                    
+                    Part.1.F.deal-with-forward-references（如何从容应对含有过多 “过早引用” 的知识？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../part1/Part.1.G.The-Python-Tutorial-local.html">
+            
+                <a href="../part1/Part.1.G.The-Python-Tutorial-local.html">
+            
+                    
+                    Part.1.G.The-Python-Tutorial-local（官方教程：The Python Tutorial）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Part 2
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Part.2.A.clumsy-and-patience.html">
+            
+                <a href="Part.2.A.clumsy-and-patience.html">
+            
+                    
+                    Part.2.A.clumsy-and-patience（笨拙与耐心）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Part.2.B.deliberate-practicing.html">
+            
+                <a href="Part.2.B.deliberate-practicing.html">
+            
+                    
+                    Part.2.B.deliberate-practicing（刻意练习）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="Part.2.C.why-start-from-writing-functions.html">
+            
+                <a href="Part.2.C.why-start-from-writing-functions.html">
+            
+                    
+                    Part.2.C.why-start-from-writing-functions（为什么从函数开始？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="Part.2.D.1-args.html">
+            
+                <a href="Part.2.D.1-args.html">
+            
+                    
+                    Part.2.D.1-args（关于参数（上））
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="Part.2.D.2-aargs.html">
+            
+                <a href="Part.2.D.2-aargs.html">
+            
+                    
+                    Part.2.D.2-aargs（关于参数（下））
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="Part.2.D.3-lambda.html">
+            
+                <a href="Part.2.D.3-lambda.html">
+            
+                    
+                    Part.2.D.3-lambda（化名与匿名）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="Part.2.D.4-recursion.html">
+            
+                <a href="Part.2.D.4-recursion.html">
+            
+                    
+                    Part.2.D.4-recursion（递归函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="Part.2.D.5-docstrings.html">
+            
+                <a href="Part.2.D.5-docstrings.html">
+            
+                    
+                    Part.2.D.5-docstrings（函数的文档）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="Part.2.D.6-modules.html">
+            
+                <a href="Part.2.D.6-modules.html">
+            
+                    
+                    Part.2.D.6-modules（保存到文件的函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="Part.2.D.7-tdd.html">
+            
+                <a href="Part.2.D.7-tdd.html">
+            
+                    
+                    Part.2.D.7-tdd（测试驱动的开发）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="Part.2.D.8-main.html">
+            
+                <a href="Part.2.D.8-main.html">
+            
+                    
+                    Part.2.D.8-main（可执行的 Python 文件）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="Part.2.E.deliberate-thinking.html">
+            
+                <a href="Part.2.E.deliberate-thinking.html">
+            
+                    
+                    Part.2.E.deliberate-thinking（刻意思考）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Part 3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../part3/Part.3.A.conquering-difficulties.html">
+            
+                <a href="../part3/Part.3.A.conquering-difficulties.html">
+            
+                    
+                    Part.3.A.conquering-difficulties（战胜难点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../part3/Part.3.B.1.classes-1.html">
+            
+                <a href="../part3/Part.3.B.1.classes-1.html">
+            
+                    
+                    Part.3.B.1.classes-1（类 —— 面向对象编程）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../part3/Part.3.B.2.classes-2.html">
+            
+                <a href="../part3/Part.3.B.2.classes-2.html">
+            
+                    
+                    Part.3.B.2.classes-2（类 —— Python 的实现）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../part3/Part.3.B.3.decorator-iterator-generator.html">
+            
+                <a href="../part3/Part.3.B.3.decorator-iterator-generator.html">
+            
+                    
+                    Part.3.B.3.decorator-iterator-generator（函数工具）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../part3/Part.3.B.4.regex.html">
+            
+                <a href="../part3/Part.3.B.4.regex.html">
+            
+                    
+                    Part.3.B.4.regex（正则表达式）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../part3/Part.3.B.5.bnf-ebnf-pebnf.html">
+            
+                <a href="../part3/Part.3.B.5.bnf-ebnf-pebnf.html">
+            
+                    
+                    Part.3.B.5.bnf-ebnf-pebnf（BNF 以及 EBNF）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../part3/Part.3.C.breaking-good-and-bad.html">
+            
+                <a href="../part3/Part.3.C.breaking-good-and-bad.html">
+            
+                    
+                    Part.3.C.breaking-good-and-bad（拆解）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../part3/Part.3.D.indispensable-illusion.html">
+            
+                <a href="../part3/Part.3.D.indispensable-illusion.html">
+            
+                    
+                    Part.3.D.indispensable-illusion（刚需幻觉）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../part3/Part.3.E.to-be-thorough.html">
+            
+                <a href="../part3/Part.3.E.to-be-thorough.html">
+            
+                    
+                    Part.3.E.to-be-thorough（全面 —— 自学的境界）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../part3/Part.3.F.social-selfteaching.html">
+            
+                <a href="../part3/Part.3.F.social-selfteaching.html">
+            
+                    
+                    Part.3.F.social-selfteaching（自学者的社交）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../part3/Part.3.G.the-golden-age-and-google.html">
+            
+                <a href="../part3/Part.3.G.the-golden-age-and-google.html">
+            
+                    
+                    Part.3.G.the-golden-age-and-google（这是自学者的黄金时代）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../part3/Part.3.H.prevent-focus-drifting.html">
+            
+                <a href="../part3/Part.3.H.prevent-focus-drifting.html">
+            
+                    
+                    Part.3.H.prevent-focus-drifting（避免注意力漂移）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    附章
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Q.good-communiation.html">
+            
+                <a href="../Q.good-communiation.html">
+            
+                    
+                    Q.good-communiation（如何成为优秀沟通者）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../R.finale.html">
+            
+                <a href="../R.finale.html">
+            
+                    
+                    R.finale（自学者的终点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../S.whats-next.html">
+            
+                <a href="../S.whats-next.html">
+            
+                    
+                    S.whats-next（下一步干什么？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    附录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../T-appendix.editor.vscode.html">
+            
+                <a href="../T-appendix.editor.vscode.html">
+            
+                    
+                    T-appendix.editor.vscode（Visual Studio Code 的安装与配置）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../T-appendix.git-introduction.html">
+            
+                <a href="../T-appendix.git-introduction.html">
+            
+                    
+                    T-appendix.git-introduction（Git 简介）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../T-appendix.jupyter-installation-and-setup.html">
+            
+                <a href="../T-appendix.jupyter-installation-and-setup.html">
+            
+                    
+                    T-appendix.jupyter-installation-and-setup（Jupyterlab 的安装与配置）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../T-appendix.symbols.html">
+            
+                <a href="../T-appendix.symbols.html">
+            
+                    
+                    T-appendix.symbols（这些符号都代表什么？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Part.2.C.why-start-from-writing-functions（为什么从函数开始？）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4ECE;&#x51FD;&#x6570;&#x5F00;&#x59CB;&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;&#x4ECE;&#x51FD;&#x6570;&#x5F00;&#x59CB;&#xFF1F;</h1>
+<p>&#x8BFB;&#x5B8C;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x591A;&#x591A;&#x5C11;&#x5C11;&#x5DF2;&#x7ECF; &#x201C;&#x5199;&#x201D; &#x4E86;&#x4E00;&#x4E9B;&#x7A0B;&#x5E8F;&#xFF0C;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x603B;&#x662F;&#x8BF4;&#xFF0C;&#x201C;&#x8FD9;&#x5C31;&#x662F;&#x8BA9;&#x4F60;&#x8131;&#x76F2;&#x201D;&#xFF1B;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4ECE;&#x6B64;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x591A;&#x591A;&#x5C11;&#x5C11;&#x80FD;&#x591F;&#x8BFB;&#x61C2;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x5C31;&#x5DF2;&#x7ECF;&#x5F88;&#x597D;&#x4E86;&#x3002;</p>
+<p>&#x53EF;&#x662F;&#x4F60;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x90FD;&#x907F;&#x514D;&#x4E0D;&#x4E86;&#x5DF2;&#x7ECF;&#x5199;&#x4E86;&#x4E00;&#x4E9B;&#xFF0C;&#x867D;&#x7136;&#xFF0C;&#x90A3;&#x6240;&#x8C13;&#x7684; &#x201C;&#x5199;&#x201D;&#xFF0C;&#x4E0D;&#x8FC7;&#x662F; &#x201C;&#x6539;&#x201D; &#x800C;&#x5DF2; &#x2014;&#x2014; &#x4F46;&#x6BD5;&#x7ADF;&#x4E5F;&#x662F;&#x4E00;&#x5927;&#x6B65;&#x3002;</p>
+<p>&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7F16;&#x7A0B;&#x4E66;&#x7C4D;&#x5E76;&#x4E0D;&#x533A;&#x5206;&#x5B66;&#x4E60;&#x8005;&#x7684; &#x201C;&#x8BFB;&#x201D; &#x4E0E; &#x201C;&#x5199;&#x201D; &#x8FD9;&#x4E24;&#x4E2A;&#x5B9E;&#x9645;&#x4E0A;&#x5E94;&#x8BE5;&#x5206;&#x79BB;&#x7684;&#x9636;&#x6BB5; &#x2014;&#x2014; &#x867D;&#x7136;&#x73B0;&#x5B9E;&#x4E2D;&#x8FD9;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#x603B;&#x662F;&#x591A;&#x591A;&#x5C11;&#x5C11;&#x91CD;&#x53E0;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x81EA;&#x7136;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x603B;&#x662F;&#x5148;&#x5B66;&#x4F1A;&#x9605;&#x8BFB;&#xFF0C;&#x800C;&#x540E;&#x624D;&#x5F00;&#x59CB;&#x7EC3;&#x4E60;&#x5199;&#x4F5C;&#xFF1B;&#x5E76;&#x4E14;&#xFF0C;&#x6700;&#x7EC8;&#xFF0C;&#x9605;&#x8BFB;&#x7684;&#x91CF;&#x4E00;&#x5B9A;&#x8FDC;&#x8FDC;&#x5927;&#x4E8E;&#x5199;&#x4F5C;&#x7684;&#x91CF; &#x2014;&#x2014; &#x5373;&#xFF0C;&#x8F93;&#x5165;&#x8FDC;&#x8FDC;&#x5927;&#x4E8E;&#x8F93;&#x51FA;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x8C8C;&#x4F3C;&#x4E5F;&#x6709;&#x4F8B;&#x5916;&#x3002;&#x636E;&#x8BF4;&#xFF0C;&#x9999;&#x6E2F;&#x4F5C;&#x5BB6;&#x502A;&#x5321;&#xFF0C;&#x4ED6;&#x81EA;&#x5DF1;&#x540E;&#x6765;&#x5F88;&#x5C11;&#x8BFB;&#x4E66;&#xFF0C;&#x6BCF;&#x5929;&#x54A3;&#x5F53;&#x54A3;&#x5F53;&#x5730;&#x50CF;&#x662F;&#x6253;&#x626B;&#x9648;&#x5E74;&#x65E7;&#x7269;&#x5012;&#x5783;&#x573E;&#x4E00;&#x6837;&#x5199;&#x4F5C; &#x2014;&#x2014; &#x4ED6;&#x51E0;&#x4E4E;&#x662F;&#x5168;&#x7403;&#x6700;&#x5177;&#x4EA7;&#x91CF;&#x7684;&#x7545;&#x9500;&#x5C0F;&#x8BF4;&#x4F5C;&#x5BB6;&#xFF0C;&#x8C8C;&#x4F3C;&#x5730;&#x7403;&#x53E6;&#x5916;&#x4E00;&#x7AEF;&#x7684;&#x53F2;&#x8482;&#x82AC;&#x30FB;&#x91D1;&#x90FD;&#x4E0D;&#x5982;&#x4ED6;&#x591A;&#x3002;&#x53C8;&#x5F53;&#x7136;&#xFF0C;&#x4ED6;&#x7684;&#x4E3B;&#x8981;&#x8F93;&#x5165;&#x6765;&#x81EA;&#x4E8E;&#x4ED6;&#x65E9;&#x5E74;&#x4E30;&#x5BCC;&#x7684;&#x4EBA;&#x751F;&#x7ECF;&#x5386;&#xFF0C;&#x4EBA;&#x5BB6;&#x8BFB;&#x4E66;&#xFF0C;&#x4ED6;&#x9605;&#x4E16;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x4E0D;&#x662F;&#x8F93;&#x5165;&#x5F88;&#x5C11;&#xFF0C;&#x6070;&#x6070;&#x76F8;&#x53CD;&#xFF0C;&#x662F;&#x8F93;&#x5165;&#x592A;&#x591A;&#x2026;&#x2026;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8F93;&#x5165;&#x591A;&#x4E8E;&#x8F93;&#x51FA;&#xFF0C;&#x6216;&#x8005;&#xFF0C;&#x8F93;&#x5165;&#x8FDC;&#x8FDC;&#x591A;&#x4E8E;&#x8F93;&#x51FA;&#xFF0C;&#x4E0D;&#x4EC5;&#x662F;&#x81EA;&#x7136;&#x73B0;&#x8C61;&#xFF0C;&#x4E5F;&#x662F;&#x65E0;&#x6CD5;&#x6539;&#x53D8;&#x7684;&#x89C4;&#x5219;&#x3002;</p>
+<p>&#x4E8E;&#x662F;&#xFF0C;&#x6211;&#x5728;&#x5B89;&#x6392;&#x5185;&#x5BB9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x523B;&#x610F;&#x5982;&#x6B64;&#x5B89;&#x6392;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4E3B;&#x8981;&#x5728;&#x4E8E;&#x542F;&#x52A8;&#x8BFB;&#x8005;&#x5728;&#x7F16;&#x7A0B;&#x9886;&#x57DF;&#x4E2D;&#x7684; &#x201C;&#x9605;&#x8BFB;&#x80FD;&#x529B;&#x201D;&#xFF0C;&#x5230;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#xFF0C;&#x624D;&#x5F00;&#x59CB;&#x9010;&#x6B65;&#x542F;&#x52A8;&#x8BFB;&#x8005;&#x5728;&#x7F16;&#x7A0B;&#x9886;&#x57DF;&#x4E2D;&#x7684; &#x201C;&#x5199;&#x4F5C;&#x80FD;&#x529B;&#x201D;&#x3002;</p>
+<p>&#x5728;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x542F;&#x52A8;&#x4E4B;&#x524D;&#xFF0C;&#x6709;&#x65F6;&#x95F4;&#x6709;&#x8010;&#x5FC3;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x591A;&#x505A;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>Python &#x7684;&#x4EE3;&#x7801;&#x662F;&#x5F00;&#x6E90;&#x7684;&#xFF0C;&#x5B83;&#x7684;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#x5728; Github &#x4E0A;&#xFF1A;</p>
+<blockquote>
+<p><a href="https://github.com/python/" target="_blank">https://github.com/python/</a></p>
+</blockquote>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4FDD;&#x5B58;&#x7740;&#x82E5;&#x5E72; Python Demo &#x7A0B;&#x5E8F;&#xFF1A;</p>
+<blockquote>
+<p><a href="https://github.com/python/cpython/tree/master/Tools/demo" target="_blank">https://github.com/python/cpython/tree/master/Tools/demo</a></p>
+</blockquote>
+<p>&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684; README &#x4E2D;&#x6709;&#x8BF4;&#x660E;&#xFF1A;</p>
+<blockquote>
+<p>This directory contains a collection of demonstration scripts for
+various aspects of Python programming.</p>
+<ul>
+<li><code>beer.py</code>        Well-known programming example: Bottles of beer.</li>
+<li><code>eiffel.py</code>      Python advanced magic: A metaclass for Eiffel post/preconditions.</li>
+<li><code>hanoi.py</code>       Well-known programming example: Towers of Hanoi.</li>
+<li><code>life.py</code>        Curses programming: Simple game-of-life.</li>
+<li><code>markov.py</code>      Algorithms: Markov chain simulation.</li>
+<li><code>mcast.py</code>       Network programming: Send and receive UDP multicast packets.</li>
+<li><code>queens.py</code>      Well-known programming example: N-Queens problem.</li>
+<li><code>redemo.py</code>      Regular Expressions: GUI script to test regexes.</li>
+<li><code>rpython.py</code>     Network programming: Small client for remote code execution.</li>
+<li><code>rpythond.py</code>    Network programming: Small server for remote code execution.</li>
+<li><code>sortvisu.py</code>    GUI programming: Visualization of different sort algorithms.</li>
+<li><code>ss1.py</code>         GUI/Application programming: A simple spreadsheet application.</li>
+<li><code>vector.py</code>      Python basics: A vector class with demonstrating special methods.</li>
+</ul>
+</blockquote>
+<p>&#x6700;&#x8D77;&#x7801;&#x628A;&#x8FD9;&#x5176;&#x4E2D;&#x7684;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7A0B;&#x5E8F;&#x90FD;&#x7CBE;&#x8BFB;&#x4E00;&#x4E0B;&#xFF0C;&#x770B;&#x770B;&#x81EA;&#x5DF1;&#x7684;&#x7406;&#x89E3;&#x80FD;&#x529B;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li><a href="https://github.com/python/cpython/blob/master/Tools/demo/beer.py" target="_blank">beer.py</a>        Well-known programming example: Bottles of beer.</li>
+<li><a href="https://github.com/python/cpython/blob/master/Tools/demo/eiffel.py" target="_blank">eiffel.py</a>      Python advanced magic: A metaclass for Eiffel post/preconditions.</li>
+<li><a href="https://github.com/python/cpython/blob/master/Tools/demo/hanoi.py" target="_blank">hanoi.py</a>       Well-known programming example: Towers of Hanoi.</li>
+<li><a href="https://github.com/python/cpython/blob/master/Tools/demo/life.py" target="_blank">life.py</a>        Curses programming: Simple game-of-life.</li>
+<li><a href="https://github.com/python/cpython/blob/master/Tools/demo/markov.py" target="_blank">markov.py</a>      Algorithms: Markov chain simulation.</li>
+<li><a href="https://github.com/python/cpython/blob/master/Tools/demo/queens.py" target="_blank">queens.py</a>      Well-known programming example: N-Queens problem.</li>
+</ul>
+</blockquote>
+<p>&#x5C31;&#x7B97;&#x8BFB;&#x4E0D;&#x61C2;&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#xFF0C;&#x628A;&#x8BFB;&#x4E0D;&#x61C2;&#x7684;&#x90E8;&#x5206;&#x6807;&#x8BB0;&#x4E0B;&#x6765;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x53EF;&#x4EE5; &#x201C;&#x5E26;&#x7740;&#x95EE;&#x9898;&#x5B66;&#x4E60;&#x201D;&#x2026;&#x2026;</p>
+<p>&#x5728;&#x672A;&#x6765;&#x7684;&#x65F6;&#x95F4;&#x91CC;&#xFF0C;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x4E60;&#x60EF;&#x5C31;&#x662F;&#xFF0C;&#x6709;&#x7A7A;&#x4E86;&#x53BB;&#x8BFB;&#x8BFB;&#x522B;&#x4EBA;&#x5199;&#x7684;&#x4EE3;&#x7801; &#x2014;&#x2014; &#x7406;&#x89E3;&#x80FD;&#x529B;&#x7684;&#x63D0;&#x9AD8;&#xFF0C;&#x5C31;&#x9760;&#x8FD9;&#x4E2A;&#x4E86;&#x3002;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x8FD9;&#x4E8B;&#x8DDF;&#x5176;&#x4ED6;&#x9886;&#x57DF;&#x7684;&#x5B66;&#x4E60;&#x6CA1;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x3002;&#x4F60;&#x5B66;&#x82F1;&#x8BED;&#x4E5F;&#x4E00;&#x6837;&#xFF0C;&#x8BFB;&#x591A;&#x4E86;&#xFF0C;&#x81EA;&#x7136;&#x5C31;&#x8BFB;&#x5F97;&#x5FEB;&#x4E86;&#xFF0C;&#x7406;&#x89E3;&#x5F97;&#x5FEB;&#x4E86;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x90A3;&#x8FC7;&#x7A0B;&#x4E2D;&#x81EA;&#x7136;&#x800C;&#x7136;&#x5730;&#x4E60;&#x5F97;&#x4E86;&#x5F88;&#x591A; &#x201C;&#x53E5;&#x5F0F;&#x201D;&#xFF0C;&#x751A;&#x81F3;&#x5F88;&#x591A; &#x201C;&#x8BF4;&#x7406;&#x7684;&#x65B9;&#x6CD5;&#x201D;&#x3001;&#x201C;&#x8BB2;&#x6545;&#x4E8B;&#x7684;&#x7B56;&#x7565;&#x201D;&#x2026;&#x2026; &#x7136;&#x540E;&#x5C31;&#x81EA;&#x7136;&#x800C;&#x7136;&#x5730;&#x4F1A;&#x5199;&#x4E86;&#xFF0C;&#x4ECE;&#x80FD;&#x5199;&#x4E00;&#x70B9;&#x5F00;&#x59CB;&#xFF0C;&#x6162;&#x6162;&#x5230; &#x201C;&#x5F88;&#x80FD;&#x5199;&#x201D;&#xFF01;</p>
+<p>&#x4E3A;&#x4E86;&#x987A;&#x5229;&#x542F;&#x52A8;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x7684; &#x201C;&#x9605;&#x8BFB;&#x201D;&#xFF0C;&#x7279;&#x610F;&#x627E;&#x4E86;&#x4E2A;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x201C;&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x201D;&#xFF1B;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#xFF0C;&#x4ECE; &#x201C;&#x9605;&#x8BFB;&#x201D; &#x8FC7;&#x6E21;&#x5230; &#x201C;&#x5199;&#x4F5C;&#x201D;&#xFF0C;&#x6211;&#x4E5F;&#x540C;&#x6837;&#x7279;&#x610F;&#x5BFB;&#x627E;&#x4E86;&#x4E00;&#x4E2A;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x5165;&#x53E3;&#xFF1A;<strong>&#x4ECE;&#x51FD;&#x6570;&#x5F00;&#x59CB;&#x5199;&#x8D77;</strong>&#x3002;</p>
+<p>&#x4ECE;&#x5C0F;&#x5165;&#x624B;&#xFF0C;&#x4ECE;&#x6765;&#x90FD;&#x662F;&#x81EA;&#x5B66;&#x7684;&#x597D;&#x65B9;&#x6CD5;&#x3002;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x60F3;&#x7740;&#x4E00;&#x4E0A;&#x6765;&#x5C31;&#x5199;&#x7A0B;&#x5E8F;&#xFF0C;&#x800C;&#x662F;&#x5199; &#x201C;&#x5B50;&#x7A0B;&#x5E8F;&#x201D;&#x3001;&#x201C;&#x5C0F;&#x7A0B;&#x5E8F;&#x201D;&#x3001;&#x201C;&#x77ED;&#x7A0B;&#x5E8F;&#x201D;&#x3002;&#x4ECE;&#x7ED3;&#x6784;&#x5316;&#x7F16;&#x7A0B;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;&#x5199;&#x51FD;&#x6570;&#x7684;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x8981;&#x6C42;&#x5C31;&#x662F;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li>&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF1B;</li>
+<li>&#x53EA;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF1B;</li>
+<li>&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;&#x5730;&#x53EA;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x2026;&#x2026;</li>
+</ul>
+</blockquote>
+<p>&#x7136;&#x800C;&#xFF0C;&#x5373;&#x4FBF;&#x662F;&#x4ECE;&#x5C0F;&#x5165;&#x624B;&#xFF0C;&#x4EFB;&#x52A1;&#x4E5F;&#x6CA1;&#x6709;&#x53D8;&#x5F97;&#x8FC7;&#x5206;&#x7B80;&#x5355;&#x3002;&#x5176;&#x4E2D;&#x6D89;&#x53CA;&#x7684;&#x8BDD;&#x9898;&#x7406;&#x89E3;&#x8D77;&#x6765;&#x5E76;&#x4E0D;&#x5BB9;&#x6613;&#xFF0C;&#x5C3D;&#x7BA1;&#x6211;&#x4EEC;&#x5C3D;&#x91CF;&#x7528;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x3002;&#x6D89;&#x53CA;&#x7684;&#x8BDD;&#x9898;&#x6709;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li>&#x53C2;&#x6570;&#x7684;&#x4F20;&#x9012;</li>
+<li>&#x591A;&#x53C2;&#x6570;&#x7684;&#x4F20;&#x9012;</li>
+<li>&#x533F;&#x540D;&#x51FD;&#x6570;&#x4EE5;&#x53CA;&#x51FD;&#x6570;&#x7684;&#x522B;&#x79F0;</li>
+<li>&#x9012;&#x5F52;&#x51FD;&#x6570;</li>
+<li>&#x51FD;&#x6570;&#x6587;&#x6863;</li>
+<li>&#x6A21;&#x5757;</li>
+<li>&#x6D4B;&#x8BD5;&#x9A71;&#x52A8;&#x7F16;&#x7A0B;</li>
+<li>&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;</li>
+</ul>
+</blockquote>
+<p>&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x4F60;&#x672A;&#x6765;&#x5199;&#x81EA;&#x5DF1;&#x7684;&#x5DE5;&#x7A0B;&#x65F6;&#x6240;&#x5FC5;&#x987B;&#x4EF0;&#x4ED7;&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x9A6C;&#x864E;&#x4E0D;&#x5F97;&#xFF0C;&#x758F;&#x6F0F;&#x4E0D;&#x5F97;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x4E0E;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x6709;&#x4E00;&#x4E2A;&#x523B;&#x610F;&#x4E0D;&#x540C;&#x7684;&#x7F16;&#x6392;&#xFF0C;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x6BCF;&#x4E00;&#x7AE0;&#x4E4B;&#x540E;&#xFF0C;<strong>&#x6CA1;&#x6709;&#x5199;&#x603B;&#x7ED3;</strong> &#x2014;&#x2014; &#x90A3;&#x4E2A;&#x603B;&#x7ED3;&#x9700;&#x8981;&#x8BFB;&#x8005;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x5B8C;&#x6210;&#x3002;&#x4F60;&#x9700;&#x8981;&#x505A;&#x7684;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x7AE0;&#x8282;&#x7684;&#x603B;&#x7ED3;&#xFF0C;&#x6574;&#x4E2A;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x8BFB;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x8981;&#x505A;&#x9488;&#x5BF9;&#x6574;&#x4E2A; &#x201C;&#x6DF1;&#x5165;&#x4E86;&#x89E3;&#x51FD;&#x6570;&#x201D;&#xFF08;&#x751A;&#x81F3;&#x5E94;&#x8BE5;&#x5305;&#x62EC;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x5DF2;&#x7ECF;&#x8BFB;&#x8FC7;&#x7684;&#x5173;&#x4E8E;&#x51FD;&#x6570;&#x7684;&#x5185;&#x5BB9;&#xFF09;&#x7684;&#x603B;&#x7ED3;&#x2026;&#x2026; &#x5E76;&#x4E14;&#xFF0C;&#x5173;&#x4E8E;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E00;&#x7AE0;&#x5E76;&#x672A;&#x5B8C;&#x5168;&#x8BB2;&#x5B8C;&#x5462;&#xFF0C;&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#x8FD8;&#x6709;&#x751F;&#x6210;&#x5668;&#x3001;&#x8FED;&#x4EE3;&#x5668;&#x3001;&#x4EE5;&#x53CA;&#x88C5;&#x9970;&#x5668;&#x8981;&#x8865;&#x5145; &#x2014;&#x2014; &#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x591A;&#x591A;&#x5C11;&#x5C11;&#x90FD;&#x6D89;&#x53CA;&#x5230;&#x4E0B;&#x4E00;&#x90E8;&#x5206;&#x624D;&#x80FD;&#x6DF1;&#x5165;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x5C31;&#x6682;&#x65F6;&#x6CA1;&#x6709;&#x6D89;&#x53CA;&#x3002;</p>
+<p>&#x4F60;&#x8981;&#x4E60;&#x60EF;&#xFF0C;&#x5F52;&#x7EB3;&#x3001;&#x603B;&#x7ED3;&#x3001;&#x6574;&#x7406;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x4ECE;&#x6765;&#x90FD;&#x4E0D;&#x662F;&#x4E00;&#x6B21;&#x5C31;&#x80FD;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x53CD;&#x590D;&#x591A;&#x6B21;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x5F7B;&#x5E95;&#x5B8C;&#x6210;&#x3002;&#x5FC5;&#x987B;&#x4E60;&#x60EF;&#x8FD9;&#x79CD;&#x6D41;&#x7A0B; &#x2014;&#x2014; &#x800C;&#x4E0D;&#x662F;&#x50CF;&#x90A3;&#x4E9B;&#x4ECE;&#x672A;&#x81EA;&#x5B66;&#x8FC7;&#x7684;&#x4EBA;&#x4E00;&#x6837;&#xFF0C;&#x5BF9;&#x8FD9;&#x79CD;&#x4E1C;&#x897F;&#x60F3;&#x5F53;&#x7136;&#x5730;&#x5168;&#x4E0D;&#x4E86;&#x89E3;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x4ECE;&#x73B0;&#x4EE3;&#x7F16;&#x7A0B;&#x65B9;&#x6CD5;&#x8BBA;&#x6765;&#x770B;&#xFF0C;&#x201C;&#x5199;&#x4F5C;&#x201D; &#x90E8;&#x5206;&#x4E00;&#x4E0A;&#x6765;&#x5C31;&#x4ECE;&#x51FD;&#x6570;&#x5165;&#x624B;&#x4E5F;&#x7684;&#x786E;&#x662F; &#x201C;&#x66F4;&#x6B63;&#x786E;&#x201D; &#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7ED3;&#x6784;&#x5316;&#x7F16;&#x7A0B;&#x7684;&#x6838;&#x5FC3;&#x5C31;&#x662F;&#x62C6;&#x5206;&#x4EFB;&#x52A1;&#xFF0C;&#x628A;&#x4EFB;&#x52A1;&#x62C6;&#x5206;&#x5230;&#x4E0D;&#x80FD;&#x518D;&#x62C6;&#x5206;&#x4E3A;&#x6B62; &#x2014;&#x2014; &#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4E0D;&#x80FD;&#x518D;&#x62C6;&#x5206;&#x4E86;&#x5462;&#xFF1F;&#x5C31;&#x662F;&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x53EA;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x7684;&#x65F6;&#x5019;&#x2026;&#x2026;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Part.2.B.deliberate-practicing.html" class="navigation navigation-prev " aria-label="Previous page: Part.2.B.deliberate-practicing（刻意练习）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Part.2.D.1-args.html" class="navigation navigation-next " aria-label="Next page: Part.2.D.1-args（关于参数（上））">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Part.2.C.why-start-from-writing-functions（为什么从函数开始？）","level":"1.4.3","depth":2,"next":{"title":"Part.2.D.1-args（关于参数（上））","level":"1.4.4","depth":2,"path":"part2/Part.2.D.1-args.md","ref":"part2/Part.2.D.1-args.md","articles":[]},"previous":{"title":"Part.2.B.deliberate-practicing（刻意练习）","level":"1.4.2","depth":2,"path":"part2/Part.2.B.deliberate-practicing.md","ref":"part2/Part.2.B.deliberate-practicing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part2/Part.2.C.why-start-from-writing-functions.md","mtime":"2020-11-05T09:52:08.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-05T10:41:49.536Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

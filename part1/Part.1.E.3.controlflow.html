@@ -1,0 +1,1323 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Part.1.E.3.controlflow（流程控制） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Part.1.E.4.functions.html" />
+    
+    
+    <link rel="prev" href="Part.1.E.2.values-and-their-operators.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    自学是门艺术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../00.cover.html">
+            
+                <a href="../00.cover.html">
+            
+                    
+                    00.cover(封面)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01.preface.html">
+            
+                <a href="../01.preface.html">
+            
+                    
+                    01.preface（前言）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../02.proof-of-work.html">
+            
+                <a href="../02.proof-of-work.html">
+            
+                    
+                    02.proof-of-work（如何证明你真的读过这本书？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Part 1
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Part.1.A.better.teachyourself.html">
+            
+                <a href="Part.1.A.better.teachyourself.html">
+            
+                    
+                    Part.1.A.better.teachyourself（为什么一定要掌握自学能力？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Part.1.B.why.start.from.learning.coding.html">
+            
+                <a href="Part.1.B.why.start.from.learning.coding.html">
+            
+                    
+                    Part.1.B.why.start.from.learning.coding（为什么把编程当作自学的入口？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Part.1.C.must.learn.sth.only.by.reading.html">
+            
+                <a href="Part.1.C.must.learn.sth.only.by.reading.html">
+            
+                    
+                    Part.1.C.must.learn.sth.only.by.reading（只靠阅读习得新技能）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="Part.1.D.preparation.for.reading.html">
+            
+                <a href="Part.1.D.preparation.for.reading.html">
+            
+                    
+                    Part.1.D.preparation.for.reading（开始阅读前的一些准备）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="Part.1.E.1.entrance.html">
+            
+                <a href="Part.1.E.1.entrance.html">
+            
+                    
+                    Part.1.E.1.entrance（入口）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="Part.1.E.2.values-and-their-operators.html">
+            
+                <a href="Part.1.E.2.values-and-their-operators.html">
+            
+                    
+                    Part.1.E.2.values-and-their-operators（值及其相应的运算）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="Part.1.E.3.controlflow.html">
+            
+                <a href="Part.1.E.3.controlflow.html">
+            
+                    
+                    Part.1.E.3.controlflow（流程控制）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="Part.1.E.4.functions.html">
+            
+                <a href="Part.1.E.4.functions.html">
+            
+                    
+                    Part.1.E.4.functions（函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="Part.1.E.5.strings.html">
+            
+                <a href="Part.1.E.5.strings.html">
+            
+                    
+                    Part.1.E.5.strings（字符串）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="Part.1.E.6.containers.html">
+            
+                <a href="Part.1.E.6.containers.html">
+            
+                    
+                    Part.1.E.6.containers（数据容器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="Part.1.E.7.files.html">
+            
+                <a href="Part.1.E.7.files.html">
+            
+                    
+                    Part.1.E.7.files（文件）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="Part.1.F.deal-with-forward-references.html">
+            
+                <a href="Part.1.F.deal-with-forward-references.html">
+            
+                    
+                    Part.1.F.deal-with-forward-references（如何从容应对含有过多 “过早引用” 的知识？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="Part.1.G.The-Python-Tutorial-local.html">
+            
+                <a href="Part.1.G.The-Python-Tutorial-local.html">
+            
+                    
+                    Part.1.G.The-Python-Tutorial-local（官方教程：The Python Tutorial）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Part 2
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../part2/Part.2.A.clumsy-and-patience.html">
+            
+                <a href="../part2/Part.2.A.clumsy-and-patience.html">
+            
+                    
+                    Part.2.A.clumsy-and-patience（笨拙与耐心）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../part2/Part.2.B.deliberate-practicing.html">
+            
+                <a href="../part2/Part.2.B.deliberate-practicing.html">
+            
+                    
+                    Part.2.B.deliberate-practicing（刻意练习）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../part2/Part.2.C.why-start-from-writing-functions.html">
+            
+                <a href="../part2/Part.2.C.why-start-from-writing-functions.html">
+            
+                    
+                    Part.2.C.why-start-from-writing-functions（为什么从函数开始？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../part2/Part.2.D.1-args.html">
+            
+                <a href="../part2/Part.2.D.1-args.html">
+            
+                    
+                    Part.2.D.1-args（关于参数（上））
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../part2/Part.2.D.2-aargs.html">
+            
+                <a href="../part2/Part.2.D.2-aargs.html">
+            
+                    
+                    Part.2.D.2-aargs（关于参数（下））
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../part2/Part.2.D.3-lambda.html">
+            
+                <a href="../part2/Part.2.D.3-lambda.html">
+            
+                    
+                    Part.2.D.3-lambda（化名与匿名）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../part2/Part.2.D.4-recursion.html">
+            
+                <a href="../part2/Part.2.D.4-recursion.html">
+            
+                    
+                    Part.2.D.4-recursion（递归函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../part2/Part.2.D.5-docstrings.html">
+            
+                <a href="../part2/Part.2.D.5-docstrings.html">
+            
+                    
+                    Part.2.D.5-docstrings（函数的文档）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../part2/Part.2.D.6-modules.html">
+            
+                <a href="../part2/Part.2.D.6-modules.html">
+            
+                    
+                    Part.2.D.6-modules（保存到文件的函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../part2/Part.2.D.7-tdd.html">
+            
+                <a href="../part2/Part.2.D.7-tdd.html">
+            
+                    
+                    Part.2.D.7-tdd（测试驱动的开发）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../part2/Part.2.D.8-main.html">
+            
+                <a href="../part2/Part.2.D.8-main.html">
+            
+                    
+                    Part.2.D.8-main（可执行的 Python 文件）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../part2/Part.2.E.deliberate-thinking.html">
+            
+                <a href="../part2/Part.2.E.deliberate-thinking.html">
+            
+                    
+                    Part.2.E.deliberate-thinking（刻意思考）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Part 3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../part3/Part.3.A.conquering-difficulties.html">
+            
+                <a href="../part3/Part.3.A.conquering-difficulties.html">
+            
+                    
+                    Part.3.A.conquering-difficulties（战胜难点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../part3/Part.3.B.1.classes-1.html">
+            
+                <a href="../part3/Part.3.B.1.classes-1.html">
+            
+                    
+                    Part.3.B.1.classes-1（类 —— 面向对象编程）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../part3/Part.3.B.2.classes-2.html">
+            
+                <a href="../part3/Part.3.B.2.classes-2.html">
+            
+                    
+                    Part.3.B.2.classes-2（类 —— Python 的实现）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../part3/Part.3.B.3.decorator-iterator-generator.html">
+            
+                <a href="../part3/Part.3.B.3.decorator-iterator-generator.html">
+            
+                    
+                    Part.3.B.3.decorator-iterator-generator（函数工具）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../part3/Part.3.B.4.regex.html">
+            
+                <a href="../part3/Part.3.B.4.regex.html">
+            
+                    
+                    Part.3.B.4.regex（正则表达式）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../part3/Part.3.B.5.bnf-ebnf-pebnf.html">
+            
+                <a href="../part3/Part.3.B.5.bnf-ebnf-pebnf.html">
+            
+                    
+                    Part.3.B.5.bnf-ebnf-pebnf（BNF 以及 EBNF）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../part3/Part.3.C.breaking-good-and-bad.html">
+            
+                <a href="../part3/Part.3.C.breaking-good-and-bad.html">
+            
+                    
+                    Part.3.C.breaking-good-and-bad（拆解）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../part3/Part.3.D.indispensable-illusion.html">
+            
+                <a href="../part3/Part.3.D.indispensable-illusion.html">
+            
+                    
+                    Part.3.D.indispensable-illusion（刚需幻觉）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../part3/Part.3.E.to-be-thorough.html">
+            
+                <a href="../part3/Part.3.E.to-be-thorough.html">
+            
+                    
+                    Part.3.E.to-be-thorough（全面 —— 自学的境界）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../part3/Part.3.F.social-selfteaching.html">
+            
+                <a href="../part3/Part.3.F.social-selfteaching.html">
+            
+                    
+                    Part.3.F.social-selfteaching（自学者的社交）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../part3/Part.3.G.the-golden-age-and-google.html">
+            
+                <a href="../part3/Part.3.G.the-golden-age-and-google.html">
+            
+                    
+                    Part.3.G.the-golden-age-and-google（这是自学者的黄金时代）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../part3/Part.3.H.prevent-focus-drifting.html">
+            
+                <a href="../part3/Part.3.H.prevent-focus-drifting.html">
+            
+                    
+                    Part.3.H.prevent-focus-drifting（避免注意力漂移）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    附章
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Q.good-communiation.html">
+            
+                <a href="../Q.good-communiation.html">
+            
+                    
+                    Q.good-communiation（如何成为优秀沟通者）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../R.finale.html">
+            
+                <a href="../R.finale.html">
+            
+                    
+                    R.finale（自学者的终点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../S.whats-next.html">
+            
+                <a href="../S.whats-next.html">
+            
+                    
+                    S.whats-next（下一步干什么？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    附录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../T-appendix.editor.vscode.html">
+            
+                <a href="../T-appendix.editor.vscode.html">
+            
+                    
+                    T-appendix.editor.vscode（Visual Studio Code 的安装与配置）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../T-appendix.git-introduction.html">
+            
+                <a href="../T-appendix.git-introduction.html">
+            
+                    
+                    T-appendix.git-introduction（Git 简介）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../T-appendix.jupyter-installation-and-setup.html">
+            
+                <a href="../T-appendix.jupyter-installation-and-setup.html">
+            
+                    
+                    T-appendix.jupyter-installation-and-setup（Jupyterlab 的安装与配置）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../T-appendix.symbols.html">
+            
+                <a href="../T-appendix.symbols.html">
+            
+                    
+                    T-appendix.symbols（这些符号都代表什么？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Part.1.E.3.controlflow（流程控制）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6D41;&#x7A0B;&#x63A7;&#x5236;">&#x6D41;&#x7A0B;&#x63A7;&#x5236;</h1>
+<p>&#x5728;&#x76F8;&#x5BF9;&#x6DF1;&#x5165;&#x4E86;&#x89E3;&#x4E86;&#x503C;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x518D;&#x8FD4;&#x56DE;&#x6765;&#x5BF9;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x505A;&#x66F4;&#x6DF1;&#x5165;&#x7684;&#x4E86;&#x89E3;&#x3002;</p>
+<p>&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x770B;&#x8FC7;&#x8FD9;&#x4E2A;&#x5BFB;&#x627E;&#x8D28;&#x6570;&#x7684;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, <span class="hljs-number">100</span>):
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">2</span>:
+        print(n)
+        <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, n):
+        <span class="hljs-keyword">if</span> (n % i) == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>:
+        print(n)
+</code></pre>
+<p>&#x8FD9;&#x5176;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x4E86;<em>&#x5206;&#x652F;</em>&#x4E0E;<em>&#x5FAA;&#x73AF;</em> &#x2014;&#x2014; &#x65E0;&#x8BBA;&#x591A;&#x590D;&#x6742;&#x7684;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x7528;&#x8FD9;&#x4E24;&#x4E2A;&#x4E1C;&#x897F;&#x5C31;&#x591F;&#x4E86;&#xFF0C;&#x5C31;&#x597D;&#x50CF;&#x65E0;&#x8BBA;&#x591A;&#x590D;&#x6742;&#x7684;&#x7535;&#x8DEF;&#x6700;&#x7EC8;&#x90FD;&#x662F;&#x7531;&#x901A;&#x8DEF;&#x548C;&#x5F00;&#x8DEF;&#x4EC5;&#x4EC5;&#x4E24;&#x4E2A;&#x72B6;&#x6001;&#x6784;&#x6210;&#x7684;&#x4E00;&#x6837;&#x3002;</p>
+<blockquote>
+<p>&#x4ECA;&#x5929;&#x7684;&#x4EBA;&#x4EEC;&#x89C9;&#x5F97;&#x8FD9;&#x662F; &#x201C;&#x5929;&#x7ECF;&#x5730;&#x4E49;&#x201D; &#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x53EF;&#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x975E;&#x5982;&#x6B64;&#x3002;&#x8FD9;&#x662F; 1966 &#x5E74;&#x7684;&#x4E00;&#x7BC7;&#x8BBA;&#x6587;&#x6240;&#x5E26;&#x6765;&#x7684;&#x5DE8;&#x5927;&#x6539;&#x53D8; &#x2014;&#x2014; <em>Flow diagrams, turing machines and languages with only two formation rules</em> by B&#xF6;hm and Jacopini (1966)&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x76F4;&#x5230;&#x4E0A;&#x4E2A;&#x4E16;&#x7EAA;&#x672B;&#xFF0C;<code>GOTO</code> &#x8BED;&#x53E5;&#x624D;&#x4ECE;&#x5404;&#x79CD;&#x8BED;&#x8A00;&#x91CC;&#x8FD1;&#x4E4E; &#x201C;&#x706D;&#x7EDD;&#x201D;&#x2026;&#x2026;</p>
+<p>&#x4EFB;&#x4F55;&#x8FDB;&#x6B65;&#xFF0C;&#x65E0;&#x8BBA;&#x5927;&#x5C0F;&#xFF0C;&#x5176;&#x5B9E;&#x90FD;&#x76F8;&#x5F53;&#x4E0D;&#x5BB9;&#x6613;&#xFF0C;&#x90FD;&#x975E;&#x5E38;&#x8017;&#x65F6;&#x8D39;&#x529B; &#x2014;&#x2014; &#x5728;&#x54EA;&#x513F;&#x90FD;&#x4E00;&#x6837;&#x3002;&#x6709;&#x5174;&#x8DA3;&#x3001;&#x6709;&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x53BB;&#x6D4F;&#x89C8; Wikipedia &#x4E0A;&#x7684;&#x7B80;&#x8981;&#x8BF4;&#x660E; &#x2014;&#x2014; <a href="https://en.wikipedia.org/wiki/Control_flow#Goto" target="_blank">Wikipedia: Minimal structured control flow</a>&#x3002;</p>
+</blockquote>
+<h2 id="if-&#x8BED;&#x53E5;">if &#x8BED;&#x53E5;</h2>
+<p><code>if</code> &#x8BED;&#x53E5;&#x7684;&#x6700;&#x7B80;&#x5355;&#x6784;&#x6210;&#x662F;&#x8FD9;&#x6837; &#x2014;&#x2014; &#x6CE8;&#x610F;&#x7B2C; 1 &#x884C;&#x672B;&#x5C3E;&#x7684;&#x5192;&#x53F7; <code>:</code> &#x548C;&#x7B2C; 2 &#x884C;&#x7684;&#x7F29;&#x8FDB;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> expression:
+    statements
+</code></pre>
+<p>&#x5982;&#x679C;&#x8868;&#x8FBE;&#x5F0F; <code>expression</code> &#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x771F;&#xFF0C;&#x6267;&#x884C; <code>if</code> &#x8BED;&#x53E5;&#x5757;&#x5185;&#x90E8;&#x7684; <code>statements</code>&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x505A;&#xFF0C;&#x6267;&#x884C; <code>if</code> &#x4E4B;&#x540E;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> random
+r = random.randrange(<span class="hljs-number">1</span>, <span class="hljs-number">1000</span>)
+
+<span class="hljs-keyword">if</span> r % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
+    print(f<span class="hljs-string">&apos;{r} is even.&apos;</span>)
+</code></pre>
+<pre><code>372 is even.
+</code></pre><p>&#x5982;&#x679C;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>expression</code> &#x8FD4;&#x56DE;&#x503C;&#x65E0;&#x8BBA;&#x771F;&#x5047;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x9700;&#x8981;&#x505A;&#x4E00;&#x70B9;&#x76F8;&#x5E94;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> expression:
+    statements_for_True
+<span class="hljs-keyword">else</span>:
+    statements_for_False
+</code></pre>
+<p>&#x5982;&#x679C;&#x8868;&#x8FBE;&#x5F0F; <code>expression</code> &#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x771F;&#xFF0C;&#x6267;&#x884C; <code>if</code> &#x8BED;&#x53E5;&#x5757;&#x5185;&#x90E8;&#x7684; <code>statements_for_True</code>&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x5C31;&#x6267;&#x884C; <code>else</code> &#x8BED;&#x53E5;&#x5757;&#x5185;&#x90E8;&#x7684; <code>statements_for_False</code></p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> random
+r = random.randrange(<span class="hljs-number">1</span>, <span class="hljs-number">1000</span>)
+
+<span class="hljs-keyword">if</span> r % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
+    print(f<span class="hljs-string">&apos;{r} is even.&apos;</span>)
+<span class="hljs-keyword">else</span>:
+    print(f<span class="hljs-string">&apos;{r} is odd.&apos;</span>)
+</code></pre>
+<pre><code>945 is odd.
+</code></pre><p>&#x6709;&#x65F6;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>&lt;expression&gt;</code> &#x8FD4;&#x56DE;&#x7684;&#x503C;&#x6709;&#x591A;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5E76;&#x4E14;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x6211;&#x4EEC;&#x90FD;&#x8981;&#x505A;&#x76F8;&#x5E94;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> expression_1:
+    statements_for_expression_1_True
+
+<span class="hljs-keyword">elif</span> expression_2:
+    statements_for_expression_2_True
+
+<span class="hljs-keyword">elif</span> expression_3:
+    statements_for_expression_3_True
+
+<span class="hljs-keyword">elif</span> expression_...:
+    statements_for_expression_..._True
+</code></pre>
+<p>Python &#x7528; <code>elif</code> &#x5904;&#x7406;&#x8FD9;&#x79CD;&#x591A;&#x60C5;&#x51B5;&#x5206;&#x652F;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5176;&#x5B83;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x4F7F;&#x7528; <code>switch</code> &#x6216;&#x8005; <code>case</code>&#x2026;&#x2026;</p>
+<p><code>elif</code> &#x662F; <code>else if</code> &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x4F5C;&#x7528;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x7A0B;&#x5E8F;&#x6A21;&#x62DF;&#x6295;&#x4E24;&#x4E2A;&#x9AB0;&#x5B50;&#x7684;&#x7ED3;&#x679C; &#x2014;&#x2014; &#x4E24;&#x4E2A;&#x9AB0;&#x5B50;&#x6570;&#x5B57;&#x52A0;&#x8D77;&#x6765;&#xFF0C;&#x7B49;&#x4E8E; <code>7</code> &#x7B97;&#x5E73;&#xFF0C;&#x5927;&#x4E8E; <code>7</code> &#x7B97;&#x5927;&#xFF0C;&#x5C0F;&#x4E8E; <code>7</code> &#x7B97;&#x5C0F;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> random
+r = random.randrange(<span class="hljs-number">2</span>, <span class="hljs-number">13</span>)
+
+<span class="hljs-keyword">if</span> r == <span class="hljs-number">7</span>:
+    print(<span class="hljs-string">&apos;Draw!&apos;</span>)
+<span class="hljs-keyword">elif</span> r &lt; <span class="hljs-number">7</span>:
+    print(<span class="hljs-string">&apos;Small!&apos;</span>)
+<span class="hljs-keyword">elif</span> r &gt; <span class="hljs-number">7</span>:
+    print(<span class="hljs-string">&apos;Big!&apos;</span>)
+</code></pre>
+<pre><code>Big!
+</code></pre><p>&#x5F53;&#x7136;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;&#x6295;&#x98DE;&#x4E86;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5373;&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x9AB0;&#x5B50;&#x6570;&#x662F; <code>0</code> &#x6216;&#x8005; <code>1</code>&#xFF0C;&#x5373;&#xFF0C;<code>&lt; 2</code>&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> random
+r = random.randrange(<span class="hljs-number">0</span>, <span class="hljs-number">13</span>) <span class="hljs-comment"># &#x751F;&#x6210;&#x7684;&#x968F;&#x673A;&#x6570;&#x5E94;&#x8BE5;&#x4ECE; 0 &#x5F00;&#x59CB;&#x4E86;&#xFF1B;</span>
+
+<span class="hljs-keyword">if</span> r == <span class="hljs-number">7</span>:
+    print(<span class="hljs-string">&apos;Draw!&apos;</span>)
+<span class="hljs-keyword">elif</span> r &gt;= <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> r &lt; <span class="hljs-number">7</span>:      <span class="hljs-comment"># &#x5982;&#x679C;&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x5199; elif r &lt; 7:&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;else: &#x90A3;&#x4E00;&#x90E8;&#x5206;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#x2026;&#x2026;</span>
+    print(<span class="hljs-string">&apos;Small!&apos;</span>)
+<span class="hljs-keyword">elif</span> r &gt; <span class="hljs-number">7</span>:
+    print(<span class="hljs-string">&apos;Big!&apos;</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&apos;Not valid!&apos;</span>)
+</code></pre>
+<pre><code>Small!
+</code></pre><h2 id="for-&#x5FAA;&#x73AF;">for &#x5FAA;&#x73AF;</h2>
+<p>Python &#x8BED;&#x8A00;&#x4E2D;&#xFF0C;<code>for</code> &#x5FAA;&#x73AF;&#x4E0D;&#x4F7F;&#x7528;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x4E2D;&#x90A3;&#x6837;&#x7684;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x7684;&#x662F; <code>range()</code> &#x8FD9;&#x4E2A;&#x6211;&#x79F0;&#x5176;&#x4E3A; &#x201C;&#x6574;&#x6570;&#x7B49;&#x5DEE;&#x6570;&#x5217;&#x751F;&#x6210;&#x5668;&#x201D; &#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x7528; C &#x8BED;&#x8A00;&#x5199;&#x5FAA;&#x73AF;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">for</span>( a = <span class="hljs-number">0</span>; a &lt; <span class="hljs-number">10</span>; a = a + <span class="hljs-number">1</span> ){
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;value of a: %d\n&quot;</span>, a);
+}
+</code></pre>
+<p>&#x7528; Python &#x5199;&#x540C;&#x6837;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
+    print(f<span class="hljs-string">&apos;value of a: {a}&apos;</span>) <span class="hljs-comment">#&#x6BCF;&#x6B21; a &#x7684;&#x503C;&#x90FD;&#x4E0D;&#x540C;&#xFF0C;&#x4ECE; 0 &#x9012;&#x589E;&#x81F3; 9</span>
+</code></pre>
+<pre><code>value of a: 0
+value of a: 1
+value of a: 2
+value of a: 3
+value of a: 4
+value of a: 5
+value of a: 6
+value of a: 7
+value of a: 8
+value of a: 9
+</code></pre><h3 id="range-&#x51FD;&#x6570;">range() &#x51FD;&#x6570;</h3>
+<p><code>range()</code> &#x662F;&#x4E2A;&#x5185;&#x5EFA;&#x51FD;&#x6570;&#xFF0C;<a href="https://docs.python.org/3/library/functions.html#func-range" target="_blank">&#x5B83;&#x7684;&#x6587;&#x6863;</a>&#x662F;&#x8FD9;&#x6837;&#x5199;&#x7684;&#xFF1A;</p>
+<blockquote>
+<p><strong>range</strong>(<em>stop</em>)</p>
+<p><strong>range</strong>(<em>start, stop[, step]</em>)</p>
+</blockquote>
+<p>&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x88AB;&#x7406;&#x89E3;&#x4E3A; <code>stop</code>&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4ECE; <code>0</code> &#x5F00;&#x59CB;&#xFF0C;&#x5230; <code>stop - 1</code> &#x7684;&#x6574;&#x6570;&#x6570;&#x5217;&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x89E3;&#x91CA;&#x4E86;&#x4E3A;&#x4EC0;&#x4E48;&#x6709;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F1A;&#x5728; <code>for ... in range(...):</code> &#x8FD9;&#x79CD;&#x5FAA;&#x73AF;&#x5185;&#x7684;&#x8BED;&#x53E5;&#x5757;&#x91CC;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7ECF;&#x5E38;&#x4F1A;&#x5728;&#x53D8;&#x91CF;&#x4E4B;&#x540E;&#x5199;&#x4E0A; <code>+ 1</code>&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC; range(n) &#x7684;&#x8FD4;&#x56DE;&#x6570;&#x5217;&#x4E2D;&#x4E0D;&#x5305;&#x542B; <code>n</code>&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x6709;&#x65F6;&#x5019;&#x5374;&#x9700;&#x8981; <code>n</code>&#x3002;<a href="Part.1.E.1.entrance.ipynb#plusone">&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x8FD4;&#x56DE;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x7AE0;&#x91CC;&#x63D0;&#x5230;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;&#x6240;&#x8C13;&#x7B97;&#x6CD5;&#x90A3;&#x4E00;&#x5C0F;&#x8282;</a>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+range(<span class="hljs-number">10</span>)
+list(range(<span class="hljs-number">10</span>)) <span class="hljs-comment"># &#x5C06; range(10) &#x8F6C;&#x6362;&#x6210; list&#xFF0C;&#x4EE5;&#x4FBF;&#x6E05;&#x695A;&#x770B;&#x5230;&#x5176;&#x5185;&#x5BB9;&#x3002;</span>
+</code></pre>
+<pre><code>range(0, 10)
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre><p><code>start</code> &#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>0</code>&#x3002;&#x5982;&#x9700;&#x6307;&#x5B9A;&#x8D77;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x5F97;&#x7ED9; <code>range()</code> &#x4F20;&#x9012;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;<code>range(2, 13)</code>&#x2026;&#x2026;</p>
+<pre><code class="lang-python">list(range(<span class="hljs-number">2</span>, <span class="hljs-number">13</span>))
+</code></pre>
+<pre><code>[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+</code></pre><p>&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x53EF;&#x9009;&#xFF1B;<code>step</code>&#xFF0C;&#x6B65;&#x957F;&#xFF0C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x662F; &#x201C;&#x7B49;&#x5DEE;&#x6570;&#x5217;&#x201D; &#x5F53;&#x4E2D;&#x7684; &#x201C;&#x5DEE;&#x201D;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>1</code>&#x3002;&#x4F8B;&#x5982;&#xFF0C;<code>range(1, 10, 2)</code> &#x751F;&#x6210;&#x7684;&#x662F;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x6570;&#x5217; <code>[1, 3, 5, 7, 9]</code>&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6253;&#x5370; <code>0 &#xFF5E; 10</code> &#x4E4B;&#x95F4;&#x7684;&#x6240;&#x6709;&#x5947;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>):
+    print(i)
+</code></pre>
+<pre><code>1
+3
+5
+7
+9
+</code></pre><p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x8D1F;&#x6570;&#x7684;&#x6570;&#x5217;&#xFF1A;</p>
+<pre><code class="lang-python">list(range(<span class="hljs-number">0</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">-1</span>))
+</code></pre>
+<pre><code>[0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+</code></pre><h3 id="continue&#x3001;break-&#x548C;-pass">Continue&#x3001;Break &#x548C; Pass</h3>
+<p>&#x5728;&#x5FAA;&#x73AF;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x7528; <code>continue</code> &#x548C; <code>break</code> &#x63A7;&#x5236;&#x6D41;&#x7A0B;&#x8D70;&#x5411;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x5728;&#x67D0;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x53D1;&#x751F;&#x7684;&#x60C5;&#x51B5;&#x4E0B; &#x2014;&#x2014; &#x6B63;&#x5982;&#x4F60;&#x65E9;&#x5C31;&#x89C1;&#x8FC7;&#x7684;&#x90A3;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, <span class="hljs-number">100</span>):
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">2</span>:
+        print(n)
+        <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, n):
+        <span class="hljs-keyword">if</span> (n % i) == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>:
+        print(n)
+</code></pre>
+<p><code>continue</code> &#x8BED;&#x53E5;&#x5C06;&#x5FFD;&#x7565;&#x5176;&#x540E;&#x7684;&#x8BED;&#x53E5;&#x5F00;&#x59CB;&#x4E0B;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x800C; <code>break</code> &#x8BED;&#x53E5;&#x5C06;&#x4ECE;&#x6B64;&#x7ED3;&#x675F;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#xFF0C;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4E4B;&#x540E;&#x7684;&#x8BED;&#x53E5;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/continue-break.png?raw=true" alt=""></p>
+<p><code>for</code> &#x8BED;&#x53E5;&#x5757;&#x8FD8;&#x53EF;&#x4EE5;&#x9644;&#x52A0;&#x4E00;&#x4E2A; <code>else</code> &#x2014;&#x2014; &#x8FD9;&#x662F; Python &#x7684;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x6709;&#x4E2A;&#x6027;&#x7684;&#x5730;&#x65B9;&#x3002;&#x9644;&#x52A0;&#x5728; <code>for</code> &#x7ED3;&#x5C3E;&#x7684; <code>else</code> &#x8BED;&#x53E5;&#x5757;&#xFF0C;<em>&#x5728;&#x6CA1;&#x6709; <code>break</code> &#x53D1;&#x751F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x8FD0;&#x884C;</em>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, <span class="hljs-number">100</span>):
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">2</span>:
+        print(n)
+        <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, n):
+        <span class="hljs-keyword">if</span> (n % i) == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>:               <span class="hljs-comment"># &#x4E0B;&#x4E00;&#x884C;&#x7684; print(n) &#x4E8B;&#x5B9E;&#x4E0A;&#x5C5E;&#x4E8E;&#x8BED;&#x53E5;&#x5757; for i in range(2, n):</span>
+        print(n)        <span class="hljs-comment"># &#x6574;&#x4E2A;&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#xFF0C;&#x90FD;&#x6CA1;&#x6709;&#x53D1;&#x751F; break &#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x624D;&#x6267;&#x884C;&#x4E00;&#x6B21; print(n)</span>
+</code></pre>
+<pre><code>2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+</code></pre><p>&#x8BD5;&#x6BD4;&#x8F83;&#x4EE5;&#x4E0B;&#x4E24;&#x6BB5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, <span class="hljs-number">100</span>):
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">2</span>:
+        print(n)
+        <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, n):
+        <span class="hljs-keyword">if</span> (n % i) == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">break</span>
+    print(n)            <span class="hljs-comment"># &#x4E8B;&#x5B9E;&#x4E0A;&#x76F8;&#x5F53;&#x4E8E;&#x9488;&#x5BF9; range(2, 100) &#x4E2D;&#x6BCF;&#x4E2A; n &#x90FD;&#x6267;&#x884C;&#x4E86;&#x4E00;&#x6B21; print(n)</span>
+                        <span class="hljs-comment"># &#x8FD9;&#x4E2A; print(n) &#x5C5E;&#x4E8E;&#x8BED;&#x53E5;&#x5757; for n in range(2, 100):</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, <span class="hljs-number">100</span>):
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">2</span>:
+        print(n)
+        <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, n):
+        <span class="hljs-keyword">if</span> (n % i) == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">break</span>
+        print(n)            <span class="hljs-comment"># &#x4E8B;&#x5B9E;&#x4E0A;&#x76F8;&#x5F53;&#x4E8E;&#x9488;&#x5BF9; range(2, n) &#x4E2D;&#x6BCF;&#x4E2A; i &#x90FD;&#x6267;&#x884C;&#x4E86;&#x4E00;&#x6B21; print(n)</span>
+</code></pre>
+<pre><code>2
+3
+5
+5
+5
+7
+7
+7
+7
+7
+9
+11
+11
+11
+...
+97
+97
+97
+97
+99
+</code></pre><p><code>pass</code> &#x8BED;&#x53E5;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x5E72;&#xFF1A;</p>
+<p>&#x518D;&#x6BD4;&#x5982;&#xFF0C;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">someFunction</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+<p>&#x53C8;&#x6216;&#x8005;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+    <span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">if</span> i % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">pass</span>
+</code></pre>
+<p>&#x6362;&#x4E2A;&#x89D2;&#x5EA6;&#x53BB;&#x7406;&#x89E3;&#x7684;&#x8BDD;&#x53EF;&#x80FD;&#x66F4;&#x6E05;&#x695A;&#xFF1A;<code>pass</code> &#x8FD9;&#x4E2A;&#x8BED;&#x53E5;&#x66F4;&#x591A;&#x662F;&#x7ED9;&#x5199;&#x7A0B;&#x5E8F;&#x7684;&#x4EBA;&#x7528;&#x7684;&#x3002;&#x5F53;&#x4F60;&#x5199;&#x7A0B;&#x5E8F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>pass</code> &#x5360;&#x4F4D;&#xFF0C;&#x800C;&#x540E;&#x5148;&#x5199;&#x522B;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x8FC7;&#x540E;&#x518D;&#x56DE;&#x6765;&#x8865;&#x5145;&#x672C;&#x6765;&#x5E94;&#x8BE5;&#x5199;&#x5728; <code>pass</code> &#x6240;&#x5728;&#x4F4D;&#x7F6E;&#x7684;&#x90A3;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x5199;&#x5D4C;&#x5957;&#x7684;&#x5224;&#x65AD;&#x8BED;&#x53E5;&#x6216;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6700;&#x5E38;&#x7528; <code>pass</code>&#xFF0C;&#x56E0;&#x4E3A;&#x5199;&#x5D4C;&#x5957;&#x633A;&#x8D39;&#x8111;&#x5B50;&#x7684;&#xFF0C;&#x4E00;&#x4E0D;&#x5C0F;&#x5FC3;&#x5C31;&#x5F04;&#x4E71;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x5148;&#x7528; <code>pass</code> &#x5360;&#x4F4D;&#xFF0C;&#x800C;&#x540E;&#x9010;&#x4E00;&#x7A81;&#x7834;&#x3002;</p>
+<h2 id="while-&#x5FAA;&#x73AF;">while &#x5FAA;&#x73AF;</h2>
+<p>&#x4ECA;&#x5929;&#xFF0C;&#x5728;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x90FD;&#x63D0;&#x4F9B;&#x4E24;&#x79CD;&#x5FAA;&#x73AF;&#x7ED3;&#x6784;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li>Collection-controlled loops&#xFF08;&#x4EE5;&#x96C6;&#x5408;&#x4E3A;&#x57FA;&#x7840;&#x7684;&#x5FAA;&#x73AF;&#xFF09;</li>
+<li>Condition-controlled loops&#xFF08;&#x4EE5;&#x6761;&#x4EF6;&#x4E3A;&#x57FA;&#x7840;&#x7684;&#x5FAA;&#x73AF;&#xFF09;</li>
+</ul>
+</blockquote>
+<p>&#x4E4B;&#x524D;&#x7684; <code>for ... in ...</code> &#x5C31;&#x662F; Collection-controlled loops&#xFF1B;&#x800C;&#x5728; Python &#x4E2D;&#x63D0;&#x4F9B;&#x7684; Condition-controlled loops &#x662F; <code>while</code> &#x5FAA;&#x73AF;&#x3002;</p>
+<p><code>while</code> &#x5FAA;&#x73AF;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">while</span> expression:
+    statements
+</code></pre>
+<p>&#x8F93;&#x51FA; 1000 &#x4EE5;&#x5185;&#x7684;&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;&#x7684;&#x7A0B;&#x5E8F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">n = <span class="hljs-number">1000</span>
+a, b = <span class="hljs-number">0</span>, <span class="hljs-number">1</span>
+<span class="hljs-keyword">while</span> a &lt; n:
+    print(a, end=<span class="hljs-string">&apos; &apos;</span>)
+    a, b = b, a+b
+print()
+</code></pre>
+<pre><code>0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+</code></pre><p><code>for</code> &#x548C; <code>while</code> &#x7684;&#x533A;&#x522B;&#x5728;&#x54EA;&#x91CC;&#xFF1F;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x5E94;&#x8BE5;&#x7528;&#x54EA;&#x4E2A;&#xFF1F;</p>
+<p><code>for</code> &#x66F4;&#x9002;&#x5408;&#x5904;&#x7406;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF08;Sequence Type&#xFF09;&#x7684;&#x8FED;&#x4EE3;&#xFF0C;&#x6BD4;&#x5982;&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;&#x628A; <code>range()</code> &#x8FD4;&#x56DE;&#x7684;&#x6570;&#x5217;&#x5F53;&#x4F5C;&#x67D0;&#x79CD;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<p><code>while</code> &#x66F4;&#x4E3A;&#x7075;&#x6D3B;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x540E;&#x9762;&#x53EA;&#x9700;&#x8981;&#x63A5;&#x4E0A;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="&#x4E00;&#x4E2A;&#x6295;&#x9AB0;&#x5B50;&#x8D4C;&#x5927;&#x5C0F;&#x7684;&#x6E38;&#x620F;">&#x4E00;&#x4E2A;&#x6295;&#x9AB0;&#x5B50;&#x8D4C;&#x5927;&#x5C0F;&#x7684;&#x6E38;&#x620F;</h2>
+<p>&#x867D;&#x7136;&#x8FD8;&#x4E0D;&#x53EF;&#x80FD;&#x968F;&#x5FC3;&#x6240;&#x6B32;&#x5199;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x4F60;&#x73B0;&#x5728;&#x5177;&#x5907;&#x4E86;&#x8D77;&#x7801;&#x7684; &#x201C;&#x9605;&#x8BFB;&#x80FD;&#x529B;&#x201D;&#x3002;&#x6709;&#x4E86;&#x4EE5;&#x4E0A;&#x5927;&#x6982;&#x7684;&#x4ECB;&#x7ECD;&#xFF0C;&#x4F60;&#x4E5F;&#x8BB8;&#x53EF;&#x4EE5;&#x8BFB;&#x61C2;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#x4E86; &#x2014;&#x2014; &#x5B83;&#x4EEC;&#x5728;&#x4F60;&#x773C;&#x91CC;&#x518D;&#x4E5F;&#x4E0D;&#x662F;&#x5929;&#x4E66;&#x4E86;&#x2026;&#x2026;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x8BA9;&#x7528;&#x6237;&#x548C;&#x7A0B;&#x5E8F;&#x73A9;&#x63B7;&#x9AB0;&#x5B50;&#x8D4C;&#x5927;&#x5C0F;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li>&#x6BCF;&#x6B21;&#x8BA1;&#x7B97;&#x673A;&#x968F;&#x673A;&#x751F;&#x6210;&#x4E00;&#x4E2A; <code>2... 12</code> &#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x6A21;&#x62DF;&#x673A;&#x5668;&#x4EBA;&#x6295;&#x4E24;&#x4E2A;&#x9AB0;&#x5B50;&#x7684;&#x60C5;&#x51B5;&#xFF1B;</li>
+<li>&#x673A;&#x5668;&#x4EBA;&#x548C;&#x7528;&#x6237;&#x7684;&#x8D77;&#x59CB;&#x8D44;&#x91D1;&#x90FD;&#x662F; 10 &#x4E2A;&#x786C;&#x5E01;</li>
+<li>&#x8981;&#x6C42;&#x7528;&#x6237;&#x731C;&#x5927;&#x5C0F;&#xFF1A;<ul>
+<li>&#x7528;&#x6237;&#x8F93;&#x5165; <code>b</code> &#x4EE3;&#x8868; &#x201C;&#x5927;&#x201D;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x8F93;&#x5165; <code>s</code> &#x4EE3;&#x8868; &#x201C;&#x5C0F;&#x201D;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x8F93;&#x5165; <code>q</code> &#x4EE3;&#x8868; &#x201C;&#x9000;&#x51FA;&#x201D;&#xFF1B;</li>
+</ul>
+</li>
+<li>&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x548C;&#x968F;&#x673A;&#x4EA7;&#x751F;&#x7684;&#x6570;&#x5B57;&#x6BD4;&#x8F83;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;<ul>
+<li>&#x968F;&#x673A;&#x6570;&#x5C0F;&#x4E8E; <code>7</code>&#xFF0C;&#x7528;&#x6237;&#x731C;&#x5C0F;&#xFF0C;&#x7528;&#x6237;&#x8D62;&#xFF1B;</li>
+<li>&#x968F;&#x673A;&#x6570;&#x5C0F;&#x4E8E; <code>7</code>&#xFF0C;&#x7528;&#x6237;&#x731C;&#x5927;&#xFF0C;&#x7528;&#x6237;&#x8F93;&#xFF1B;</li>
+<li>&#x968F;&#x673A;&#x6570;&#x7B49;&#x4E8E; <code>7</code>&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x8BBA;&#x731C;&#x5927;&#x8FD8;&#x662F;&#x731C;&#x5C0F;&#xFF0C;&#x7ED3;&#x5C40;&#x5E73;&#xFF0C;&#x4E0D;&#x8F93;&#x4E0D;&#x8D62;&#xFF1B;</li>
+<li>&#x968F;&#x673A;&#x6570;&#x5927;&#x4E8E; <code>7</code>&#xFF0C;&#x7528;&#x6237;&#x731C;&#x5C0F;&#xFF0C;&#x7528;&#x6237;&#x8F93;&#xFF1B;</li>
+<li>&#x968F;&#x673A;&#x6570;&#x5927;&#x4E8E; <code>7</code>&#xFF0C;&#x7528;&#x6237;&#x731C;&#x5927;&#xFF0C;&#x7528;&#x6237;&#x8D62;&#xFF1B;</li>
+</ul>
+</li>
+<li>&#x6E38;&#x620F;&#x7ED3;&#x675F;&#x6761;&#x4EF6;&#xFF1A;<ul>
+<li>&#x673A;&#x5668;&#x4EBA;&#x548C;&#x7528;&#x6237;&#xFF0C;&#x82E5;&#x4EFB;&#x610F;&#x4E00;&#x65B9;&#x786C;&#x5E01;&#x6570;&#x91CF;&#x4E3A; <code>0</code>&#xFF0C;&#x5219;&#x6E38;&#x620F;&#x7ED3;&#x675F;&#xFF1B;</li>
+<li>&#x7528;&#x6237;&#x8F93;&#x5165;&#x4E86; <code>q</code> &#x4E3B;&#x52A8;&#x7EC8;&#x6B62;&#x6E38;&#x620F;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randrange
+
+coin_user, coin_bot = <span class="hljs-number">10</span>, <span class="hljs-number">10</span> <span class="hljs-comment"># &#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x8D4B;&#x503C;&#x7B26;&#x53F7;&#x5206;&#x522B;&#x4E3A;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;</span>
+rounds_of_game = <span class="hljs-number">0</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bet</span><span class="hljs-params">(dice, wager)</span>:</span>    <span class="hljs-comment"># &#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x9AB0;&#x5B50;&#x70B9;&#x6570;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;</span>
+    <span class="hljs-keyword">if</span> dice == <span class="hljs-number">7</span>:
+        print(f<span class="hljs-string">&apos;The dice is {dice};\nDRAW!\n&apos;</span>) <span class="hljs-comment"># \n &#x662F;&#x6362;&#x884C;&#x7B26;&#x53F7;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    <span class="hljs-keyword">elif</span> dice &lt; <span class="hljs-number">7</span>:
+        <span class="hljs-keyword">if</span> wager == <span class="hljs-string">&apos;s&apos;</span>:
+            print(f<span class="hljs-string">&apos;The dice is {dice};\nYou WIN!\n&apos;</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>:
+            print(f<span class="hljs-string">&apos;The dice is {dice};\nYou LOST!\n&apos;</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+    <span class="hljs-keyword">elif</span> dice &gt; <span class="hljs-number">7</span>:
+        <span class="hljs-keyword">if</span> wager == <span class="hljs-string">&apos;s&apos;</span>:
+            print(f<span class="hljs-string">&apos;The dice is {dice};\nYou LOST!\n&apos;</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+        <span class="hljs-keyword">else</span>:
+            print(f<span class="hljs-string">&apos;The dice is {dice};\nYou WIN!\n&apos;</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:         <span class="hljs-comment">#  &#x9664; for &#x4E4B;&#x5916;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;</span>
+    print(f<span class="hljs-string">&apos;You: {coin_user}\t Bot: {coin_bot}&apos;</span>)
+    dice = randrange(<span class="hljs-number">2</span>, <span class="hljs-number">13</span>)   <span class="hljs-comment"># &#x751F;&#x6210;&#x4E00;&#x4E2A; 2 &#x5230; 12 &#x7684;&#x968F;&#x673A;&#x6570;</span>
+    wager = input(<span class="hljs-string">&quot;What&apos;s your bet? &quot;</span>)
+    <span class="hljs-keyword">if</span> wager == <span class="hljs-string">&apos;q&apos;</span>:
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">elif</span> wager <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;bs&apos;</span>:  <span class="hljs-comment"># &#x53EA;&#x6709;&#x5F53;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x662F; b &#x6216;&#x8005; s &#x5F97;&#x65F6;&#x5019;&#xFF0C;&#x624D; &#x201C;&#x63B7;&#x9AB0;&#x5B50;&#x201D;&#x2026;&#x2026;</span>
+        result = bet(dice, wager)
+        coin_user += result    <span class="hljs-comment"># coin_user += result &#x76F8;&#x5F53;&#x4E8E; coin_user = coin_user + result</span>
+        coin_bot -= result
+        rounds_of_game += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">if</span> coin_user == <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">&quot;Woops, you&apos;ve LOST ALL, and game over!&quot;</span>)
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">elif</span> coin_bot == <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">&quot;Woops, the robot&apos;s LOST ALL, and game over!&quot;</span>)
+        <span class="hljs-keyword">break</span>
+
+print(f<span class="hljs-string">&quot;You&apos;ve played {rounds_of_game} rounds.\n&quot;</span>)
+print(f<span class="hljs-string">&quot;You have {coin_user} coins now.\nBye!&quot;</span>)
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x6709;&#x63A7;&#x5236;&#x6D41;&#xFF0C;&#x624D;&#x80FD;&#x7B97;&#x5F97;&#x4E0A;&#x662F;&#x7A0B;&#x5E8F;&#x3002;</p>
+<blockquote>
+<ul>
+<li>&#x53EA;&#x5904;&#x7406;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x7528; <code>if ...</code></li>
+<li>&#x5904;&#x7406; <code>True</code>/<code>False</code> &#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x7528; <code>if ... else ...</code></li>
+<li>&#x5904;&#x7406;&#x591A;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x7528; <code>if ... elif ... elif ... else ...</code></li>
+<li>&#x8FED;&#x4EE3;&#x6709;&#x5E8F;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x7528; <code>for ... in ...</code>&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5904;&#x7406;&#x6CA1;&#x6709; <code>break</code> &#x53D1;&#x751F;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x7528; <code>for ... else ...</code></li>
+<li>&#x5176;&#x5B83;&#x5FAA;&#x73AF;&#xFF0C;&#x7528; <code>while ...</code></li>
+<li>&#x4E0E;&#x5FAA;&#x73AF;&#x76F8;&#x5173;&#x7684;&#x8BED;&#x53E5;&#x8FD8;&#x6709; <code>continue</code>&#x3001;<code>break</code>&#x3001;<code>pass</code></li>
+<li>&#x51FD;&#x6570;&#x4ECE;&#x63A7;&#x5236;&#x6D41;&#x89D2;&#x5EA6;&#x53BB;&#x770B;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5B50;&#x7A0B;&#x5E8F;</li>
+</ul>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Part.1.E.2.values-and-their-operators.html" class="navigation navigation-prev " aria-label="Previous page: Part.1.E.2.values-and-their-operators（值及其相应的运算）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Part.1.E.4.functions.html" class="navigation navigation-next " aria-label="Next page: Part.1.E.4.functions（函数）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Part.1.E.3.controlflow（流程控制）","level":"1.3.7","depth":2,"next":{"title":"Part.1.E.4.functions（函数）","level":"1.3.8","depth":2,"path":"part1/Part.1.E.4.functions.md","ref":"part1/Part.1.E.4.functions.md","articles":[]},"previous":{"title":"Part.1.E.2.values-and-their-operators（值及其相应的运算）","level":"1.3.6","depth":2,"path":"part1/Part.1.E.2.values-and-their-operators.md","ref":"part1/Part.1.E.2.values-and-their-operators.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part1/Part.1.E.3.controlflow.md","mtime":"2020-11-05T09:52:07.987Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-05T10:41:49.536Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1271 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Part.2.D.6-modules（保存到文件的函数） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Part.2.D.7-tdd.html" />
+    
+    
+    <link rel="prev" href="Part.2.D.5-docstrings.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    自学是门艺术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../00.cover.html">
+            
+                <a href="../00.cover.html">
+            
+                    
+                    00.cover(封面)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01.preface.html">
+            
+                <a href="../01.preface.html">
+            
+                    
+                    01.preface（前言）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../02.proof-of-work.html">
+            
+                <a href="../02.proof-of-work.html">
+            
+                    
+                    02.proof-of-work（如何证明你真的读过这本书？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Part 1
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../part1/Part.1.A.better.teachyourself.html">
+            
+                <a href="../part1/Part.1.A.better.teachyourself.html">
+            
+                    
+                    Part.1.A.better.teachyourself（为什么一定要掌握自学能力？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../part1/Part.1.B.why.start.from.learning.coding.html">
+            
+                <a href="../part1/Part.1.B.why.start.from.learning.coding.html">
+            
+                    
+                    Part.1.B.why.start.from.learning.coding（为什么把编程当作自学的入口？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../part1/Part.1.C.must.learn.sth.only.by.reading.html">
+            
+                <a href="../part1/Part.1.C.must.learn.sth.only.by.reading.html">
+            
+                    
+                    Part.1.C.must.learn.sth.only.by.reading（只靠阅读习得新技能）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../part1/Part.1.D.preparation.for.reading.html">
+            
+                <a href="../part1/Part.1.D.preparation.for.reading.html">
+            
+                    
+                    Part.1.D.preparation.for.reading（开始阅读前的一些准备）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../part1/Part.1.E.1.entrance.html">
+            
+                <a href="../part1/Part.1.E.1.entrance.html">
+            
+                    
+                    Part.1.E.1.entrance（入口）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../part1/Part.1.E.2.values-and-their-operators.html">
+            
+                <a href="../part1/Part.1.E.2.values-and-their-operators.html">
+            
+                    
+                    Part.1.E.2.values-and-their-operators（值及其相应的运算）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../part1/Part.1.E.3.controlflow.html">
+            
+                <a href="../part1/Part.1.E.3.controlflow.html">
+            
+                    
+                    Part.1.E.3.controlflow（流程控制）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../part1/Part.1.E.4.functions.html">
+            
+                <a href="../part1/Part.1.E.4.functions.html">
+            
+                    
+                    Part.1.E.4.functions（函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../part1/Part.1.E.5.strings.html">
+            
+                <a href="../part1/Part.1.E.5.strings.html">
+            
+                    
+                    Part.1.E.5.strings（字符串）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../part1/Part.1.E.6.containers.html">
+            
+                <a href="../part1/Part.1.E.6.containers.html">
+            
+                    
+                    Part.1.E.6.containers（数据容器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../part1/Part.1.E.7.files.html">
+            
+                <a href="../part1/Part.1.E.7.files.html">
+            
+                    
+                    Part.1.E.7.files（文件）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../part1/Part.1.F.deal-with-forward-references.html">
+            
+                <a href="../part1/Part.1.F.deal-with-forward-references.html">
+            
+                    
+                    Part.1.F.deal-with-forward-references（如何从容应对含有过多 “过早引用” 的知识？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../part1/Part.1.G.The-Python-Tutorial-local.html">
+            
+                <a href="../part1/Part.1.G.The-Python-Tutorial-local.html">
+            
+                    
+                    Part.1.G.The-Python-Tutorial-local（官方教程：The Python Tutorial）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Part 2
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Part.2.A.clumsy-and-patience.html">
+            
+                <a href="Part.2.A.clumsy-and-patience.html">
+            
+                    
+                    Part.2.A.clumsy-and-patience（笨拙与耐心）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Part.2.B.deliberate-practicing.html">
+            
+                <a href="Part.2.B.deliberate-practicing.html">
+            
+                    
+                    Part.2.B.deliberate-practicing（刻意练习）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="Part.2.C.why-start-from-writing-functions.html">
+            
+                <a href="Part.2.C.why-start-from-writing-functions.html">
+            
+                    
+                    Part.2.C.why-start-from-writing-functions（为什么从函数开始？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="Part.2.D.1-args.html">
+            
+                <a href="Part.2.D.1-args.html">
+            
+                    
+                    Part.2.D.1-args（关于参数（上））
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="Part.2.D.2-aargs.html">
+            
+                <a href="Part.2.D.2-aargs.html">
+            
+                    
+                    Part.2.D.2-aargs（关于参数（下））
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="Part.2.D.3-lambda.html">
+            
+                <a href="Part.2.D.3-lambda.html">
+            
+                    
+                    Part.2.D.3-lambda（化名与匿名）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="Part.2.D.4-recursion.html">
+            
+                <a href="Part.2.D.4-recursion.html">
+            
+                    
+                    Part.2.D.4-recursion（递归函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="Part.2.D.5-docstrings.html">
+            
+                <a href="Part.2.D.5-docstrings.html">
+            
+                    
+                    Part.2.D.5-docstrings（函数的文档）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.9" data-path="Part.2.D.6-modules.html">
+            
+                <a href="Part.2.D.6-modules.html">
+            
+                    
+                    Part.2.D.6-modules（保存到文件的函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="Part.2.D.7-tdd.html">
+            
+                <a href="Part.2.D.7-tdd.html">
+            
+                    
+                    Part.2.D.7-tdd（测试驱动的开发）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="Part.2.D.8-main.html">
+            
+                <a href="Part.2.D.8-main.html">
+            
+                    
+                    Part.2.D.8-main（可执行的 Python 文件）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="Part.2.E.deliberate-thinking.html">
+            
+                <a href="Part.2.E.deliberate-thinking.html">
+            
+                    
+                    Part.2.E.deliberate-thinking（刻意思考）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Part 3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../part3/Part.3.A.conquering-difficulties.html">
+            
+                <a href="../part3/Part.3.A.conquering-difficulties.html">
+            
+                    
+                    Part.3.A.conquering-difficulties（战胜难点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../part3/Part.3.B.1.classes-1.html">
+            
+                <a href="../part3/Part.3.B.1.classes-1.html">
+            
+                    
+                    Part.3.B.1.classes-1（类 —— 面向对象编程）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../part3/Part.3.B.2.classes-2.html">
+            
+                <a href="../part3/Part.3.B.2.classes-2.html">
+            
+                    
+                    Part.3.B.2.classes-2（类 —— Python 的实现）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../part3/Part.3.B.3.decorator-iterator-generator.html">
+            
+                <a href="../part3/Part.3.B.3.decorator-iterator-generator.html">
+            
+                    
+                    Part.3.B.3.decorator-iterator-generator（函数工具）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../part3/Part.3.B.4.regex.html">
+            
+                <a href="../part3/Part.3.B.4.regex.html">
+            
+                    
+                    Part.3.B.4.regex（正则表达式）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../part3/Part.3.B.5.bnf-ebnf-pebnf.html">
+            
+                <a href="../part3/Part.3.B.5.bnf-ebnf-pebnf.html">
+            
+                    
+                    Part.3.B.5.bnf-ebnf-pebnf（BNF 以及 EBNF）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../part3/Part.3.C.breaking-good-and-bad.html">
+            
+                <a href="../part3/Part.3.C.breaking-good-and-bad.html">
+            
+                    
+                    Part.3.C.breaking-good-and-bad（拆解）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../part3/Part.3.D.indispensable-illusion.html">
+            
+                <a href="../part3/Part.3.D.indispensable-illusion.html">
+            
+                    
+                    Part.3.D.indispensable-illusion（刚需幻觉）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../part3/Part.3.E.to-be-thorough.html">
+            
+                <a href="../part3/Part.3.E.to-be-thorough.html">
+            
+                    
+                    Part.3.E.to-be-thorough（全面 —— 自学的境界）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../part3/Part.3.F.social-selfteaching.html">
+            
+                <a href="../part3/Part.3.F.social-selfteaching.html">
+            
+                    
+                    Part.3.F.social-selfteaching（自学者的社交）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../part3/Part.3.G.the-golden-age-and-google.html">
+            
+                <a href="../part3/Part.3.G.the-golden-age-and-google.html">
+            
+                    
+                    Part.3.G.the-golden-age-and-google（这是自学者的黄金时代）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../part3/Part.3.H.prevent-focus-drifting.html">
+            
+                <a href="../part3/Part.3.H.prevent-focus-drifting.html">
+            
+                    
+                    Part.3.H.prevent-focus-drifting（避免注意力漂移）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    附章
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Q.good-communiation.html">
+            
+                <a href="../Q.good-communiation.html">
+            
+                    
+                    Q.good-communiation（如何成为优秀沟通者）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../R.finale.html">
+            
+                <a href="../R.finale.html">
+            
+                    
+                    R.finale（自学者的终点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../S.whats-next.html">
+            
+                <a href="../S.whats-next.html">
+            
+                    
+                    S.whats-next（下一步干什么？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    附录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../T-appendix.editor.vscode.html">
+            
+                <a href="../T-appendix.editor.vscode.html">
+            
+                    
+                    T-appendix.editor.vscode（Visual Studio Code 的安装与配置）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../T-appendix.git-introduction.html">
+            
+                <a href="../T-appendix.git-introduction.html">
+            
+                    
+                    T-appendix.git-introduction（Git 简介）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../T-appendix.jupyter-installation-and-setup.html">
+            
+                <a href="../T-appendix.jupyter-installation-and-setup.html">
+            
+                    
+                    T-appendix.jupyter-installation-and-setup（Jupyterlab 的安装与配置）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../T-appendix.symbols.html">
+            
+                <a href="../T-appendix.symbols.html">
+            
+                    
+                    T-appendix.symbols（这些符号都代表什么？）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Part.2.D.6-modules（保存到文件的函数）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;">&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;</h1>
+<p>&#x5199;&#x597D;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x7136;&#x6700;&#x597D;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x4EE5;&#x4FBF;&#x5C06;&#x6765;&#x968F;&#x65F6;&#x8C03;&#x7528;&#x3002;</p>
+<h2 id="&#x6A21;&#x5757;">&#x6A21;&#x5757;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x4FDD;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>mycode.py</code> &#x7684;&#x6587;&#x4EF6;&#x4E2D; &#x2014;&#x2014; &#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x88AB;&#x5916;&#x90E8;&#x8C03;&#x7528;&#x7684; <code>.py</code> &#x6587;&#x4EF6;&#xFF0C;&#x6709;&#x4E2A;&#x4E13;&#x95E8;&#x7684;&#x79F0;&#x547C;&#xFF0C;<strong>&#x6A21;&#x5757;</strong>&#xFF08;Module&#xFF09;&#x2014;&#x2014; &#x4E8E;&#x662F;&#xFF0C;&#x5B83;&#xFF08;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A; <code>.py</code> &#x6587;&#x4EF6;&#xFF09;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x79F0;&#x4E3A;<em>&#x6A21;&#x5757;</em>&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># %load mycode.py</span>
+<span class="hljs-comment"># &#x5F53;&#x524D;&#x8FD9;&#x4E2A; Code Cell &#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684; mycode.py &#x6587;&#x4EF6;&#x4E2D;</span>
+<span class="hljs-comment"># &#x4EE5;&#x4E0B;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x662F;&#x4F7F;&#x7528; Jupyter &#x547D;&#x4EE4; %load mycode.py &#x5BFC;&#x5165;&#x5230;&#x5F53;&#x524D; Code Cell &#x4E2D;&#x7684;&#xFF1A;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_prime</span><span class="hljs-params">(n)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    Return a boolean value based upon
+    whether the argument n is a prime number.
+    &quot;&quot;&quot;</span>
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">2</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+    <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, int(n**<span class="hljs-number">0.5</span>)+<span class="hljs-number">1</span>):
+        <span class="hljs-keyword">if</span> (n % m) == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">say_hi</span><span class="hljs-params">(*names, greeting=<span class="hljs-string">&apos;Hello&apos;</span>, capitalized=False)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    Print a string, with a greeting to everyone.
+    :param *names: tuple of names to be greeted.
+    :param greeting: &apos;Hello&apos; as default.
+    :param capitalized: Whether name should be converted to capitalized before print. False as default.
+    :returns: None
+    &quot;&quot;&quot;</span>
+    <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names:
+        <span class="hljs-keyword">if</span> capitalized:
+            name = name.capitalize()
+        print(f<span class="hljs-string">&apos;{greeting}, {name}!&apos;</span>)
+</code></pre>
+<p>&#x800C;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x5B83;&#x5730;&#x65B9;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#xFF08;&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4E2D;&#x7684; <code>mycode.py</code>&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+<span class="hljs-keyword">import</span> mycode
+
+help(mycode.is_prime)
+help(mycode.say_hi)
+
+mycode.__name__
+mycode.is_prime(<span class="hljs-number">3</span>)
+mycode.say_hi(<span class="hljs-string">&apos;mike&apos;</span>, <span class="hljs-string">&apos;zoe&apos;</span>)
+</code></pre>
+<pre><code>Help on function is_prime in module mycode:
+
+is_prime(n)
+    Return a boolean value based upon
+    whether the argument n is a prime number.
+
+Help on function say_hi in module mycode:
+
+say_hi(*names, greeting=&apos;Hello&apos;, capitalized=False)
+    Print a string, with a greeting to everyone.
+    :param *names: tuple of names to be greeted.
+    :param greeting: &apos;Hello&apos; as default.
+    :param capitalized: Whether name should be converted to capitalzed before print. False as default.
+    :returns: None
+
+&apos;mycode&apos;
+
+True
+
+Hello, mike!
+Hello, zoe!
+</code></pre><p>&#x4EE5;&#x4E0A;&#x8FD9;&#x4E2A;<strong>&#x6A21;&#x5757;</strong>&#xFF08;<a href="https://docs.python.org/3/tutorial/modules.html" target="_blank">Module</a>&#xFF09;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5C31;&#x662F; <code>mycode</code>&#x3002;</p>
+<h2 id="&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x68C0;&#x7D22;&#x987A;&#x5E8F;">&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x68C0;&#x7D22;&#x987A;&#x5E8F;</h2>
+<p>&#x5F53;&#x4F60;&#x5411; Python &#x8BF4; <code>import ...</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x8981;&#x53BB;&#x5BFB;&#x627E;&#x4F60;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E2A;&#x6587;&#x4EF6;&#x5E94;&#x8BE5;&#x662F; <code>import</code> &#x8BED;&#x53E5;&#x540E;&#x9762;&#x5F15;&#x7528;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x518D;&#x52A0;&#x4E0A; <code>.py</code> &#x6784;&#x6210;&#x7684;&#x540D;&#x5B57;&#x7684;&#x6587;&#x4EF6;&#x3002;Python &#x4F1A;&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x987A;&#x5E8F;&#x53BB;&#x5BFB;&#x627E;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li>&#x5148;&#x53BB;&#x770B;&#x770B;&#x5185;&#x5EFA;&#x6A21;&#x5757;&#x91CC;&#x6709;&#x6CA1;&#x6709;&#x4F60;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x540D;&#x79F0;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x6309;&#x7167; <code>sys.path</code> &#x6240;&#x8FD4;&#x56DE;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x987A;&#x5E8F;&#x53BB;&#x627E;&#x3002;</li>
+</ul>
+</blockquote>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x67E5;&#x770B;&#x4F60;&#x81EA;&#x5DF1;&#x5F53;&#x524D;&#x673A;&#x5668;&#x7684; <code>sys.path</code>&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sys
+sys.path
+</code></pre>
+<p>&#x5728; <code>sys.path</code> &#x6240;&#x8FD4;&#x56DE;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x4F60;&#x5F53;&#x524D;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x6392;&#x5728;&#x7B2C;&#x4E00;&#x4F4D;&#x3002;</p>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x68C0;&#x7D22;&#x76EE;&#x5F55;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x77E5;&#x9053;&#x4F60;&#x8981;&#x7528;&#x7684;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x5728;&#x4EC0;&#x4E48;&#x4F4D;&#x7F6E;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x7528; <code>sys.path.append()</code> &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x641C;&#x7D22;&#x4F4D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sys
+sys.path.append(<span class="hljs-string">&quot;/My/Path/To/Module/Directory&quot;</span>)
+<span class="hljs-keyword">import</span> my_module
+</code></pre>
+<h2 id="&#x7CFB;&#x7EDF;&#x5185;&#x5EFA;&#x7684;&#x6A21;&#x5757;">&#x7CFB;&#x7EDF;&#x5185;&#x5EFA;&#x7684;&#x6A21;&#x5757;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x5185;&#x5EFA;&#x6A21;&#x5757;&#x7684;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+<span class="hljs-keyword">import</span> sys
+
+sys.builtin_module_names
+<span class="hljs-string">&quot;_sre&quot;</span> <span class="hljs-keyword">in</span> sys.builtin_module_names <span class="hljs-comment"># True</span>
+<span class="hljs-string">&quot;math&quot;</span> <span class="hljs-keyword">in</span> sys.builtin_module_names <span class="hljs-comment"># False &#xFF08;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7535;&#x8111;&#x5E93;&#x7684;&#x5B89;&#x88C5;&#x60C5;&#x51B5;&#xFF0C;&#x7ED3;&#x679C;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#xFF09;</span>
+</code></pre>
+<pre><code>(&apos;_abc&apos;,
+ &apos;_ast&apos;,
+ &apos;_codecs&apos;,
+ &apos;_collections&apos;,
+ &apos;_functools&apos;,
+ &apos;_imp&apos;,
+ &apos;_io&apos;,
+ &apos;_locale&apos;,
+ &apos;_operator&apos;,
+ &apos;_signal&apos;,
+ &apos;_sre&apos;,
+ &apos;_stat&apos;,
+ &apos;_string&apos;,
+ &apos;_symtable&apos;,
+ &apos;_thread&apos;,
+ &apos;_tracemalloc&apos;,
+ &apos;_warnings&apos;,
+ &apos;_weakref&apos;,
+ &apos;atexit&apos;,
+ &apos;builtins&apos;,
+ &apos;errno&apos;,
+ &apos;faulthandler&apos;,
+ &apos;gc&apos;,
+ &apos;itertools&apos;,
+ &apos;marshal&apos;,
+ &apos;posix&apos;,
+ &apos;pwd&apos;,
+ &apos;sys&apos;,
+ &apos;time&apos;,
+ &apos;xxsubtype&apos;,
+ &apos;zipimport&apos;)
+True
+False
+</code></pre><p>&#x8DDF;&#x53D8;&#x91CF;&#x540D;&#x3001;&#x51FD;&#x6570;&#x540D;&#xFF0C;&#x4E0D;&#x80FD;&#x4E0E;&#x5173;&#x952E;&#x5B57;&#x91CD;&#x540D;&#x4E00;&#x6837;&#xFF0C;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x540D;&#x79F0;&#x4E5F;&#x6700;&#x597D;&#x522B;&#x4E0E;&#x7CFB;&#x7EDF;&#x5185;&#x5EFA;&#x6A21;&#x5757;&#x540D;&#x79F0;&#x91CD;&#x5408;&#x3002;</p>
+<h2 id="&#x5F15;&#x5165;&#x6307;&#x5B9A;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x51FD;&#x6570;">&#x5F15;&#x5165;&#x6307;&#x5B9A;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x51FD;&#x6570;</h2>
+<p>&#x5F53;&#x4F60;&#x4F7F;&#x7528; <code>import mycode</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x5411;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x5F15;&#x5165;&#x4E86; <code>mycode</code> &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6240;&#x6709;&#x51FD;&#x6570;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> mycode <span class="hljs-keyword">import</span> *
+</code></pre>
+<p>&#x4F60;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x53EA;&#x5F15;&#x5165;&#x5F53;&#x524D;&#x9700;&#x8981;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x53EA;&#x5F15;&#x5165; <code>is_prime()</code>&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> mycode <span class="hljs-keyword">import</span> is_prime
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x5C31;&#x4E0D;&#x5FC5;&#x4F7F;&#x7528; <code>mycode.is_prime()</code> &#x4E86;&#xFF1B;&#x800C;&#x662F;&#x5C31;&#x597D;&#x50CF;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x5199;&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E00;&#x6837;&#xFF0C;&#x76F4;&#x63A5;&#x5199; <code>is_prime()</code>&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> mycode <span class="hljs-keyword">import</span> is_prime
+is_prime(<span class="hljs-number">3</span>)
+</code></pre>
+<pre><code>True
+</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x5E76;&#x6CA1;&#x6709; <code>mycode.py</code> &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;<code>mycode</code> &#x4F1A;&#x88AB;&#x5F53;&#x4F5C;&#x76EE;&#x5F55;&#x540D;&#x518D;&#x88AB;&#x5C1D;&#x8BD5;&#x4E00;&#x6B21; &#x2014;&#x2014; &#x5982;&#x679C;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x5185;&#xFF0C;&#x6709;&#x4E2A;&#x53EB;&#x505A; <code>mycode</code> &#x7684;&#x76EE;&#x5F55;&#xFF08;&#x6216;&#x79F0;&#x6587;&#x4EF6;&#x5939;&#xFF09;&#x4E14;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x540C;&#x65F6;&#x8981;&#x5B58;&#x5728;&#x4E00;&#x4E2A; <a href="https://docs.python.org/3/reference/import.html#regular-packages" target="_blank"><code>__init__.py</code></a> &#x6587;&#x4EF6;&#xFF08;&#x901A;&#x5E38;&#x4E3A;&#x7A7A;&#x6587;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x672C;&#x76EE;&#x5F55;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x6A21;&#x5757;&#x7684; <strong>&#x5305;</strong>&#xFF08;<a href="https://docs.python.org/3/reference/import.html#regular-packages" target="_blank">packages</a>&#xFF09;&#xFF0C;&#x5B83;&#x4EEC;&#x5904;&#x5728;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684; <strong>&#x547D;&#x540D;&#x7A7A;&#x95F4;</strong>&#xFF08;<a href="https://docs.python.org/3/glossary.html#term-namespace-package" target="_blank">namespace</a>&#xFF09;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;<code>from mycode import *</code> &#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x628A; <code>mycode</code> &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;&#x6240;&#x6709; <code>.py</code> &#x6587;&#x4EF6;&#x5168;&#x90E8;&#x5BFC;&#x5165;&#x2026;&#x2026;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5BFC;&#x5165; <code>foo</code> &#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x7684; <code>bar.py</code> &#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> foo.bar
+</code></pre>
+<p>&#x6216;&#x8005;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> foo <span class="hljs-keyword">import</span> bar
+</code></pre>
+<h2 id="&#x5F15;&#x5165;&#x5E76;&#x4F7F;&#x7528;&#x5316;&#x540D;">&#x5F15;&#x5165;&#x5E76;&#x4F7F;&#x7528;&#x5316;&#x540D;</h2>
+<p>&#x6709;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6216;&#x8005;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6DF7;&#x6DC6;&#xFF0C;&#x6216;&#x8005;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x8F93;&#x5165;&#x592A;&#x591A;&#x5B57;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E3A;&#x5F15;&#x5165;&#x7684;&#x51FD;&#x6570;&#x8BBE;&#x5B9A; <strong>&#x5316;&#x540D;</strong>&#xFF08;alias&#xFF09;&#xFF0C;&#x800C;&#x540E;&#x4F7F;&#x7528;&#x5316;&#x540D;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> mycode <span class="hljs-keyword">import</span> is_prime <span class="hljs-keyword">as</span> isp
+isp(<span class="hljs-number">3</span>)
+</code></pre>
+<pre><code>True
+</code></pre><p>&#x751A;&#x81F3;&#x5E72;&#x8106;&#x7ED9;&#x6574;&#x4E2A;&#x6A21;&#x5757;&#x53D6;&#x4E2A;&#x5316;&#x540D;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+<span class="hljs-keyword">import</span> mycode <span class="hljs-keyword">as</span> m
+
+m.is_prime(<span class="hljs-number">3</span>)
+m.say_hi(<span class="hljs-string">&apos;mike&apos;</span>, <span class="hljs-string">&apos;zoe&apos;</span>)
+</code></pre>
+<pre><code>True
+Hello, mike!
+Hello, zoe!
+</code></pre><h2 id="&#x6A21;&#x5757;&#x4E2D;&#x4E0D;&#x4E00;&#x5B9A;&#x53EA;&#x6709;&#x51FD;&#x6570;">&#x6A21;&#x5757;&#x4E2D;&#x4E0D;&#x4E00;&#x5B9A;&#x53EA;&#x6709;&#x51FD;&#x6570;</h2>
+<p>&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E0D;&#x4E00;&#x5B9A;&#x53EA;&#x5305;&#x542B;&#x51FD;&#x6570;&#xFF1B;&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x51FD;&#x6570;&#x4E4B;&#x5916;&#x7684;&#x53EF;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x3002;&#x53EA;&#x4E0D;&#x8FC7;&#xFF0C;&#x5728; <code>import</code> &#x8BED;&#x53E5;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x975E;&#x51FD;&#x6570;&#x90E8;&#x5206;&#x7684;&#x53EF;&#x6267;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;</p>
+<p>&#x6709;&#x4E00;&#x4E2A; Python &#x7684;&#x5F69;&#x86CB;&#xFF0C;&#x6070;&#x597D;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x6B64;&#x5904;&#x7684;&#x6700;&#x4F73;&#x4F8B;&#x5B50; &#x2014;&#x2014; &#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x662F; <code>this</code>&#xFF0C;&#x5B83;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x662F; <a href="https://github.com/python/cpython/blob/master/Lib/this.py" target="_blank"><code>this.py</code></a>&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> this
+</code></pre>
+<pre><code>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&apos;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&apos;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&apos;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&apos;s do more of those!
+</code></pre><p>&#x8FD9;&#x4E2A; <code>this</code> &#x6A21;&#x5757;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">s = <span class="hljs-string">&quot;&quot;&quot;Gur Mra bs Clguba, ol Gvz Crgref
+Ornhgvshy vf orggre guna htyl.
+Rkcyvpvg vf orggre guna vzcyvpvg.
+Fvzcyr vf orggre guna pbzcyrk.
+Pbzcyrk vf orggre guna pbzcyvpngrq.
+Syng vf orggre guna arfgrq.
+Fcnefr vf orggre guna qrafr.
+Ernqnovyvgl pbhagf.
+Fcrpvny pnfrf nera&apos;g fcrpvny rabhtu gb oernx gur ehyrf.
+Nygubhtu cenpgvpnyvgl orngf chevgl.
+Reebef fubhyq arire cnff fvyragyl.
+Hayrff rkcyvpvgyl fvyraprq.
+Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.
+Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.
+Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh&apos;er Qhgpu.
+Abj vf orggre guna arire.
+Nygubhtu arire vf bsgra orggre guna *evtug* abj.
+Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg&apos;f n onq vqrn.
+Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
+Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg&apos;f qb zber bs gubfr!&quot;&quot;&quot;</span>
+
+d = {}
+<span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> (<span class="hljs-number">65</span>, <span class="hljs-number">97</span>):
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">26</span>):
+        d[chr(i+c)] = chr((i+<span class="hljs-number">13</span>) % <span class="hljs-number">26</span> + c)
+
+print(<span class="hljs-string">&quot;&quot;</span>.join([d.get(c, c) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> s]))
+</code></pre>
+<p>&#x8FD9;&#x4E2A; <code>this.py</code> &#x6587;&#x4EF6;&#x4E2D;&#x4E5F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x6240;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x53EF;&#x4EE5;&#x5728; <code>import this</code> &#x4E4B;&#x540E;&#x89E6;&#x8FBE;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.core.interactiveshell <span class="hljs-keyword">import</span> InteractiveShell
+InteractiveShell.ast_node_interactivity = <span class="hljs-string">&quot;all&quot;</span>
+
+<span class="hljs-keyword">import</span> this
+this.d
+this.s
+</code></pre>
+<pre><code>{&apos;A&apos;: &apos;N&apos;,
+ &apos;B&apos;: &apos;O&apos;,
+ &apos;C&apos;: &apos;P&apos;,
+ &apos;D&apos;: &apos;Q&apos;,
+ &apos;E&apos;: &apos;R&apos;,
+ &apos;F&apos;: &apos;S&apos;,
+ &apos;G&apos;: &apos;T&apos;,
+ &apos;H&apos;: &apos;U&apos;,
+ &apos;I&apos;: &apos;V&apos;,
+ &apos;J&apos;: &apos;W&apos;,
+ &apos;K&apos;: &apos;X&apos;,
+ &apos;L&apos;: &apos;Y&apos;,
+ &apos;M&apos;: &apos;Z&apos;,
+ &apos;N&apos;: &apos;A&apos;,
+ &apos;O&apos;: &apos;B&apos;,
+ &apos;P&apos;: &apos;C&apos;,
+ &apos;Q&apos;: &apos;D&apos;,
+ &apos;R&apos;: &apos;E&apos;,
+ &apos;S&apos;: &apos;F&apos;,
+ &apos;T&apos;: &apos;G&apos;,
+ &apos;U&apos;: &apos;H&apos;,
+ &apos;V&apos;: &apos;I&apos;,
+ &apos;W&apos;: &apos;J&apos;,
+ &apos;X&apos;: &apos;K&apos;,
+ &apos;Y&apos;: &apos;L&apos;,
+ &apos;Z&apos;: &apos;M&apos;,
+ &apos;a&apos;: &apos;n&apos;,
+ &apos;b&apos;: &apos;o&apos;,
+ &apos;c&apos;: &apos;p&apos;,
+ &apos;d&apos;: &apos;q&apos;,
+ &apos;e&apos;: &apos;r&apos;,
+ &apos;f&apos;: &apos;s&apos;,
+ &apos;g&apos;: &apos;t&apos;,
+ &apos;h&apos;: &apos;u&apos;,
+ &apos;i&apos;: &apos;v&apos;,
+ &apos;j&apos;: &apos;w&apos;,
+ &apos;k&apos;: &apos;x&apos;,
+ &apos;l&apos;: &apos;y&apos;,
+ &apos;m&apos;: &apos;z&apos;,
+ &apos;n&apos;: &apos;a&apos;,
+ &apos;o&apos;: &apos;b&apos;,
+ &apos;p&apos;: &apos;c&apos;,
+ &apos;q&apos;: &apos;d&apos;,
+ &apos;r&apos;: &apos;e&apos;,
+ &apos;s&apos;: &apos;f&apos;,
+ &apos;t&apos;: &apos;g&apos;,
+ &apos;u&apos;: &apos;h&apos;,
+ &apos;v&apos;: &apos;i&apos;,
+ &apos;w&apos;: &apos;j&apos;,
+ &apos;x&apos;: &apos;k&apos;,
+ &apos;y&apos;: &apos;l&apos;,
+ &apos;z&apos;: &apos;m&apos;}
+
+&quot;Gur Mra bs Clguba, ol Gvz Crgref\n\nOrnhgvshy vf orggre guna htyl.\nRkcyvpvg vf orggre guna vzcyvpvg.\nFvzcyr vf orggre guna pbzcyrk.\nPbzcyrk vf orggre guna pbzcyvpngrq.\nSyng vf orggre guna arfgrq.\nFcnefr vf orggre guna qrafr.\nErnqnovyvgl pbhagf.\nFcrpvny pnfrf nera&apos;g fcrpvny rabhtu gb oernx gur ehyrf.\nNygubhtu cenpgvpnyvgl orngf chevgl.\nReebef fubhyq arire cnff fvyragyl.\nHayrff rkcyvpvgyl fvyraprq.\nVa gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.\nGurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.\nNygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh&apos;er Qhgpu.\nAbj vf orggre guna arire.\nNygubhtu arire vf bsgra orggre guna *evtug* abj.\nVs gur vzcyrzragngvba vf uneq gb rkcynva, vg&apos;f n onq vqrn.\nVs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.\nAnzrfcnprf ner bar ubaxvat terng vqrn -- yrg&apos;f qb zber bs gubfr!&quot;
+</code></pre><p>&#x8BD5;&#x8BD5;&#x5427;&#xFF0C;&#x8BD5;&#x8BD5;&#x80FD;&#x5426;&#x72EC;&#x7ACB;&#x8BFB;&#x61C2;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x7684;&#x4EE3;&#x7801; &#x2014;&#x2014; &#x5BF9;&#x521D;&#x5B66;&#x8005;&#x6765;&#x8BF4;&#xFF0C;&#x8FD8;&#x662F;&#x633A;&#x7EC3;&#x8111;&#x5B50;&#x7684;&#x5462;&#xFF01;</p>
+<p>&#x5B83;&#x5148;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#x8868;&#xFF0C;&#x4FDD;&#x5B58;&#x5728; <code>d</code> &#x8FD9;&#x4E2A;&#x5B57;&#x5178;&#x4E2D;&#xFF1B;&#x800C;&#x540E;&#xFF0C;&#x5C06; <code>s</code> &#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x4E2D;&#x4FDD;&#x5B58;&#x7684; &#x201C;&#x5BC6;&#x6587;&#x201D; &#x7FFB;&#x8BD1;&#x6210;&#x4E86;&#x82F1;&#x6587;&#x2026;&#x2026;</p>
+<p>&#x6216;&#x8BB8;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;&#xFF0C;&#x770B;&#x770B;&#x600E;&#x6837;&#x80FD;&#x5199;&#x4E2A;&#x51FD;&#x6570;&#x51FA;&#x6765;&#xFF0C;&#x7ED9;&#x4F60;&#x4E00;&#x6BB5;&#x82F1;&#x6587;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x52A0;&#x5BC6;&#x6210;&#x8DDF;&#x5B83;&#x4E00;&#x6837;&#x7684; &#x201C;&#x5BC6;&#x6587;&#x201D;&#xFF1F;</p>
+<h2 id="dir-&#x51FD;&#x6570;">dir() &#x51FD;&#x6570;</h2>
+<p>&#x4F60;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;&#x6A21;&#x5757;&#x91CC;&#x4E4B;&#x540E;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x7528;&#x6237;&#xFF08;&#x5F53;&#x7136;&#x4E5F;&#x5305;&#x62EC;&#x4F60;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>dir()</code> &#x51FD;&#x6570;&#x67E5;&#x770B;&#x6A21;&#x5757;&#x4E2D;&#x53EF;&#x89E6;&#x8FBE;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#x548C;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> mycode
+dir(mycode)
+</code></pre>
+<pre><code>[&apos;__builtins__&apos;,
+ &apos;__cached__&apos;,
+ &apos;__doc__&apos;,
+ &apos;__file__&apos;,
+ &apos;__loader__&apos;,
+ &apos;__name__&apos;,
+ &apos;__package__&apos;,
+ &apos;__spec__&apos;,
+ &apos;is_prime&apos;,
+ &apos;say_hi&apos;]
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Part.2.D.5-docstrings.html" class="navigation navigation-prev " aria-label="Previous page: Part.2.D.5-docstrings（函数的文档）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Part.2.D.7-tdd.html" class="navigation navigation-next " aria-label="Next page: Part.2.D.7-tdd（测试驱动的开发）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Part.2.D.6-modules（保存到文件的函数）","level":"1.4.9","depth":2,"next":{"title":"Part.2.D.7-tdd（测试驱动的开发）","level":"1.4.10","depth":2,"path":"part2/Part.2.D.7-tdd.md","ref":"part2/Part.2.D.7-tdd.md","articles":[]},"previous":{"title":"Part.2.D.5-docstrings（函数的文档）","level":"1.4.8","depth":2,"path":"part2/Part.2.D.5-docstrings.md","ref":"part2/Part.2.D.5-docstrings.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part2/Part.2.D.6-modules.md","mtime":"2020-11-05T09:52:09.337Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-05T10:41:49.536Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
